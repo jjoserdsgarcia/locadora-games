@@ -79,6 +79,7 @@
             btnPROSSEGUIRUSER.TabIndex = 4;
             btnPROSSEGUIRUSER.Text = "Prosseguir";
             btnPROSSEGUIRUSER.UseVisualStyleBackColor = true;
+            btnPROSSEGUIRUSER.Click += btnPROSSEGUIRUSER_Click;
             // 
             // btnVOLTARUSER
             // 

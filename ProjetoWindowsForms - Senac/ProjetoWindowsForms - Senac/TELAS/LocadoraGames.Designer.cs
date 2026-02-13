@@ -102,7 +102,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             BackgroundImage = Properties.Resources.noxus_lol_cinematic_2025_1_1024x437;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 435);
             Controls.Add(lblNomeLocadora);
             Controls.Add(label1);
             Controls.Add(btnAdm);
