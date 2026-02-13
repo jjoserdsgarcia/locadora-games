@@ -63,6 +63,36 @@ namespace ProjetoWindowsForms___Senac.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1aab263e_d7fa_48cf_84c6_26b4cdb60451 {
+            get {
+                object obj = ResourceManager.GetObject("1aab263e-d7fa-48cf-84c6-26b4cdb60451", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8943e202_f427_4677_9714_e2a91975a709 {
+            get {
+                object obj = ResourceManager.GetObject("8943e202-f427-4677-9714-e2a91975a709", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap d0b7d847_5bad_4ed5_a76b_a413a0e81b87 {
+            get {
+                object obj = ResourceManager.GetObject("d0b7d847-5bad-4ed5-a76b-a413a0e81b87", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap noxus_lol_cinematic_2025_1_1024x437 {
             get {
                 object obj = ResourceManager.GetObject("noxus-lol-cinematic-2025-1-1024x437", resourceCulture);
