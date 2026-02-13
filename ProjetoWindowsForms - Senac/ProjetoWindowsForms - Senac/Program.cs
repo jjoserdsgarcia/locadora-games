@@ -1,3 +1,5 @@
+using ProjetoWindowsForms___Senac;
+
 namespace ProjetoWindowsForms___Senac
 {
     internal static class Program
