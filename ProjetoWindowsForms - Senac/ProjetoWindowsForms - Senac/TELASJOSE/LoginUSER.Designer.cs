@@ -30,8 +30,6 @@
         {
             lblCPFUSER = new Label();
             textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            lblSENHAUSER = new Label();
             btnPROSSEGUIRUSER = new Button();
             btnVOLTARUSER = new Button();
             SuspendLayout();
@@ -40,35 +38,19 @@
             // 
             lblCPFUSER.AutoSize = true;
             lblCPFUSER.Font = new Font("Modern No. 20", 17.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            lblCPFUSER.Location = new Point(52, 40);
+            lblCPFUSER.Location = new Point(290, 166);
             lblCPFUSER.Name = "lblCPFUSER";
             lblCPFUSER.Size = new Size(170, 25);
             lblCPFUSER.TabIndex = 0;
             lblCPFUSER.Text = "CPF do Usuário";
+            lblCPFUSER.Click += lblCPFUSER_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(52, 91);
+            textBox1.Location = new Point(290, 217);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(221, 23);
             textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(52, 239);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(221, 23);
-            textBox2.TabIndex = 3;
-            // 
-            // lblSENHAUSER
-            // 
-            lblSENHAUSER.AutoSize = true;
-            lblSENHAUSER.Font = new Font("Modern No. 20", 17.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            lblSENHAUSER.Location = new Point(52, 188);
-            lblSENHAUSER.Name = "lblSENHAUSER";
-            lblSENHAUSER.Size = new Size(186, 25);
-            lblSENHAUSER.TabIndex = 2;
-            lblSENHAUSER.Text = "Senha do Usuário";
             // 
             // btnPROSSEGUIRUSER
             // 
@@ -99,8 +81,6 @@
             ClientSize = new Size(800, 450);
             Controls.Add(btnVOLTARUSER);
             Controls.Add(btnPROSSEGUIRUSER);
-            Controls.Add(textBox2);
-            Controls.Add(lblSENHAUSER);
             Controls.Add(textBox1);
             Controls.Add(lblCPFUSER);
             Name = "LoginUSER";
@@ -113,8 +93,6 @@
 
         private Label lblCPFUSER;
         private TextBox textBox1;
-        private TextBox textBox2;
-        private Label lblSENHAUSER;
         private Button btnPROSSEGUIRUSER;
         private Button btnVOLTARUSER;
     }

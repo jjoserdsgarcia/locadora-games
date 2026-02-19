@@ -1,6 +1,6 @@
 ﻿namespace ProjetoWindowsForms___Senac
 {
-    public class Jogo
+    public class Game
     {
         private static int contador = 1;
         public int Id { get; set; }
@@ -10,7 +10,7 @@
         public decimal Valor { get; set; }
         public  int Ano { get; set; }
 
-        public Jogo()
+        public Game()
         {
             Id = contador;
             contador++;
