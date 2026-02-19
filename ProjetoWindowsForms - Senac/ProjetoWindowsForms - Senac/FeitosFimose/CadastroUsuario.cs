@@ -18,7 +18,7 @@ namespace ProjetoWindowsForms___Senac
             string cpf = txtCPFCadastroUser.Text;
             string email = txtEmailCadastroUser.Text;
             string telefone = txtTelefoneCadastroUser.Text;
-            string data = txtDataCadastroUser.Text;
+            DateTime dataNascimento = dtpData.Value;
 
             Usuario novoUsuario = new Usuario
             {
@@ -26,7 +26,7 @@ namespace ProjetoWindowsForms___Senac
                CPF = cpf,
                Email = email,
                Telefone = telefone,
-               Data = data
+               DataNascimento = dataNascimento
             };
 
             usuarios.Add(novoUsuario);
