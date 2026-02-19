@@ -32,6 +32,7 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             lblSenhaADM = new Label();
+            btnENTRARADM = new Button();
             SuspendLayout();
             // 
             // lblUsuarioADM
@@ -73,12 +74,22 @@
             lblSenhaADM.TabIndex = 2;
             lblSenhaADM.Text = "Senha";
             // 
+            // btnENTRARADM
+            // 
+            btnENTRARADM.Location = new Point(259, 357);
+            btnENTRARADM.Name = "btnENTRARADM";
+            btnENTRARADM.Size = new Size(222, 48);
+            btnENTRARADM.TabIndex = 4;
+            btnENTRARADM.Text = "Entrar";
+            btnENTRARADM.UseVisualStyleBackColor = true;
+            // 
             // LoginADM
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnENTRARADM);
             Controls.Add(textBox2);
             Controls.Add(lblSenhaADM);
             Controls.Add(textBox1);
@@ -95,5 +106,6 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private Label lblSenhaADM;
+        private Button btnENTRARADM;
     }
 }

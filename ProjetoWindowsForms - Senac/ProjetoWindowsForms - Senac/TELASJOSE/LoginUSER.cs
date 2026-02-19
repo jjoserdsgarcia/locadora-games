@@ -25,5 +25,10 @@ namespace ProjetoWindowsForms___Senac
             teladgvuser.ShowDialog();
             this.Show();
         }
+
+        private void lblCPFUSER_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
