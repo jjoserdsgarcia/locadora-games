@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProjetoWindowsForms___Senac.Classes;
+using Dapper;
 
 namespace ProjetoWindowsForms___Senac.Repositories.RepoUser
 {
     public class RepositoryUser
     {
         private static readonly ConexaoBancoSQL conexaobanco = new ConexaoBancoSQL();
-        public static async Task<IEnumerable<Usuario>> ObterTodos()
+        public static async Task<IEnumerable<User>> ObterTodos()
         {
 
             var usuario = await conexaobanco.dbConnection()
-            .QueryAsync<Usuario>(
+            .QueryAsync<User>(
                 @"
                 SELECT
                     UsuarioID,
