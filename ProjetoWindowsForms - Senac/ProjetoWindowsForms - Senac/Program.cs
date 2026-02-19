@@ -2,7 +2,7 @@ using ProjetoWindowsForms___Senac;
 
 namespace ProjetoWindowsForms___Senac
 {
-    internal static class Program
+    public static class Program
     {
         /// <summary>
         ///  The main entry point for the application.
@@ -13,7 +13,7 @@ namespace ProjetoWindowsForms___Senac
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FPage());
+            Application.Run(new CadastroUsuario());
         }
     }
 }

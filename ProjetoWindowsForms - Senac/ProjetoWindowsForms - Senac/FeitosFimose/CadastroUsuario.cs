@@ -1,9 +1,12 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
+using ProjetoWindowsForms___Senac.Classes;
 
 namespace ProjetoWindowsForms___Senac
 {
     public partial class CadastroUsuario : Form
     {
+
+        private List<Usuario> usuarios = new List<Usuario>();
         public CadastroUsuario()
         {
             InitializeComponent();
@@ -17,14 +20,17 @@ namespace ProjetoWindowsForms___Senac
             string telefone = txtTelefoneCadastroUser.Text;
             string data = txtDataCadastroUser.Text;
 
-            User novoUsuario = new User
+            Usuario novoUsuario = new Usuario
             {
-                Nome = nome,
-                CPF = cpf,
-                Email = email,
-
-
+               Nome = nome,
+               CPF = cpf,
+               Email = email,
+               Telefone = telefone,
+               Data = data
             };
+
+            usuarios.Add(novoUsuario);
+            MessageBox.Show($"Um novo usuário foi cadastrado!");
         }
     }
 }

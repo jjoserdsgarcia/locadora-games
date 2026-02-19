@@ -40,7 +40,7 @@
             txtCPFCadastroUser = new TextBox();
             txtEmailCadastroUser = new TextBox();
             txtTelefoneCadastroUser = new TextBox();
-            txtDataCadastroUser = new TextBox();
+            dtpData = new DateTimePicker();
             SuspendLayout();
             // 
             // label1
@@ -152,19 +152,19 @@
             txtTelefoneCadastroUser.Size = new Size(241, 23);
             txtTelefoneCadastroUser.TabIndex = 11;
             // 
-            // txtDataCadastroUser
+            // dtpData
             // 
-            txtDataCadastroUser.Location = new Point(45, 331);
-            txtDataCadastroUser.Name = "txtDataCadastroUser";
-            txtDataCadastroUser.Size = new Size(241, 23);
-            txtDataCadastroUser.TabIndex = 12;
+            dtpData.Location = new Point(45, 332);
+            dtpData.Name = "dtpData";
+            dtpData.Size = new Size(241, 23);
+            dtpData.TabIndex = 13;
             // 
             // CadastroUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(txtDataCadastroUser);
+            Controls.Add(dtpData);
             Controls.Add(txtTelefoneCadastroUser);
             Controls.Add(txtEmailCadastroUser);
             Controls.Add(txtCPFCadastroUser);
@@ -179,6 +179,7 @@
             Controls.Add(label1);
             Name = "CadastroUsuario";
             Text = "Tela Cadastro Usuário ";
+            
             ResumeLayout(false);
             PerformLayout();
         }
@@ -197,6 +198,6 @@
         private TextBox txtCPFCadastroUser;
         private TextBox txtEmailCadastroUser;
         private TextBox txtTelefoneCadastroUser;
-        private TextBox txtDataCadastroUser;
+        private DateTimePicker dtpData;
     }
 }

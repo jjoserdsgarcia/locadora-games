@@ -180,6 +180,7 @@
             Controls.Add(label2);
             Name = "CadastroGame";
             Text = "CadastroGame";
+            Load += CadastroGame_Load;
             ResumeLayout(false);
             PerformLayout();
         }

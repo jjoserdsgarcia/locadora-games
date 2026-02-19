@@ -1,11 +1,13 @@
-﻿namespace ProjetoWindowsForms___Senac
+﻿using ProjetoWindowsForms___Senac.Classes;
+
+namespace ProjetoWindowsForms___Senac
 {
     public partial class CadastroGame : Form
     {
-        private List<Jogo> jogos = new List<Jogo>(); 
+        private List<Jogo> jogos = new List<Jogo>();
 
         public CadastroGame()
-        {  
+        {
             InitializeComponent();
         }
 
@@ -41,6 +43,11 @@
 
             jogos.Add(novoJogo);
             MessageBox.Show("Jogo cadastrado com sucesso!");
+        }
+
+        private void CadastroGame_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
