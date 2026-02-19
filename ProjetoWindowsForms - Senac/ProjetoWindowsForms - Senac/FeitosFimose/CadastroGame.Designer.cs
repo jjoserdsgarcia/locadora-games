@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -41,67 +40,62 @@
             txtGenero = new TextBox();
             txtValor = new TextBox();
             txtAnoLanca = new TextBox();
+            label1 = new Label();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = SystemColors.ActiveCaptionText;
-            label1.ForeColor = Color.Transparent;
-            label1.Location = new Point(30, 24);
-            label1.Name = "label1";
-            label1.Size = new Size(116, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Cadastrar Novo Item";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(28, 74);
+            label2.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(32, 82);
             label2.Name = "label2";
-            label2.Size = new Size(85, 15);
+            label2.Size = new Size(101, 18);
             label2.TabIndex = 1;
-            label2.Text = "Nome do Jogo";
+            label2.Text = "Nome do Jogo:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(28, 154);
+            label3.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(32, 151);
             label3.Name = "label3";
-            label3.Size = new Size(65, 15);
+            label3.Size = new Size(84, 18);
             label3.TabIndex = 2;
-            label3.Text = "Plataforma";
+            label3.Text = "Plataforma:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(28, 231);
+            label4.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(33, 230);
             label4.Name = "label4";
-            label4.Size = new Size(45, 15);
+            label4.Size = new Size(57, 18);
             label4.TabIndex = 3;
-            label4.Text = "Gênero";
+            label4.Text = "Gênero:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(28, 311);
+            label5.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(33, 309);
             label5.Name = "label5";
-            label5.Size = new Size(33, 15);
+            label5.Size = new Size(48, 18);
             label5.TabIndex = 4;
-            label5.Text = "Valor";
+            label5.Text = "Valor:";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(315, 311);
+            label6.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(322, 308);
             label6.Name = "label6";
-            label6.Size = new Size(114, 15);
+            label6.Size = new Size(142, 18);
             label6.TabIndex = 5;
-            label6.Text = "Ano de Lançamento";
+            label6.Text = "Ano de Lançamento:";
             // 
             // btnVoltar
             // 
+            btnVoltar.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVoltar.Location = new Point(37, 390);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(100, 40);
@@ -111,6 +105,7 @@
             // 
             // btnSalvar
             // 
+            btnSalvar.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalvar.Location = new Point(360, 390);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(100, 40);
@@ -121,7 +116,7 @@
             // 
             // txtNomeJogo
             // 
-            txtNomeJogo.Location = new Point(32, 92);
+            txtNomeJogo.Location = new Point(32, 103);
             txtNomeJogo.Name = "txtNomeJogo";
             txtNomeJogo.Size = new Size(293, 23);
             txtNomeJogo.TabIndex = 8;
@@ -155,11 +150,22 @@
             txtAnoLanca.Size = new Size(124, 23);
             txtAnoLanca.TabIndex = 12;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Modern No. 20", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(28, 24);
+            label1.Name = "label1";
+            label1.Size = new Size(202, 24);
+            label1.TabIndex = 13;
+            label1.Text = "Cadastrar Novo Item";
+            // 
             // CadastroGame
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(512, 450);
+            Controls.Add(label1);
             Controls.Add(txtAnoLanca);
             Controls.Add(txtValor);
             Controls.Add(txtGenero);
@@ -172,7 +178,6 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
             Name = "CadastroGame";
             Text = "CadastroGame";
             ResumeLayout(false);
@@ -180,8 +185,6 @@
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
@@ -194,5 +197,6 @@
         private TextBox txtGenero;
         private TextBox txtValor;
         private TextBox txtAnoLanca;
+        private Label label1;
     }
 }

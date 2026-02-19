@@ -1,4 +1,4 @@
-﻿namespace ProjetoWindowsForms___Senac
+﻿namespace ProjetoWindowsForms___Senac.Classes
 {
     public class Jogo
     {

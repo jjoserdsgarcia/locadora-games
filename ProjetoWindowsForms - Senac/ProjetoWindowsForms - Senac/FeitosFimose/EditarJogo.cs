@@ -1,4 +1,5 @@
 ﻿using System.Configuration;
+using ProjetoWindowsForms___Senac.Classes;
 
 namespace ProjetoWindowsForms___Senac
 {
