@@ -24,7 +24,7 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoUser
                     Telefone,
                     DataNascimento
                     FROM
-                        User1
+                        Usuario
                 ");
 
             return usuario;
