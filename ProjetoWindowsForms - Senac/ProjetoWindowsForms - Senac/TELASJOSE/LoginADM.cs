@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoWindowsForms___Senac.TELAS;
 
 namespace ProjetoWindowsForms___Senac
 {
@@ -15,6 +16,14 @@ namespace ProjetoWindowsForms___Senac
         public LoginADM()
         {
             InitializeComponent();
+        }
+
+        private void btnENTRARADM_Click(object sender, EventArgs e)
+        {
+            var teladgvadm = new DgvTelaADMIN();
+            this.Hide();
+            teladgvadm.ShowDialog();
+            this.Show();
         }
     }
 }

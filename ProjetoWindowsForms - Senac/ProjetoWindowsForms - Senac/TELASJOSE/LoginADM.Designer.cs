@@ -82,6 +82,7 @@
             btnENTRARADM.TabIndex = 4;
             btnENTRARADM.Text = "Entrar";
             btnENTRARADM.UseVisualStyleBackColor = true;
+            btnENTRARADM.Click += btnENTRARADM_Click;
             // 
             // LoginADM
             // 
