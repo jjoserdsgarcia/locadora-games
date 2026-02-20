@@ -1,5 +1,7 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
+﻿using System.Threading.Tasks;
+using Microsoft.VisualBasic.ApplicationServices;
 using ProjetoWindowsForms___Senac.Classes;
+using ProjetoWindowsForms___Senac.Repositories.RepoUser;
 
 namespace ProjetoWindowsForms___Senac
 {
@@ -12,7 +14,7 @@ namespace ProjetoWindowsForms___Senac
             InitializeComponent();
         }
 
-        private void btnSalvarCadastroUser(object sender, EventArgs e)
+        private async Task btnSalvarCadastroUser(object sender, EventArgs e)
         {
             string nome = txtNomeCadastroUser.Text;
             string cpf = txtCPFCadastroUser.Text;
@@ -36,7 +38,8 @@ namespace ProjetoWindowsForms___Senac
                 DataNascimento = dataNascimento
             };
 
-            usuarios.Add(novoUsuario);
+            RepositoryUser.SalvarUsuario(novoUsuario);
+            
             MessageBox.Show($"Um novo usuário foi cadastrado!");
             Close();
 

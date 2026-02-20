@@ -32,5 +32,17 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoUser
 
 
         }
+
+        public static async void SalvarUsuario(Usuario usuario)
+        {
+            await conexaobanco.dbConnection().QueryAsync(
+
+                @"INSERT INTO Usuario (Nome, CPF, Email, Telefone, DataNascimento)
+                    VALUES (@Nome, @CPF, @Email, @Telefone, @DataNascimento);
+                        
+
+
+                ",usuario);
+        }
     }
 }
