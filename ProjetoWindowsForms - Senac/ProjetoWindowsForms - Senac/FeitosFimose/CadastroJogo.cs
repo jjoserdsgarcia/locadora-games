@@ -2,11 +2,11 @@
 
 namespace ProjetoWindowsForms___Senac
 {
-    public partial class CadastroGame : Form
+    public partial class CadastroJogo : Form
     {
         private List<Jogo> jogos = new List<Jogo>();
 
-        public CadastroGame()
+        public CadastroJogo()
         {
             InitializeComponent();
         }
@@ -20,6 +20,10 @@ namespace ProjetoWindowsForms___Senac
         {
 
         }
+        private void txtNJogo(object sender, EventArgs e)
+        {
+
+        }
 
 
         private void btnSalvarJogo(object sender, EventArgs e)
@@ -30,7 +34,7 @@ namespace ProjetoWindowsForms___Senac
             string plataforma = txtPlataforma.Text;
             string genero = txtGenero.Text;
             string valor = txtValor.Text;
-            string ano = txtAnoLanca.Text;
+            string anoLancamentoCadastro = txtAnoLancamento.Text;
 
             Jogo novoJogo = new Jogo()
             {
@@ -38,14 +42,14 @@ namespace ProjetoWindowsForms___Senac
                 Plataforma = plataforma,
                 Genero = genero,
                 Valor = decimal.Parse(txtValor.Text),
-                Ano = int.Parse(txtAnoLanca.Text)
+                Ano = int.Parse(anoLancamentoCadastro)
             };
 
             jogos.Add(novoJogo);
             MessageBox.Show("Jogo cadastrado com sucesso!");
         }
 
-        private void CadastroGame_Load(object sender, EventArgs e)
+        private void btnVoltar_Click(object sender, EventArgs e)
         {
 
         }

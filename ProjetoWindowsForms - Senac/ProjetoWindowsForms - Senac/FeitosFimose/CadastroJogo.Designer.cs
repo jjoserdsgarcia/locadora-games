@@ -1,6 +1,6 @@
 ﻿namespace ProjetoWindowsForms___Senac
 {
-    partial class CadastroGame
+    partial class CadastroJogo
     {
         /// <summary>
         /// Required designer variable.
@@ -39,7 +39,7 @@
             txtPlataforma = new TextBox();
             txtGenero = new TextBox();
             txtValor = new TextBox();
-            txtAnoLanca = new TextBox();
+            txtAnoLancamento = new TextBox();
             label1 = new Label();
             SuspendLayout();
             // 
@@ -102,6 +102,7 @@
             btnVoltar.TabIndex = 6;
             btnVoltar.Text = "Voltar";
             btnVoltar.UseVisualStyleBackColor = true;
+            btnVoltar.Click += btnVoltar_Click;
             // 
             // btnSalvar
             // 
@@ -120,6 +121,7 @@
             txtNomeJogo.Name = "txtNomeJogo";
             txtNomeJogo.Size = new Size(293, 23);
             txtNomeJogo.TabIndex = 8;
+            txtNomeJogo.Click += txtNJogo;
             // 
             // txtPlataforma
             // 
@@ -143,12 +145,12 @@
             txtValor.Size = new Size(100, 23);
             txtValor.TabIndex = 11;
             // 
-            // txtAnoLanca
+            // txtAnoLancamento
             // 
-            txtAnoLanca.Location = new Point(322, 329);
-            txtAnoLanca.Name = "txtAnoLanca";
-            txtAnoLanca.Size = new Size(124, 23);
-            txtAnoLanca.TabIndex = 12;
+            txtAnoLancamento.Location = new Point(322, 329);
+            txtAnoLancamento.Name = "txtAnoLancamento";
+            txtAnoLancamento.Size = new Size(124, 23);
+            txtAnoLancamento.TabIndex = 12;
             // 
             // label1
             // 
@@ -160,13 +162,13 @@
             label1.TabIndex = 13;
             label1.Text = "Cadastrar Novo Item";
             // 
-            // CadastroGame
+            // CadastroJogo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(512, 450);
             Controls.Add(label1);
-            Controls.Add(txtAnoLanca);
+            Controls.Add(txtAnoLancamento);
             Controls.Add(txtValor);
             Controls.Add(txtGenero);
             Controls.Add(txtPlataforma);
@@ -178,9 +180,8 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Name = "CadastroGame";
-            Text = "CadastroGame";
-            Load += CadastroGame_Load;
+            Name = "CadastroJogo";
+            Text = "CadastroJogo";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -197,7 +198,7 @@
         private TextBox txtPlataforma;
         private TextBox txtGenero;
         private TextBox txtValor;
-        private TextBox txtAnoLanca;
+        private TextBox txtAnoLancamento;
         private Label label1;
     }
 }

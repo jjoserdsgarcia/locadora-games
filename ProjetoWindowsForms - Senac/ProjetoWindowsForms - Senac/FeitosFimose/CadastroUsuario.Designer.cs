@@ -102,6 +102,7 @@
             button1.TabIndex = 5;
             button1.Text = "Cancelar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += btnCancelarCadUsuario;
             // 
             // button2
             // 
@@ -179,7 +180,6 @@
             Controls.Add(label1);
             Name = "CadastroUsuario";
             Text = "Tela Cadastro Usuário ";
-            
             ResumeLayout(false);
             PerformLayout();
         }
