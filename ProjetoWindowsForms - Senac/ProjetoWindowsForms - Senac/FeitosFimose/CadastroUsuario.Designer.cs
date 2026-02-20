@@ -46,56 +46,56 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(45, 74);
             label1.Name = "label1";
-            label1.Size = new Size(48, 18);
+            label1.Size = new Size(55, 20);
             label1.TabIndex = 0;
             label1.Text = "Nome:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(45, 132);
             label2.Name = "label2";
-            label2.Size = new Size(41, 18);
+            label2.Size = new Size(44, 20);
             label2.TabIndex = 1;
             label2.Text = "CPF:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.Location = new Point(45, 187);
             label3.Name = "label3";
-            label3.Size = new Size(52, 18);
+            label3.Size = new Size(52, 20);
             label3.TabIndex = 2;
             label3.Text = "Email:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.Location = new Point(45, 249);
             label4.Name = "label4";
-            label4.Size = new Size(67, 18);
+            label4.Size = new Size(75, 20);
             label4.TabIndex = 3;
             label4.Text = "Telefone:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.Location = new Point(45, 311);
             label5.Name = "label5";
-            label5.Size = new Size(141, 18);
+            label5.Size = new Size(158, 20);
             label5.TabIndex = 4;
             label5.Text = "Data de Nascimento:";
             // 
             // button1
             // 
-            button1.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.Location = new Point(62, 388);
             button1.Name = "button1";
             button1.Size = new Size(95, 40);
@@ -106,7 +106,7 @@
             // 
             // button2
             // 
-            button2.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.Location = new Point(616, 388);
             button2.Name = "button2";
             button2.Size = new Size(90, 40);
@@ -118,10 +118,10 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Modern No. 20", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.Location = new Point(41, 21);
             label6.Name = "label6";
-            label6.Size = new Size(321, 24);
+            label6.Size = new Size(361, 25);
             label6.TabIndex = 7;
             label6.Text = "Digite as informações do Usuário";
             // 
@@ -180,6 +180,7 @@
             Controls.Add(label1);
             Name = "CadastroUsuario";
             Text = "Tela Cadastro Usuário ";
+            Load += CadastroUsuario_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -21,5 +21,10 @@ namespace ProjetoWindowsForms___Senac
         {
 
         }
+
+        private void EditarUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

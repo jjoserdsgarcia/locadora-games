@@ -45,30 +45,30 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Modern No. 20", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(32, 36);
             label1.Name = "label1";
-            label1.Size = new Size(104, 15);
+            label1.Size = new Size(113, 16);
             label1.TabIndex = 0;
             label1.Text = "Buscar Usuário";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(32, 62);
             label2.Name = "label2";
-            label2.Size = new Size(103, 18);
+            label2.Size = new Size(100, 20);
             label2.TabIndex = 1;
             label2.Text = "ID ou E-Mail:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.Location = new Point(36, 166);
             label3.Name = "label3";
-            label3.Size = new Size(48, 18);
+            label3.Size = new Size(55, 20);
             label3.TabIndex = 2;
             label3.Text = "Nome:";
             label3.Click += label3_Click;
@@ -76,20 +76,20 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.Location = new Point(36, 213);
             label4.Name = "label4";
-            label4.Size = new Size(59, 18);
+            label4.Size = new Size(57, 20);
             label4.TabIndex = 3;
             label4.Text = "E-Mail:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.Location = new Point(36, 260);
             label5.Name = "label5";
-            label5.Size = new Size(67, 18);
+            label5.Size = new Size(75, 20);
             label5.TabIndex = 4;
             label5.Text = "Telefone:";
             // 
@@ -103,7 +103,7 @@
             // 
             // button1
             // 
-            button1.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.Location = new Point(542, 56);
             button1.Name = "button1";
             button1.Padding = new Padding(15, 0, 15, 5);
@@ -135,7 +135,7 @@
             // 
             // button3
             // 
-            button3.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button3.Location = new Point(542, 361);
             button3.Name = "button3";
             button3.Padding = new Padding(15, 0, 15, 5);
@@ -146,7 +146,7 @@
             // 
             // button4
             // 
-            button4.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button4.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button4.Location = new Point(386, 361);
             button4.Name = "button4";
             button4.Padding = new Padding(15, 0, 15, 5);
@@ -174,6 +174,7 @@
             Controls.Add(label1);
             Name = "EditarUsuario";
             Text = "EditarUsuario";
+            Load += EditarUsuario_Load;
             ResumeLayout(false);
             PerformLayout();
         }

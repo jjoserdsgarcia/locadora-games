@@ -14,20 +14,56 @@ namespace ProjetoWindowsForms___Senac
             InitializeComponent();
         }
 
-        private async Task btnSalvarCadastroUser(object sender, EventArgs e)
+        private void btnSalvarCadastroUser(object sender, EventArgs e)
         {
             string nome = txtNomeCadastroUser.Text;
             string cpf = txtCPFCadastroUser.Text;
             string email = txtEmailCadastroUser.Text;
             string telefone = txtTelefoneCadastroUser.Text;
             DateTime dataNascimento = dtpData.Value;
+            
+            string erros = "";
 
-            if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(cpf) ||
-               string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(telefone) )
+            if (string.IsNullOrWhiteSpace(nome))
             {
-                MessageBox.Show("Por Favor, Preencha todos os campos!");
-                    return;
+                erros += "• Nome é obrigatório.\n";
             }
+
+            if (string.IsNullOrWhiteSpace(cpf))
+            {
+                erros += "• CPF é obrigatório.\n";
+            }
+
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                erros += "• Email é obrigatório.\n";
+            }
+
+            if (string.IsNullOrWhiteSpace(telefone))
+            {
+                erros += "• Telefone é obrigatório.\n";
+            }
+
+            if (erros != "")
+            {
+                MessageBox.Show(erros, "Campos obrigatórios");
+                return;
+            }
+
+            if (!cpf.All(char.IsDigit))
+            {
+                MessageBox.Show("CPF deve conter apenas números.");
+                txtCPFCadastroUser.Focus();
+                return;
+            }
+
+            if (cpf.Length != 11)
+            {
+                MessageBox.Show("CPF deve conter apenas 11 números.");
+                txtCPFCadastroUser.Focus();
+                return;
+            }
+
 
             Usuario novoUsuario = new Usuario
             {
@@ -39,7 +75,7 @@ namespace ProjetoWindowsForms___Senac
             };
 
             RepositoryUser.SalvarUsuario(novoUsuario);
-            
+
             MessageBox.Show($"Um novo usuário foi cadastrado!");
             Close();
 
@@ -48,6 +84,11 @@ namespace ProjetoWindowsForms___Senac
         private void btnCancelarCadUsuario(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void CadastroUsuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
