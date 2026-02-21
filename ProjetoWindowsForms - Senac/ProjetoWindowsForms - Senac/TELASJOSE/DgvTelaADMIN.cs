@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoWindowsForms___Senac.Repositories.RepoUser;
+using ProjetoWindowsForms___Senac.TELAS;
 
 namespace ProjetoWindowsForms___Senac
 {
@@ -15,6 +17,28 @@ namespace ProjetoWindowsForms___Senac
         public DgvTelaADMIN()
         {
             InitializeComponent();
+            Load += DgvTelaADMIN_Load;
+        }
+
+        private async void DgvTelaADMIN_Load(object? sender, EventArgs e)
+        {
+            await atualizartabelaadmindgv();
+        }
+
+        private async Task atualizartabelaadmindgv()
+        {
+            var usuario = await RepositoryUser.ObterTodos();
+            dgvADMIN.DataSource = usuario;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            var telacadastrousuario = new CadastroUsuario();
+            this.Hide();
+            telacadastrousuario.ShowDialog();
+            this.Show();
+
         }
     }
 }

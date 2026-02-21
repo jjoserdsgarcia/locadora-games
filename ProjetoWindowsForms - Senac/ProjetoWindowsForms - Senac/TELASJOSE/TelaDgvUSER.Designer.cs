@@ -39,7 +39,7 @@
             dgvMAINPAGE.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvMAINPAGE.Location = new Point(1, -1);
             dgvMAINPAGE.Name = "dgvMAINPAGE";
-            dgvMAINPAGE.Size = new Size(798, 195);
+            dgvMAINPAGE.Size = new Size(798, 257);
             dgvMAINPAGE.TabIndex = 0;
             // 
             // btnALUGAR
