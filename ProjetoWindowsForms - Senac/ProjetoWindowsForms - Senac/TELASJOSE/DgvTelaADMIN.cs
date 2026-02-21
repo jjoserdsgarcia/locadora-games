@@ -34,7 +34,7 @@ namespace ProjetoWindowsForms___Senac
         private void button1_Click(object sender, EventArgs e)
         {
 
-            var telacadastrousuario = new CadastroUsuario();
+            var telacadastrousuario = new TelaCadastroUsuario();
             this.Hide();
             telacadastrousuario.ShowDialog();
             this.Show();

@@ -5,11 +5,11 @@ using ProjetoWindowsForms___Senac.Repositories.RepoUser;
 
 namespace ProjetoWindowsForms___Senac
 {
-    public partial class CadastroUsuario : Form
+    public partial class TelaCadastroUsuario : Form
     {
 
         private List<Usuario> usuarios = new List<Usuario>();
-        public CadastroUsuario()
+        public TelaCadastroUsuario()
         {
             InitializeComponent();
         }
@@ -64,7 +64,19 @@ namespace ProjetoWindowsForms___Senac
                 return;
             }
 
+            if (telefone.Length != 11)
+            {
+                MessageBox.Show("Telefone deve conter apenas números.");
+                txtTelefoneCadastroUser.Focus();
+                return;
+            }
 
+            if (telefone.All(char.IsDigit))
+            {
+                MessageBox.Show("Telefone deve conter 11 números com DDD.");
+                txtTelefoneCadastroUser.Focus();
+                return;
+            }
             Usuario novoUsuario = new Usuario
             {
                 Nome = nome,

@@ -1,6 +1,6 @@
 ﻿namespace ProjetoWindowsForms___Senac
 {
-    partial class CadastroUsuario
+    partial class TelaCadastroUsuario
     {
         /// <summary>
         /// Required designer variable.
