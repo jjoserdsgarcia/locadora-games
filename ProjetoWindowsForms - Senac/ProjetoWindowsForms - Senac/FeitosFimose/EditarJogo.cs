@@ -18,7 +18,7 @@ namespace ProjetoWindowsForms___Senac
             lblGenero.Text = jogo.Genero;
             lblAno.Text = jogo.Ano.ToString();
 
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,6 +42,11 @@ namespace ProjetoWindowsForms___Senac
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNome_Click(object sender, EventArgs e)
         {
 
         }

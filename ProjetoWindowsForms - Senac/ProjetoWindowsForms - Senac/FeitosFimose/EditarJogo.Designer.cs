@@ -36,13 +36,7 @@
             lblGenero = new Label();
             lblAno = new Label();
             label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
             label12 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
             textBox4 = new TextBox();
             btnSalvarEdit = new Button();
             btnCancelarEdit = new Button();
@@ -63,9 +57,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(195, 72);
+            label2.Font = new Font("Modern No. 20", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(195, 54);
             label2.Name = "label2";
-            label2.Size = new Size(118, 15);
+            label2.Size = new Size(180, 24);
             label2.TabIndex = 1;
             label2.Text = "Informações do Jogo";
             label2.Click += label2_Click;
@@ -73,45 +68,51 @@
             // lblID
             // 
             lblID.AutoSize = true;
+            lblID.Font = new Font("Modern No. 20", 15.75F);
             lblID.Location = new Point(195, 111);
             lblID.Name = "lblID";
-            lblID.Size = new Size(21, 15);
+            lblID.Size = new Size(39, 24);
             lblID.TabIndex = 2;
             lblID.Text = "ID:";
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Location = new Point(195, 170);
+            lblNome.Font = new Font("Modern No. 20", 15.75F);
+            lblNome.Location = new Point(195, 157);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(88, 15);
+            lblNome.Size = new Size(68, 24);
             lblNome.TabIndex = 3;
-            lblNome.Text = "Nome do Jogo:";
+            lblNome.Text = "Título:";
+            lblNome.Click += lblNome_Click;
             // 
             // lblPlataforma
             // 
             lblPlataforma.AutoSize = true;
-            lblPlataforma.Location = new Point(195, 206);
+            lblPlataforma.Font = new Font("Modern No. 20", 15.75F);
+            lblPlataforma.Location = new Point(195, 193);
             lblPlataforma.Name = "lblPlataforma";
-            lblPlataforma.Size = new Size(68, 15);
+            lblPlataforma.Size = new Size(112, 24);
             lblPlataforma.TabIndex = 4;
             lblPlataforma.Text = "Plataforma:";
             // 
             // lblGenero
             // 
             lblGenero.AutoSize = true;
-            lblGenero.Location = new Point(195, 242);
+            lblGenero.Font = new Font("Modern No. 20", 15.75F);
+            lblGenero.Location = new Point(195, 229);
             lblGenero.Name = "lblGenero";
-            lblGenero.Size = new Size(48, 15);
+            lblGenero.Size = new Size(73, 24);
             lblGenero.TabIndex = 5;
             lblGenero.Text = "Gênero:";
             // 
             // lblAno
             // 
             lblAno.AutoSize = true;
-            lblAno.Location = new Point(195, 275);
+            lblAno.Font = new Font("Modern No. 20", 15.75F);
+            lblAno.Location = new Point(195, 262);
             lblAno.Name = "lblAno";
-            lblAno.Size = new Size(32, 15);
+            lblAno.Size = new Size(49, 24);
             lblAno.TabIndex = 6;
             lblAno.Text = "Ano:";
             lblAno.Click += label7_Click;
@@ -125,66 +126,18 @@
             label8.TabIndex = 7;
             label8.Text = "Dados da Locação";
             // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(21, 368);
-            label9.Name = "label9";
-            label9.Size = new Size(89, 15);
-            label9.TabIndex = 8;
-            label9.Text = "Preço da Diária:";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(21, 413);
-            label10.Name = "label10";
-            label10.Size = new Size(72, 15);
-            label10.TabIndex = 9;
-            label10.Text = "Quantidade:";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(308, 368);
-            label11.Name = "label11";
-            label11.Size = new Size(99, 15);
-            label11.TabIndex = 10;
-            label11.Text = "Multa por Atraso:";
-            // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(308, 409);
+            label12.Location = new Point(58, 373);
             label12.Name = "label12";
             label12.Size = new Size(42, 15);
             label12.TabIndex = 11;
             label12.Text = "Status:";
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(117, 365);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 12;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(116, 409);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 13;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(433, 365);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 14;
-            // 
             // textBox4
             // 
-            textBox4.Location = new Point(433, 405);
+            textBox4.Location = new Point(116, 370);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(100, 23);
             textBox4.TabIndex = 15;
@@ -225,13 +178,7 @@
             Controls.Add(btnCancelarEdit);
             Controls.Add(btnSalvarEdit);
             Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
             Controls.Add(label12);
-            Controls.Add(label11);
-            Controls.Add(label10);
-            Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(lblAno);
             Controls.Add(lblGenero);
@@ -258,16 +205,11 @@
         private Label lblGenero;
         private Label lblAno;
         private Label label8;
-        private Label label9;
-        private Label label10;
-        private Label label11;
         private Label label12;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
         private TextBox textBox4;
         private Button btnSalvarEdit;
         private Button btnCancelarEdit;
         private PictureBox pictureBox1;
+        
     }
 }

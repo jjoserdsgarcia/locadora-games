@@ -202,8 +202,9 @@
             btnCANCELARALUGAR.Name = "btnCANCELARALUGAR";
             btnCANCELARALUGAR.Size = new Size(157, 66);
             btnCANCELARALUGAR.TabIndex = 18;
-            btnCANCELARALUGAR.Text = "CANCELAR";
+            btnCANCELARALUGAR.Text = "VOLTAR";
             btnCANCELARALUGAR.UseVisualStyleBackColor = true;
+            btnCANCELARALUGAR.Click += btnCANCELARALUGAR_Click;
             // 
             // TelaALUGAR
             // 
