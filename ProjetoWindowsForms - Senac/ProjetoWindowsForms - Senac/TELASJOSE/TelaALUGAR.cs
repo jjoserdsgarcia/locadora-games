@@ -35,5 +35,10 @@ namespace ProjetoWindowsForms___Senac.TELAS
             this.Show();
 
         }
+
+        private void btnCANCELARALUGAR_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
