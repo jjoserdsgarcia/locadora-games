@@ -5,9 +5,22 @@ using ProjetoWindowsForms___Senac.Repositories.RepoUser;
 
 namespace ProjetoWindowsForms___Senac
 {
+    using System.Net.Mail;
+
     public partial class TelaCadastroUsuario : Form
     {
-
+        private bool emailValido(string email)
+        {
+            try
+            {
+                MailAddress mail = new MailAddress(email);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         private List<Usuario> usuarios = new List<Usuario>();
         public TelaCadastroUsuario()
         {
@@ -21,7 +34,7 @@ namespace ProjetoWindowsForms___Senac
             string email = txtEmailCadastroUser.Text;
             string telefone = txtTelefoneCadastroUser.Text;
             DateTime dataNascimento = dtpData.Value;
-            
+
             string erros = "";
 
             if (string.IsNullOrWhiteSpace(nome))
@@ -37,6 +50,10 @@ namespace ProjetoWindowsForms___Senac
             if (string.IsNullOrWhiteSpace(email))
             {
                 erros += "• Email é obrigatório.\n";
+            }
+            else if (!emailValido(email)) 
+            { 
+                erros += "E-Mail inválido. \n";
             }
 
             if (string.IsNullOrWhiteSpace(telefone))
@@ -66,7 +83,7 @@ namespace ProjetoWindowsForms___Senac
 
             if (telefone.Length != 11)
             {
-                MessageBox.Show("Telefone deve conter apenas números.");
+                MessageBox.Show("Telefone deve conter 11 números com DDD");
                 txtTelefoneCadastroUser.Focus();
                 return;
             }

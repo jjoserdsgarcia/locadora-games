@@ -40,5 +40,15 @@ namespace ProjetoWindowsForms___Senac
             this.Show();
 
         }
+
+        private void DgvTelaADMIN_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
