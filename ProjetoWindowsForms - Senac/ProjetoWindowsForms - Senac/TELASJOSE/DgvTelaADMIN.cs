@@ -31,9 +31,19 @@ namespace ProjetoWindowsForms___Senac
             dgvADMIN.DataSource = usuario;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void DgvTelaADMIN_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvADMINCADASTRAR_Click(object sender, EventArgs e)
+        {
             var telacadastrousuario = new TelaCadastroUsuario();
             this.Hide();
             telacadastrousuario.ShowDialog();
