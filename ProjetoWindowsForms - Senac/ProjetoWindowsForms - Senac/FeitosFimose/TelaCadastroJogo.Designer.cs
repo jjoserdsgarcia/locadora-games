@@ -1,6 +1,6 @@
 ﻿namespace ProjetoWindowsForms___Senac
 {
-    partial class CadastroJogo
+    partial class TelaCadastroJogo
     {
         /// <summary>
         /// Required designer variable.
@@ -77,11 +77,11 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(33, 309);
+            label5.Location = new Point(31, 309);
             label5.Name = "label5";
-            label5.Size = new Size(50, 20);
+            label5.Size = new Size(117, 20);
             label5.TabIndex = 4;
-            label5.Text = "Valor:";
+            label5.Text = "Valor Semanal:";
             // 
             // label6
             // 
@@ -162,7 +162,7 @@
             label1.TabIndex = 13;
             label1.Text = "Cadastrar Novo Item";
             // 
-            // CadastroJogo
+            // TelaCadastroJogo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -180,8 +180,9 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Name = "CadastroJogo";
+            Name = "TelaCadastroJogo";
             Text = "TelaCadastroJogo";
+            Load += CadastroJogo_Load;
             ResumeLayout(false);
             PerformLayout();
         }

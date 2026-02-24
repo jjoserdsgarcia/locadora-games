@@ -99,6 +99,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "LoginADM";
             Text = "LoginADM";
+            Load += LoginADM_Load;
             ResumeLayout(false);
             PerformLayout();
         }

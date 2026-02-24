@@ -12,13 +12,13 @@ namespace ProjetoWindowsForms___Senac
             jogo = jogoRecebido;
 
             lblEditando.Text = $"Editando: {jogo.Titulo}";
-            lblID.Text = jogo.Id.ToString();
+           
             lblNome.Text = jogo.Titulo;
             lblPlataforma.Text = jogo.Plataforma;
             lblGenero.Text = jogo.Genero;
             lblAno.Text = jogo.Ano.ToString();
 
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,6 +42,11 @@ namespace ProjetoWindowsForms___Senac
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNome_Click(object sender, EventArgs e)
         {
 
         }

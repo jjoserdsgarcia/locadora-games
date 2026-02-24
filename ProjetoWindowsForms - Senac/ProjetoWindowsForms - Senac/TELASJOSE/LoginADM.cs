@@ -25,5 +25,10 @@ namespace ProjetoWindowsForms___Senac
             teladgvadm.ShowDialog();
             this.Show();
         }
+
+        private void LoginADM_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
