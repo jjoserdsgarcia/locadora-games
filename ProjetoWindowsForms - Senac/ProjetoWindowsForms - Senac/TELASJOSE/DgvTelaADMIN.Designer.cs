@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             dgvADMIN = new DataGridView();
-            btnDGVADMINEDITAR = new Button();
+            dgvADMINEDITAR = new Button();
             dgvADMINJOGOS = new Button();
             dgvADMINUSUARIOS = new Button();
             dgvADMINCADASTRAR = new Button();
@@ -45,15 +45,15 @@
             dgvADMIN.Size = new Size(601, 260);
             dgvADMIN.TabIndex = 0;
             // 
-            // btnDGVADMINEDITAR
+            // dgvADMINEDITAR
             // 
-            btnDGVADMINEDITAR.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            btnDGVADMINEDITAR.Location = new Point(484, 366);
-            btnDGVADMINEDITAR.Name = "btnDGVADMINEDITAR";
-            btnDGVADMINEDITAR.Size = new Size(108, 40);
-            btnDGVADMINEDITAR.TabIndex = 2;
-            btnDGVADMINEDITAR.Text = "Editar";
-            btnDGVADMINEDITAR.UseVisualStyleBackColor = true;
+            dgvADMINEDITAR.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            dgvADMINEDITAR.Location = new Point(484, 366);
+            dgvADMINEDITAR.Name = "dgvADMINEDITAR";
+            dgvADMINEDITAR.Size = new Size(108, 40);
+            dgvADMINEDITAR.TabIndex = 2;
+            dgvADMINEDITAR.Text = "Editar";
+            dgvADMINEDITAR.UseVisualStyleBackColor = true;
             // 
             // dgvADMINJOGOS
             // 
@@ -84,6 +84,7 @@
             dgvADMINCADASTRAR.TabIndex = 7;
             dgvADMINCADASTRAR.Text = "Cadastrar";
             dgvADMINCADASTRAR.UseVisualStyleBackColor = true;
+            dgvADMINCADASTRAR.Click += dgvADMINCADASTRAR_Click;
             // 
             // dgvADMINEXCLUIR
             // 
@@ -105,7 +106,7 @@
             Controls.Add(dgvADMINCADASTRAR);
             Controls.Add(dgvADMINUSUARIOS);
             Controls.Add(dgvADMINJOGOS);
-            Controls.Add(btnDGVADMINEDITAR);
+            Controls.Add(dgvADMINEDITAR);
             Controls.Add(dgvADMIN);
             Name = "DgvTelaADMIN";
             Text = "Tela Principal - ADMIN";
@@ -118,7 +119,7 @@
 
         private DataGridView dgvADMIN;
         private Button btnDGVADMINCRIAR;
-        private Button btnDGVADMINEDITAR;
+        private Button dgvADMINEDITAR;
         private Button button1;
         private Button button2;
         private Button dgvADMINJOGOS;

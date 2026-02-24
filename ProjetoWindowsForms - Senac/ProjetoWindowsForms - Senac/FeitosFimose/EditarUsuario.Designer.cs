@@ -35,11 +35,11 @@
             label5 = new Label();
             txtBuscarUsuarioEditar = new TextBox();
             button1 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            txtNomeEditUsuario = new TextBox();
+            txtEmailEditUsuario = new TextBox();
+            txtTelefoneEditUsuario = new TextBox();
             button3 = new Button();
-            button4 = new Button();
+            btnCancelarEditUsuario = new Button();
             SuspendLayout();
             // 
             // label1
@@ -112,59 +112,61 @@
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtNomeEditUsuario
             // 
-            textBox1.Location = new Point(147, 166);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(337, 23);
-            textBox1.TabIndex = 7;
+            txtNomeEditUsuario.Location = new Point(147, 166);
+            txtNomeEditUsuario.Name = "txtNomeEditUsuario";
+            txtNomeEditUsuario.Size = new Size(337, 23);
+            txtNomeEditUsuario.TabIndex = 7;
             // 
-            // textBox2
+            // txtEmailEditUsuario
             // 
-            textBox2.Location = new Point(147, 213);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(337, 23);
-            textBox2.TabIndex = 8;
+            txtEmailEditUsuario.Location = new Point(147, 213);
+            txtEmailEditUsuario.Name = "txtEmailEditUsuario";
+            txtEmailEditUsuario.Size = new Size(337, 23);
+            txtEmailEditUsuario.TabIndex = 8;
             // 
-            // textBox3
+            // txtTelefoneEditUsuario
             // 
-            textBox3.Location = new Point(147, 260);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(337, 23);
-            textBox3.TabIndex = 9;
+            txtTelefoneEditUsuario.Location = new Point(147, 260);
+            txtTelefoneEditUsuario.Name = "txtTelefoneEditUsuario";
+            txtTelefoneEditUsuario.Size = new Size(337, 23);
+            txtTelefoneEditUsuario.TabIndex = 9;
             // 
             // button3
             // 
-            button3.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button3.Location = new Point(542, 361);
             button3.Name = "button3";
-            button3.Padding = new Padding(15, 0, 15, 5);
-            button3.Size = new Size(131, 30);
+            button3.Padding = new Padding(15, 0, 15, 0);
+            button3.Size = new Size(131, 40);
             button3.TabIndex = 11;
-            button3.Text = "Buscar";
+            button3.Text = "Salvar";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += btnSalvarEditUsuario;
             // 
-            // button4
+            // btnCancelarEditUsuario
             // 
-            button4.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.Location = new Point(386, 361);
-            button4.Name = "button4";
-            button4.Padding = new Padding(15, 0, 15, 5);
-            button4.Size = new Size(131, 30);
-            button4.TabIndex = 12;
-            button4.Text = "Cancelar";
-            button4.UseVisualStyleBackColor = true;
+            btnCancelarEditUsuario.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCancelarEditUsuario.Location = new Point(386, 361);
+            btnCancelarEditUsuario.Name = "btnCancelarEditUsuario";
+            btnCancelarEditUsuario.Padding = new Padding(15, 0, 15, 0);
+            btnCancelarEditUsuario.Size = new Size(131, 40);
+            btnCancelarEditUsuario.TabIndex = 12;
+            btnCancelarEditUsuario.Text = "Cancelar";
+            btnCancelarEditUsuario.UseVisualStyleBackColor = true;
+            btnCancelarEditUsuario.Click += btnCancelarEditarUsuario;
             // 
             // EditarUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(804, 450);
-            Controls.Add(button4);
+            Controls.Add(btnCancelarEditUsuario);
             Controls.Add(button3);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtTelefoneEditUsuario);
+            Controls.Add(txtEmailEditUsuario);
+            Controls.Add(txtNomeEditUsuario);
             Controls.Add(button1);
             Controls.Add(txtBuscarUsuarioEditar);
             Controls.Add(label5);
@@ -188,10 +190,10 @@
         private Label label5;
         private TextBox txtBuscarUsuarioEditar;
         private Button button1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox txtNomeEditUsuario;
+        private TextBox txtEmailEditUsuario;
+        private TextBox txtTelefoneEditUsuario;
         private Button button3;
-        private Button button4;
+        private Button btnCancelarEditUsuario;
     }
 }

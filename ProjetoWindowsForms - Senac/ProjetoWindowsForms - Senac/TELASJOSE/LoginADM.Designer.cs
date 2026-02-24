@@ -97,6 +97,7 @@
             Controls.Add(lblUsuarioADM);
             Name = "LoginADM";
             Text = "LoginADM";
+            Load += LoginADM_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -2,11 +2,11 @@
 
 namespace ProjetoWindowsForms___Senac
 {
-    public partial class CadastroJogo : Form
+    public partial class TelaCadastroJogo : Form
     {
         private List<Jogo> jogos = new List<Jogo>();
 
-        public CadastroJogo()
+        public TelaCadastroJogo()
         {
             InitializeComponent();
         }
@@ -50,6 +50,11 @@ namespace ProjetoWindowsForms___Senac
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void CadastroJogo_Load(object sender, EventArgs e)
         {
 
         }
