@@ -26,5 +26,20 @@ namespace ProjetoWindowsForms___Senac
         {
 
         }
+
+        private void btnCancelarEditarUsuario(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnSalvarEditUsuario(object sender, EventArgs e)
+        {
+            string nomeUsuarioEditado = txtNomeEditUsuario.Text;
+            string emailUsuarioEditado = txtEmailEditUsuario.Text;
+            string telefoneUsuarioEditado = txtTelefoneEditUsuario.Text;
+
+            MessageBox.Show("Usuário atualizado com sucesso!");
+            Close();
+        }
     }
 }

@@ -112,6 +112,7 @@ namespace ProjetoWindowsForms___Senac
 
         private void btnCancelarCadUsuario(object sender, EventArgs e)
         {
+            
             Close();
         }
 
