@@ -12,7 +12,7 @@ namespace ProjetoWindowsForms___Senac
             jogo = jogoRecebido;
 
             lblEditando.Text = $"Editando: {jogo.Titulo}";
-            lblID.Text = jogo.Id.ToString();
+           
             lblNome.Text = jogo.Titulo;
             lblPlataforma.Text = jogo.Plataforma;
             lblGenero.Text = jogo.Genero;

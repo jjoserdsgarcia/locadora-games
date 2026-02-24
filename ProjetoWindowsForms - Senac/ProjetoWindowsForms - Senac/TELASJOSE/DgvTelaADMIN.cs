@@ -48,6 +48,10 @@ namespace ProjetoWindowsForms___Senac
             this.Hide();
             telacadastrousuario.ShowDialog();
             this.Show();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 40b2705c1ea0b8f4c7b0a45313f013e37ea9b188
         }
     }
 }

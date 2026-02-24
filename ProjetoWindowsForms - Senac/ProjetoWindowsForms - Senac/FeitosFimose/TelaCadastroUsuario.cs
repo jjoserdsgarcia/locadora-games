@@ -88,12 +88,12 @@ namespace ProjetoWindowsForms___Senac
                 return;
             }
 
-            if (telefone.All(char.IsDigit))
-            {
-                MessageBox.Show("Telefone deve conter 11 números com DDD.");
-                txtTelefoneCadastroUser.Focus();
-                return;
-            }
+            //if (telefone.All(char.IsDigit))
+            //{
+            //    MessageBox.Show("Telefone deve conter 11 números com DDD.");
+            //    txtTelefoneCadastroUser.Focus();
+            //    return;
+            //}
             Usuario novoUsuario = new Usuario
             {
                 Nome = nome,
