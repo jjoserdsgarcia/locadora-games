@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FPage));
             lblOpcaoLog = new Label();
             btnUser = new Button();
             btnAdm = new Button();
@@ -108,6 +109,7 @@
             Controls.Add(btnAdm);
             Controls.Add(btnUser);
             Controls.Add(lblOpcaoLog);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FPage";
             Text = "Tela de Login";
             Load += FPage_Load;

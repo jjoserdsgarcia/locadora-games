@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginADM));
             lblUsuarioADM = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
@@ -95,6 +96,7 @@
             Controls.Add(lblSenhaADM);
             Controls.Add(textBox1);
             Controls.Add(lblUsuarioADM);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "LoginADM";
             Text = "LoginADM";
             ResumeLayout(false);
