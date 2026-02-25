@@ -1,6 +1,19 @@
+<<<<<<< HEAD
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using ProjetoWindowsForms___Senac.Classes;
+=======
 ﻿using System.Threading.Tasks;
 using ProjetoWindowsForms___Senac.Classes;
 using ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo;
+>>>>>>> e0fec772c23c7dfef436bdd6e33e03c43e5feb6b
 using ProjetoWindowsForms___Senac.Repositories.RepoUser;
 
 namespace ProjetoWindowsForms___Senac
@@ -25,15 +38,12 @@ namespace ProjetoWindowsForms___Senac
 
         private async Task atualizartabelaadmindgv()
         {
-            var usuario = await RepositorioUsuario.ObterTodos();
-            dgvADMIN.DataSource = usuario;
+            var usuario = await RepositoryUser.ObterTodos();
+            dgvADMIN.DataSource = new BindingList<Usuario>(usuario.ToList());  
         }
 
 
-        private void DgvTelaADMIN_Load_1(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -42,6 +52,18 @@ namespace ProjetoWindowsForms___Senac
 
         private void dgvADMINCADASTRAR_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            var telacadastrousuario = new TelaCadastroUsuario();
+            this.Hide();
+            telacadastrousuario.ShowDialog();
+            this.Show();
+
+        }
+
+        private void btnSAIRDGVADM_Click(object sender, EventArgs e)
+        {
+            Close();
+=======
             if (tipoAtual == TipoCadastroUsuarioJogo.Usuarios)
             {
                 var tela = new TelaCadastroUsuario();

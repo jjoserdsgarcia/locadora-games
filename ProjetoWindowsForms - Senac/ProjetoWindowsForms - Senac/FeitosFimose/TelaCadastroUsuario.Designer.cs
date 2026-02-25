@@ -138,6 +138,7 @@
             txtCPFCadastroUser.Name = "txtCPFCadastroUser";
             txtCPFCadastroUser.Size = new Size(241, 23);
             txtCPFCadastroUser.TabIndex = 9;
+            txtCPFCadastroUser.TextChanged += txtCPFCadastroUser_TextChanged;
             // 
             // txtEmailCadastroUser
             // 
@@ -160,7 +161,7 @@
             dtpData.Size = new Size(241, 23);
             dtpData.TabIndex = 13;
             // 
-            // CadastroUsuario
+            // TelaCadastroUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -178,7 +179,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "CadastroUsuario";
+            Name = "TelaCadastroUsuario";
             Text = "Tela Cadastro Usuário ";
             Load += CadastroUsuario_Load;
             ResumeLayout(false);

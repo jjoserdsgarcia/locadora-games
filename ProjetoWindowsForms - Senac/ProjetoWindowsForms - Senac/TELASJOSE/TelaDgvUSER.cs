@@ -12,9 +12,16 @@ namespace ProjetoWindowsForms___Senac.TELAS
 {
     public partial class TelaDgvUSER : Form
     {
-        public TelaDgvUSER()
+
+        private readonly int CPFUSUARIO;
+        private readonly bool IsADMIN;
+        public TelaDgvUSER(bool IsADMIN, int CPFUSUARIO)
         {
             InitializeComponent();
+            this.CPFUSUARIO = CPFUSUARIO;
+            this.IsADMIN = IsADMIN;
+
+           
         }
 
         private void btnALUGAR_Click(object sender, EventArgs e)

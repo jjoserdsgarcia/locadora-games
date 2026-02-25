@@ -20,6 +20,7 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoUser
                 SELECT
                     UsuarioID,
                     Nome,
+                    CPF,
                     Email,
                     Telefone,
                     DataNascimento
@@ -42,7 +43,28 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoUser
                         
 
 
-                ",usuario);
+                ", usuario);
+        }
+
+        public static async Task<Usuario> ObterPorCPF(int CPFUSUARIO)
+        {
+            var usuario = await conexaobanco.dbConnection()
+            .QueryFirstOrDefaultAsync<Usuario>(
+                @"
+                SELECT
+                    UsuarioID,
+                    Nome,
+                    CPF,
+                    Email,
+                    Telefone,
+                    DataNascimento
+                    FROM
+                        Usuario
+                    WHERE
+                        CPF = @CPF
+                ", new { CPF = CPFUSUARIO });
+
+            return usuario;
         }
     }
 }
