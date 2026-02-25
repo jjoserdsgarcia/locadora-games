@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoWindowsForms___Senac.Classes;
 using ProjetoWindowsForms___Senac.Repositories.RepoUser;
 using ProjetoWindowsForms___Senac.TELAS;
 
@@ -28,14 +29,11 @@ namespace ProjetoWindowsForms___Senac
         private async Task atualizartabelaadmindgv()
         {
             var usuario = await RepositoryUser.ObterTodos();
-            dgvADMIN.DataSource = usuario;
+            dgvADMIN.DataSource = new BindingList<Usuario>(usuario.ToList());  
         }
 
 
-        private void DgvTelaADMIN_Load_1(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -48,10 +46,12 @@ namespace ProjetoWindowsForms___Senac
             this.Hide();
             telacadastrousuario.ShowDialog();
             this.Show();
-<<<<<<< HEAD
-=======
 
->>>>>>> 40b2705c1ea0b8f4c7b0a45313f013e37ea9b188
+        }
+
+        private void btnSAIRDGVADM_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

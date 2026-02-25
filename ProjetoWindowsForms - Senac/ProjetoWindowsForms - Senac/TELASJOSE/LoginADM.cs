@@ -20,15 +20,27 @@ namespace ProjetoWindowsForms___Senac
 
         private void btnENTRARADM_Click(object sender, EventArgs e)
         {
-            var teladgvadm = new DgvTelaADMIN();
-            this.Hide();
-            teladgvadm.ShowDialog();
-            this.Show();
+            if (txtADMLOGIN.Text == "Admin" && txtADMSENHA.Text == "1234")
+            {
+                var teladgvadm = new DgvTelaADMIN();
+                this.Close();
+                teladgvadm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou Senha Incorretos", "Erro ao realizar Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void LoginADM_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSAIRADMLOG_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

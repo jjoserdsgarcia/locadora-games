@@ -5,11 +5,37 @@ using ProjetoWindowsForms___Senac.Repositories.RepoUser;
 
 namespace ProjetoWindowsForms___Senac
 {
+    using System.ComponentModel.DataAnnotations;
     using System.Net.Mail;
+    using System.Runtime.CompilerServices;
+    using System.Text;
 
     public partial class TelaCadastroUsuario : Form
     {
+        private readonly DgvTelaADMIN dgvTelaADMIN;
+
+
+
+        private bool cpfvalido(string cpf)
+        {
+            try
+            {
+                DataGridViewChec
+                    kBoxCell cell = new DataGridViewCheckBoxCell();
+
+
+            }
+
+
+            catch
+            {
+                ;
+            }
+
+
+
         private bool emailValido(string email)
+
         {
             try
             {
@@ -27,96 +53,74 @@ namespace ProjetoWindowsForms___Senac
             InitializeComponent();
         }
 
-        private void btnSalvarCadastroUser(object sender, EventArgs e)
+        private async Task btnSalvarCadastroUser(object sender, EventArgs e)
         {
-            string nome = txtNomeCadastroUser.Text;
-            string cpf = txtCPFCadastroUser.Text;
-            string email = txtEmailCadastroUser.Text;
-            string telefone = txtTelefoneCadastroUser.Text;
-            DateTime dataNascimento = dtpData.Value;
+            var usuario = new Usuario();
+            usuario.Nome = txtNomeCadastroUser.Text;
+            usuario.Email = txtEmailCadastroUser.Text;
+            usuario.Telefone = txtTelefoneCadastroUser.Text;
+            usuario.DataNascimento = DateTime.Now;
 
-            string erros = "";
+            var stringBuilder = new StringBuilder();
+            var ListaDeErros = new List<ValidationResult>();
 
-            if (string.IsNullOrWhiteSpace(nome))
+            if (!emailValido(usuario.Email))
             {
-                erros += "• Nome é obrigatório.\n";
+                ListaDeErros.Add(new ValidationResult("O email inserido é inválido. Por favor, insira um email válido."));
+            }
+           
+
+            var contexto = new ValidationContext(usuario);
+            Validator.TryValidateObject(usuario, contexto, ListaDeErros, true);
+
+
+            if (ListaDeErros.Count > 0)
+            {
+                foreach (var erro in ListaDeErros)
+                {
+                    stringBuilder.Append(erro.ErrorMessage + "\n");
+                }
+
+                .Text = stringBuilder.ToString();
+
+            }
+            else
+            {
+
+
+                // Salvar na Lista
+
+                RepositoryUser.SalvarUsuario(usuario);
+
+                await this.dgvTelaADMIN.atualizartabelaadmindgv();
+
+                this.Close();
+
             }
 
-            if (string.IsNullOrWhiteSpace(cpf))
-            {
-                erros += "• CPF é obrigatório.\n";
-            }
+            
 
-            if (string.IsNullOrWhiteSpace(email))
-            {
-                erros += "• Email é obrigatório.\n";
-            }
-            else if (!emailValido(email)) 
-            { 
-                erros += "E-Mail inválido. \n";
-            }
-
-            if (string.IsNullOrWhiteSpace(telefone))
-            {
-                erros += "• Telefone é obrigatório.\n";
-            }
-
-            if (erros != "")
-            {
-                MessageBox.Show(erros, "Campos obrigatórios");
-                return;
-            }
-
-            if (!cpf.All(char.IsDigit))
-            {
-                MessageBox.Show("CPF deve conter apenas números.");
-                txtCPFCadastroUser.Focus();
-                return;
-            }
-
-            if (cpf.Length != 11)
-            {
-                MessageBox.Show("CPF deve conter apenas 11 números.");
-                txtCPFCadastroUser.Focus();
-                return;
-            }
-
-            if (telefone.Length != 11)
-            {
-                MessageBox.Show("Telefone deve conter 11 números com DDD");
-                txtTelefoneCadastroUser.Focus();
-                return;
-            }
-
-            //if (telefone.All(char.IsDigit))
-            //{
-            //    MessageBox.Show("Telefone deve conter 11 números com DDD.");
-            //    txtTelefoneCadastroUser.Focus();
-            //    return;
-            //}
-            Usuario novoUsuario = new Usuario
-            {
-                Nome = nome,
-                CPF = cpf,
-                Email = email,
-                Telefone = telefone,
-                DataNascimento = dataNascimento
-            };
-
-            RepositoryUser.SalvarUsuario(novoUsuario);
 
             MessageBox.Show($"Um novo usuário foi cadastrado!");
+
+           
+           
             Close();
 
         }
 
         private void btnCancelarCadUsuario(object sender, EventArgs e)
         {
-            
+
             Close();
         }
 
         private void CadastroUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCPFCadastroUser_TextChanged(object sender, EventArgs e)
         {
 
         }

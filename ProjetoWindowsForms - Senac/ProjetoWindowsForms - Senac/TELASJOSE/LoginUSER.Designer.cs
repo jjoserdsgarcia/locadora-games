@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             lblCPFUSER = new Label();
-            textBox1 = new TextBox();
+            txtCPFUSUARIO = new TextBox();
             btnPROSSEGUIRUSER = new Button();
             btnVOLTARUSER = new Button();
             SuspendLayout();
@@ -45,12 +45,13 @@
             lblCPFUSER.Text = "CPF do Usuário";
             lblCPFUSER.Click += lblCPFUSER_Click;
             // 
-            // textBox1
+            // txtCPFUSUARIO
             // 
-            textBox1.Location = new Point(290, 217);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(221, 23);
-            textBox1.TabIndex = 1;
+            txtCPFUSUARIO.Location = new Point(290, 217);
+            txtCPFUSUARIO.Name = "txtCPFUSUARIO";
+            txtCPFUSUARIO.Size = new Size(221, 23);
+            txtCPFUSUARIO.TabIndex = 1;
+            txtCPFUSUARIO.TextChanged += textBox1_TextChanged;
             // 
             // btnPROSSEGUIRUSER
             // 
@@ -81,7 +82,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(btnVOLTARUSER);
             Controls.Add(btnPROSSEGUIRUSER);
-            Controls.Add(textBox1);
+            Controls.Add(txtCPFUSUARIO);
             Controls.Add(lblCPFUSER);
             Name = "LoginUSER";
             Text = "Login de Usuário";
@@ -92,7 +93,7 @@
         #endregion
 
         private Label lblCPFUSER;
-        private TextBox textBox1;
+        private TextBox txtCPFUSUARIO;
         private Button btnPROSSEGUIRUSER;
         private Button btnVOLTARUSER;
     }

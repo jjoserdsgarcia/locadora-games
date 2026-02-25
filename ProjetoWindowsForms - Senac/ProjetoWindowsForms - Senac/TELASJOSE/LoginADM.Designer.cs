@@ -30,10 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginADM));
             lblUsuarioADM = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtADMLOGIN = new TextBox();
+            txtADMSENHA = new TextBox();
             lblSenhaADM = new Label();
             btnENTRARADM = new Button();
+            btnSAIRADMLOG = new Button();
             SuspendLayout();
             // 
             // lblUsuarioADM
@@ -48,20 +49,20 @@
             lblUsuarioADM.TabIndex = 0;
             lblUsuarioADM.Text = "Usuário";
             // 
-            // textBox1
+            // txtADMLOGIN
             // 
-            textBox1.Location = new Point(201, 128);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(354, 23);
-            textBox1.TabIndex = 1;
+            txtADMLOGIN.Location = new Point(201, 128);
+            txtADMLOGIN.Name = "txtADMLOGIN";
+            txtADMLOGIN.Size = new Size(354, 23);
+            txtADMLOGIN.TabIndex = 1;
             // 
-            // textBox2
+            // txtADMSENHA
             // 
-            textBox2.Font = new Font("Modern No. 20", 11.249999F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(201, 278);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(354, 24);
-            textBox2.TabIndex = 3;
+            txtADMSENHA.Font = new Font("Segoe UI", 11.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            txtADMSENHA.Location = new Point(201, 278);
+            txtADMSENHA.Name = "txtADMSENHA";
+            txtADMSENHA.Size = new Size(354, 27);
+            txtADMSENHA.TabIndex = 3;
             // 
             // lblSenhaADM
             // 
@@ -77,13 +78,28 @@
             // 
             // btnENTRARADM
             // 
-            btnENTRARADM.Location = new Point(259, 357);
+            btnENTRARADM.BackColor = Color.LawnGreen;
+            btnENTRARADM.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnENTRARADM.Location = new Point(110, 359);
             btnENTRARADM.Name = "btnENTRARADM";
             btnENTRARADM.Size = new Size(222, 48);
             btnENTRARADM.TabIndex = 4;
-            btnENTRARADM.Text = "Entrar";
-            btnENTRARADM.UseVisualStyleBackColor = true;
+            btnENTRARADM.Text = "ENTRAR";
+            btnENTRARADM.UseVisualStyleBackColor = false;
             btnENTRARADM.Click += btnENTRARADM_Click;
+            // 
+            // btnSAIRADMLOG
+            // 
+            btnSAIRADMLOG.BackColor = Color.Red;
+            btnSAIRADMLOG.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSAIRADMLOG.ForeColor = SystemColors.ActiveCaptionText;
+            btnSAIRADMLOG.Location = new Point(464, 359);
+            btnSAIRADMLOG.Name = "btnSAIRADMLOG";
+            btnSAIRADMLOG.Size = new Size(222, 48);
+            btnSAIRADMLOG.TabIndex = 5;
+            btnSAIRADMLOG.Text = "SAIR";
+            btnSAIRADMLOG.UseVisualStyleBackColor = false;
+            btnSAIRADMLOG.Click += btnSAIRADMLOG_Click;
             // 
             // LoginADM
             // 
@@ -91,10 +107,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSAIRADMLOG);
             Controls.Add(btnENTRARADM);
-            Controls.Add(textBox2);
+            Controls.Add(txtADMSENHA);
             Controls.Add(lblSenhaADM);
-            Controls.Add(textBox1);
+            Controls.Add(txtADMLOGIN);
             Controls.Add(lblUsuarioADM);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "LoginADM";
@@ -107,9 +124,10 @@
         #endregion
 
         private Label lblUsuarioADM;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtADMLOGIN;
+        private TextBox txtADMSENHA;
         private Label lblSenhaADM;
         private Button btnENTRARADM;
+        private Button btnSAIRADMLOG;
     }
 }

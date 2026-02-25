@@ -34,6 +34,7 @@
             dgvADMINUSUARIOS = new Button();
             dgvADMINCADASTRAR = new Button();
             dgvADMINEXCLUIR = new Button();
+            btnSAIRDGVADM = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvADMIN).BeginInit();
             SuspendLayout();
             // 
@@ -96,12 +97,24 @@
             dgvADMINEXCLUIR.Text = "Excluir";
             dgvADMINEXCLUIR.UseVisualStyleBackColor = true;
             // 
+            // btnSAIRDGVADM
+            // 
+            btnSAIRDGVADM.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSAIRDGVADM.Location = new Point(53, 362);
+            btnSAIRDGVADM.Name = "btnSAIRDGVADM";
+            btnSAIRDGVADM.Size = new Size(149, 48);
+            btnSAIRDGVADM.TabIndex = 9;
+            btnSAIRDGVADM.Text = "SAIR";
+            btnSAIRDGVADM.UseVisualStyleBackColor = true;
+            btnSAIRDGVADM.Click += btnSAIRDGVADM_Click;
+            // 
             // DgvTelaADMIN
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSAIRDGVADM);
             Controls.Add(dgvADMINEXCLUIR);
             Controls.Add(dgvADMINCADASTRAR);
             Controls.Add(dgvADMINUSUARIOS);
@@ -110,7 +123,7 @@
             Controls.Add(dgvADMIN);
             Name = "DgvTelaADMIN";
             Text = "Tela Principal - ADMIN";
-            Load += DgvTelaADMIN_Load_1;
+           
             ((System.ComponentModel.ISupportInitialize)dgvADMIN).EndInit();
             ResumeLayout(false);
         }
@@ -126,5 +139,6 @@
         private Button dgvADMINUSUARIOS;
         private Button dgvADMINCADASTRAR;
         private Button dgvADMINEXCLUIR;
+        private Button btnSAIRDGVADM;
     }
 }
