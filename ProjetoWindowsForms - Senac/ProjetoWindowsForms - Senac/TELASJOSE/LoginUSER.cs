@@ -21,9 +21,10 @@ namespace ProjetoWindowsForms___Senac
         private void btnPROSSEGUIRUSER_Click(object sender, EventArgs e)
         {
             {
-                int CPFUSUARIO = int.Parse(txtCPFUSUARIO.Text);
 
-                var telaprincipal = new TelaDgvUSER(false, CPFUSUARIO);
+
+
+                var telaprincipal = new TelaDgvUSER(false, txtCPFUSUARIO.Text);
                 this.Hide();
                 telaprincipal.ShowDialog();
                 this.Show();

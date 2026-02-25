@@ -41,11 +41,10 @@
             // dgvADMIN
             // 
             dgvADMIN.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvADMIN.Location = new Point(187, 12);
+            dgvADMIN.Location = new Point(187, 0);
             dgvADMIN.Name = "dgvADMIN";
-            dgvADMIN.Size = new Size(601, 260);
+            dgvADMIN.Size = new Size(614, 272);
             dgvADMIN.TabIndex = 0;
-            
             // 
             // dgvADMINEDITAR
             // 
@@ -99,6 +98,7 @@
             dgvADMINEXCLUIR.TabIndex = 8;
             dgvADMINEXCLUIR.Text = "Excluir";
             dgvADMINEXCLUIR.UseVisualStyleBackColor = true;
+            dgvADMINEXCLUIR.Click += dgvADMINEXCLUIR_Click;
             // 
             // btnSAIRDGVADM
             // 
@@ -126,7 +126,6 @@
             Controls.Add(dgvADMIN);
             Name = "DgvTelaADMIN";
             Text = "Tela Principal - ADMIN";
-           
             ((System.ComponentModel.ISupportInitialize)dgvADMIN).EndInit();
             ResumeLayout(false);
         }

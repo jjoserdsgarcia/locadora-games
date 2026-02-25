@@ -13,9 +13,9 @@ namespace ProjetoWindowsForms___Senac.TELAS
     public partial class TelaDgvUSER : Form
     {
 
-        private readonly int CPFUSUARIO;
+        private readonly string CPFUSUARIO;
         private readonly bool IsADMIN;
-        public TelaDgvUSER(bool IsADMIN, int CPFUSUARIO)
+        public TelaDgvUSER(bool IsADMIN, string CPFUSUARIO)
         {
             InitializeComponent();
             this.CPFUSUARIO = CPFUSUARIO;

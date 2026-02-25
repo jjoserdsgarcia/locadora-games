@@ -66,5 +66,14 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoUser
 
             return usuario;
         }
+
+        public static async Task Deletar(int UsuarioID)
+        {
+            await conexaobanco.dbConnection().QueryAsync(
+                @"
+                         DELETE FROM Usuario
+                          WHERE UsuarioID = @UsuarioID
+                ", new { Usuario = UsuarioID });
+        }
     }
 }

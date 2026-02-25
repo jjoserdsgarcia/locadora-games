@@ -16,23 +16,12 @@ namespace ProjetoWindowsForms___Senac
 
 
 
-        private bool emailValido(string email)
-
-        {
-            try
-            {
-                MailAddress mail = new MailAddress(email);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
+       
         private List<Usuario> usuarios = new List<Usuario>();
-        public TelaCadastroUsuario()
+        public TelaCadastroUsuario(DgvTelaADMIN dgvTelaADMIN)
         {
             InitializeComponent();
+            this.dgvTelaADMIN = dgvTelaADMIN;
         }
 
         private async void BtnSalvarCadastroUser(object sender, EventArgs e)
@@ -59,8 +48,10 @@ namespace ProjetoWindowsForms___Senac
                 foreach (var erro in ListaDeErros)
                 {
                     stringBuilder.Append(erro.ErrorMessage + "\n");
-                }
+                    
 
+                }
+                    lblListaerro.Text = stringBuilder.ToString();
             }
             else
             {
