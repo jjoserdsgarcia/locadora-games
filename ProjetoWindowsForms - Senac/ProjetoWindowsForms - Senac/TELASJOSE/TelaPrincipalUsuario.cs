@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace ProjetoWindowsForms___Senac.TELAS
 {
-    public partial class TelaDgvUSER : Form
+    public partial class TelaPrincipalUsuario : Form
     {
 
-        private readonly int CPFUSUARIO;
+        private readonly string CPFUSUARIO;
         private readonly bool IsADMIN;
-        public TelaDgvUSER(bool IsADMIN, int CPFUSUARIO)
+        public TelaPrincipalUsuario(bool IsADMIN, string CPFUSUARIO)
         {
             InitializeComponent();
             this.CPFUSUARIO = CPFUSUARIO;

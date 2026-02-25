@@ -75,7 +75,7 @@
             lblCPFUSERALUGAR.BackColor = Color.Black;
             lblCPFUSERALUGAR.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
             lblCPFUSERALUGAR.ForeColor = Color.White;
-            lblCPFUSERALUGAR.Location = new Point(28, 123);
+            lblCPFUSERALUGAR.Location = new Point(28, 129);
             lblCPFUSERALUGAR.Name = "lblCPFUSERALUGAR";
             lblCPFUSERALUGAR.Size = new Size(44, 20);
             lblCPFUSERALUGAR.TabIndex = 2;
@@ -96,21 +96,21 @@
             // 
             // txtNomeUsuarioAlugar
             // 
-            txtNomeUsuarioAlugar.Location = new Point(87, 75);
+            txtNomeUsuarioAlugar.Location = new Point(96, 75);
             txtNomeUsuarioAlugar.Name = "txtNomeUsuarioAlugar";
             txtNomeUsuarioAlugar.Size = new Size(181, 23);
             txtNomeUsuarioAlugar.TabIndex = 8;
             // 
             // txtCpfUsuarioAlugar
             // 
-            txtCpfUsuarioAlugar.Location = new Point(87, 123);
+            txtCpfUsuarioAlugar.Location = new Point(95, 129);
             txtCpfUsuarioAlugar.Name = "txtCpfUsuarioAlugar";
             txtCpfUsuarioAlugar.Size = new Size(181, 23);
             txtCpfUsuarioAlugar.TabIndex = 9;
             // 
             // txtTelefoneUsuarioAlugar
             // 
-            txtTelefoneUsuarioAlugar.Location = new Point(87, 181);
+            txtTelefoneUsuarioAlugar.Location = new Point(95, 185);
             txtTelefoneUsuarioAlugar.Name = "txtTelefoneUsuarioAlugar";
             txtTelefoneUsuarioAlugar.Size = new Size(181, 23);
             txtTelefoneUsuarioAlugar.TabIndex = 10;
@@ -142,7 +142,7 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(104, 324);
+            textBox3.Location = new Point(104, 325);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(181, 23);
             textBox3.TabIndex = 15;
@@ -170,9 +170,9 @@
             // cmbJogo
             // 
             cmbJogo.FormattingEnabled = true;
-            cmbJogo.Location = new Point(37, 282);
+            cmbJogo.Location = new Point(104, 283);
             cmbJogo.Name = "cmbJogo";
-            cmbJogo.Size = new Size(235, 23);
+            cmbJogo.Size = new Size(181, 23);
             cmbJogo.TabIndex = 19;
             cmbJogo.Text = " - Selecione um jogo";
             // 
@@ -191,7 +191,7 @@
             // dtpEntrega
             // 
             dtpEntrega.Format = DateTimePickerFormat.Short;
-            dtpEntrega.Location = new Point(149, 374);
+            dtpEntrega.Location = new Point(152, 372);
             dtpEntrega.Name = "dtpEntrega";
             dtpEntrega.Size = new Size(200, 23);
             dtpEntrega.TabIndex = 20;

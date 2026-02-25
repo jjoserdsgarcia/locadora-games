@@ -80,7 +80,7 @@
             // 
             btnENTRARADM.BackColor = Color.LawnGreen;
             btnENTRARADM.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnENTRARADM.Location = new Point(110, 359);
+            btnENTRARADM.Location = new Point(447, 349);
             btnENTRARADM.Name = "btnENTRARADM";
             btnENTRARADM.Size = new Size(222, 48);
             btnENTRARADM.TabIndex = 4;
@@ -93,7 +93,7 @@
             btnSAIRADMLOG.BackColor = Color.Red;
             btnSAIRADMLOG.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSAIRADMLOG.ForeColor = SystemColors.ActiveCaptionText;
-            btnSAIRADMLOG.Location = new Point(464, 359);
+            btnSAIRADMLOG.Location = new Point(137, 349);
             btnSAIRADMLOG.Name = "btnSAIRADMLOG";
             btnSAIRADMLOG.Size = new Size(222, 48);
             btnSAIRADMLOG.TabIndex = 5;

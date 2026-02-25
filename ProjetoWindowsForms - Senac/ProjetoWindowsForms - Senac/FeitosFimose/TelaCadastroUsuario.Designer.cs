@@ -156,6 +156,7 @@
             // 
             // dtpData
             // 
+            dtpData.Format = DateTimePickerFormat.Short;
             dtpData.Location = new Point(45, 332);
             dtpData.Name = "dtpData";
             dtpData.Size = new Size(241, 23);

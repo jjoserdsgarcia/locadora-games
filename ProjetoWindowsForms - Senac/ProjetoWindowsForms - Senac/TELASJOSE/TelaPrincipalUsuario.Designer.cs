@@ -1,6 +1,6 @@
 ﻿namespace ProjetoWindowsForms___Senac.TELAS
 {
-    partial class TelaDgvUSER
+    partial class TelaPrincipalUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -37,15 +37,15 @@
             // dgvMAINPAGE
             // 
             dgvMAINPAGE.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMAINPAGE.Location = new Point(1, -1);
+            dgvMAINPAGE.Location = new Point(12, 12);
             dgvMAINPAGE.Name = "dgvMAINPAGE";
-            dgvMAINPAGE.Size = new Size(798, 257);
+            dgvMAINPAGE.Size = new Size(776, 257);
             dgvMAINPAGE.TabIndex = 0;
             // 
             // btnALUGAR
             // 
             btnALUGAR.Font = new Font("Modern No. 20", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnALUGAR.Location = new Point(22, 360);
+            btnALUGAR.Location = new Point(230, 360);
             btnALUGAR.Name = "btnALUGAR";
             btnALUGAR.Size = new Size(181, 67);
             btnALUGAR.TabIndex = 1;
@@ -56,7 +56,7 @@
             // btnDEVOLVER
             // 
             btnDEVOLVER.Font = new Font("Modern No. 20", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDEVOLVER.Location = new Point(235, 360);
+            btnDEVOLVER.Location = new Point(452, 360);
             btnDEVOLVER.Name = "btnDEVOLVER";
             btnDEVOLVER.Size = new Size(181, 67);
             btnDEVOLVER.TabIndex = 2;
