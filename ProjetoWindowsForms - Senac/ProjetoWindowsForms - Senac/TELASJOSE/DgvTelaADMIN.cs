@@ -53,11 +53,6 @@ namespace ProjetoWindowsForms___Senac
                 tela.ShowDialog();
             }
 
-            AtualizarGrid();
-            /*var telacadastrousuario = new TelaCadastroUsuario();
-            this.Hide();
-            telacadastrousuario.ShowDialog();
-            this.Show();*/
         }
 
         private void dgvADMIN_CellContentClick(object sender, DataGridViewCellEventArgs e)
