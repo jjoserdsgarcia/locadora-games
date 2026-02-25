@@ -45,6 +45,7 @@
             dgvADMIN.Name = "dgvADMIN";
             dgvADMIN.Size = new Size(601, 260);
             dgvADMIN.TabIndex = 0;
+            dgvADMIN.CellContentClick += dgvADMIN_CellContentClick;
             // 
             // dgvADMINEDITAR
             // 
@@ -65,6 +66,7 @@
             dgvADMINJOGOS.TabIndex = 5;
             dgvADMINJOGOS.Text = "Jogos";
             dgvADMINJOGOS.UseVisualStyleBackColor = true;
+            dgvADMINJOGOS.Click += btnJogos;
             // 
             // dgvADMINUSUARIOS
             // 
@@ -75,6 +77,7 @@
             dgvADMINUSUARIOS.TabIndex = 6;
             dgvADMINUSUARIOS.Text = "Usuários";
             dgvADMINUSUARIOS.UseVisualStyleBackColor = true;
+            dgvADMINUSUARIOS.Click += btnUsuarios;
             // 
             // dgvADMINCADASTRAR
             // 
