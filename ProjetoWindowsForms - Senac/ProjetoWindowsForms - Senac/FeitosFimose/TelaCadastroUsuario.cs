@@ -16,24 +16,6 @@ namespace ProjetoWindowsForms___Senac
 
 
 
-        private bool cpfvalido(string cpf)
-        {
-            try
-            {
-                DataGridViewChec
-                    kBoxCell cell = new DataGridViewCheckBoxCell();
-
-
-            }
-
-
-            catch
-            {
-                ;
-            }
-
-
-
         private bool emailValido(string email)
 
         {
@@ -53,10 +35,11 @@ namespace ProjetoWindowsForms___Senac
             InitializeComponent();
         }
 
-        private async Task btnSalvarCadastroUser(object sender, EventArgs e)
+        private async void BtnSalvarCadastroUser(object sender, EventArgs e)
         {
             var usuario = new Usuario();
             usuario.Nome = txtNomeCadastroUser.Text;
+            usuario.CPF = txtCPFCadastroUser.Text;
             usuario.Email = txtEmailCadastroUser.Text;
             usuario.Telefone = txtTelefoneCadastroUser.Text;
             usuario.DataNascimento = DateTime.Now;
@@ -64,10 +47,7 @@ namespace ProjetoWindowsForms___Senac
             var stringBuilder = new StringBuilder();
             var ListaDeErros = new List<ValidationResult>();
 
-            if (!emailValido(usuario.Email))
-            {
-                ListaDeErros.Add(new ValidationResult("O email inserido é inválido. Por favor, insira um email válido."));
-            }
+           
            
 
             var contexto = new ValidationContext(usuario);
@@ -81,8 +61,6 @@ namespace ProjetoWindowsForms___Senac
                     stringBuilder.Append(erro.ErrorMessage + "\n");
                 }
 
-                .Text = stringBuilder.ToString();
-
             }
             else
             {
@@ -90,24 +68,13 @@ namespace ProjetoWindowsForms___Senac
 
                 // Salvar na Lista
 
-                RepositoryUser.SalvarUsuario(usuario);
+                RepositorioUsuario.SalvarUsuario(usuario);
 
                 await this.dgvTelaADMIN.atualizartabelaadmindgv();
 
                 this.Close();
 
             }
-
-            
-
-            RepositorioUsuario.SalvarUsuario(novoUsuario);
-
-            MessageBox.Show($"Um novo usuário foi cadastrado!");
-
-           
-           
-            Close();
-
         }
 
         private void btnCancelarCadUsuario(object sender, EventArgs e)

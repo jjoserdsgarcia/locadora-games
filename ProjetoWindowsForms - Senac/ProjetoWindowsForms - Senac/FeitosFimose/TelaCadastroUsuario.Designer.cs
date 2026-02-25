@@ -113,7 +113,7 @@
             button2.TabIndex = 6;
             button2.Text = "Salvar";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += btnSalvarCadastroUser;
+            button2.Click += BtnSalvarCadastroUser;
             // 
             // label6
             // 

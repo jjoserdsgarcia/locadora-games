@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoWindowsForms___Senac.Classes;
-=======
+using Dapper;
 ﻿using System.Threading.Tasks;
 using ProjetoWindowsForms___Senac.Classes;
 using ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo;
->>>>>>> e0fec772c23c7dfef436bdd6e33e03c43e5feb6b
+
 using ProjetoWindowsForms___Senac.Repositories.RepoUser;
 
 namespace ProjetoWindowsForms___Senac
@@ -36,9 +35,9 @@ namespace ProjetoWindowsForms___Senac
             await atualizartabelaadmindgv();
         }
 
-        private async Task atualizartabelaadmindgv()
+        public async Task atualizartabelaadmindgv()
         {
-            var usuario = await RepositoryUser.ObterTodos();
+            var usuario = await RepositorioUsuario.ObterTodos();
             dgvADMIN.DataSource = new BindingList<Usuario>(usuario.ToList());  
         }
 
@@ -52,7 +51,7 @@ namespace ProjetoWindowsForms___Senac
 
         private void dgvADMINCADASTRAR_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
             var telacadastrousuario = new TelaCadastroUsuario();
             this.Hide();
             telacadastrousuario.ShowDialog();
@@ -63,7 +62,7 @@ namespace ProjetoWindowsForms___Senac
         private void btnSAIRDGVADM_Click(object sender, EventArgs e)
         {
             Close();
-=======
+
             if (tipoAtual == TipoCadastroUsuarioJogo.Usuarios)
             {
                 var tela = new TelaCadastroUsuario();
@@ -77,10 +76,7 @@ namespace ProjetoWindowsForms___Senac
 
         }
 
-        private void dgvADMIN_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
 
         private async void btnUsuarios (object sender, EventArgs e)
         {

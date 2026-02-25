@@ -45,7 +45,7 @@
             dgvADMIN.Name = "dgvADMIN";
             dgvADMIN.Size = new Size(601, 260);
             dgvADMIN.TabIndex = 0;
-            dgvADMIN.CellContentClick += dgvADMIN_CellContentClick;
+            
             // 
             // dgvADMINEDITAR
             // 
