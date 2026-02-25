@@ -8,7 +8,7 @@ using Dapper;
 
 namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
 {
-    public class RepositoryGame
+    public class RepositorioJogo
     {
         private static readonly ConexaoBancoSQL conexaoBancoSQL = new ConexaoBancoSQL();
         public static async Task<IEnumerable<Jogo>> ObterTodos()
@@ -24,7 +24,7 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
                     Valor,
                     Ano
                         FROM
-                            Games
+                            Jogo
                 ");
 
             return jogo;
@@ -37,7 +37,7 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
         {
             await conexaoBancoSQL.dbConnection().QueryAsync(
 
-                @"INSERT INTO Games (Titulo, Plataforma, Genero, Valor, Ano)
+                @"INSERT INTO Jogo (Titulo, Plataforma, Genero, Valor, Ano)
                     VALUES (@Titulo, @Plataforma, @Genero, @Valor, @Ano);
                         
 

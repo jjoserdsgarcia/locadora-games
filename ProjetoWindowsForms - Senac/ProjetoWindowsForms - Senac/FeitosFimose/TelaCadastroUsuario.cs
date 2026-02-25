@@ -103,7 +103,7 @@ namespace ProjetoWindowsForms___Senac
                 DataNascimento = dataNascimento
             };
 
-            RepositoryUser.SalvarUsuario(novoUsuario);
+            RepositorioUsuario.SalvarUsuario(novoUsuario);
 
             MessageBox.Show($"Um novo usuário foi cadastrado!");
             Close();

@@ -41,6 +41,7 @@
             txtPLATAFORMAJOGO = new TextBox();
             txtGENEROJOGO = new TextBox();
             txtANOJOGO = new TextBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -111,7 +112,7 @@
             // btnSalvarEdit
             // 
             btnSalvarEdit.Font = new Font("Modern No. 20", 15.75F);
-            btnSalvarEdit.Location = new Point(552, 395);
+            btnSalvarEdit.Location = new Point(672, 383);
             btnSalvarEdit.Name = "btnSalvarEdit";
             btnSalvarEdit.Size = new Size(100, 40);
             btnSalvarEdit.TabIndex = 16;
@@ -122,7 +123,7 @@
             // btnCancelarEdit
             // 
             btnCancelarEdit.Font = new Font("Modern No. 20", 15.75F);
-            btnCancelarEdit.Location = new Point(671, 395);
+            btnCancelarEdit.Location = new Point(550, 383);
             btnCancelarEdit.Name = "btnCancelarEdit";
             btnCancelarEdit.Size = new Size(100, 40);
             btnCancelarEdit.TabIndex = 17;
@@ -166,11 +167,21 @@
             txtANOJOGO.Size = new Size(165, 23);
             txtANOJOGO.TabIndex = 22;
             // 
+            // button1
+            // 
+            button1.Location = new Point(683, 320);
+            button1.Name = "button1";
+            button1.Size = new Size(8, 8);
+            button1.TabIndex = 23;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // EditarJogo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(txtANOJOGO);
             Controls.Add(txtGENEROJOGO);
             Controls.Add(txtPLATAFORMAJOGO);
@@ -207,5 +218,6 @@
         private TextBox txtPLATAFORMAJOGO;
         private TextBox txtGENEROJOGO;
         private TextBox txtANOJOGO;
+        private Button button1;
     }
 }

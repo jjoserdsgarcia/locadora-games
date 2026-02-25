@@ -25,7 +25,7 @@ namespace ProjetoWindowsForms___Senac
 
         private async Task atualizartabelaadmindgv()
         {
-            var usuario = await RepositoryUser.ObterTodos();
+            var usuario = await RepositorioUsuario.ObterTodos();
             dgvADMIN.DataSource = usuario;
         }
 
@@ -63,13 +63,13 @@ namespace ProjetoWindowsForms___Senac
         private async void btnUsuarios (object sender, EventArgs e)
         {
             tipoAtual = TipoCadastroUsuarioJogo.Usuarios;
-            dgvADMIN.DataSource = await RepositoryUser.ObterTodos();
+            dgvADMIN.DataSource = await RepositorioUsuario.ObterTodos();
         }
 
         private async void btnJogos(object sender, EventArgs e)
         {
             tipoAtual = TipoCadastroUsuarioJogo.Jogos;
-            dgvADMIN.DataSource = await RepositoryGame.ObterTodos();
+            dgvADMIN.DataSource = await RepositorioJogo.ObterTodos();
         }
     }
 }

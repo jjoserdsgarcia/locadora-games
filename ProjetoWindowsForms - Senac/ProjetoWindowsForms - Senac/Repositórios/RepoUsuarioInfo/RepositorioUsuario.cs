@@ -8,7 +8,7 @@ using Dapper;
 
 namespace ProjetoWindowsForms___Senac.Repositories.RepoUser
 {
-    public class RepositoryUser
+    public class RepositorioUsuario
     {
         private static readonly ConexaoBancoSQL conexaobanco = new ConexaoBancoSQL();
         public static async Task<IEnumerable<Usuario>> ObterTodos()
