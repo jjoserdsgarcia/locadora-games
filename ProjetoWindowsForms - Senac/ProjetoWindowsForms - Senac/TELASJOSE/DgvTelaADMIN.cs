@@ -52,7 +52,7 @@ namespace ProjetoWindowsForms___Senac
         private void dgvADMINCADASTRAR_Click(object sender, EventArgs e)
         {
 
-            var telacadastrousuario = new TelaCadastroUsuario();
+            var telacadastrousuario = new TelaCadastroUsuario(this);
             this.Hide();
             telacadastrousuario.ShowDialog();
             this.Show();
@@ -63,16 +63,7 @@ namespace ProjetoWindowsForms___Senac
         {
             Close();
 
-            if (tipoAtual == TipoCadastroUsuarioJogo.Usuarios)
-            {
-                var tela = new TelaCadastroUsuario();
-                tela.ShowDialog();
-            }
-            else if (tipoAtual == TipoCadastroUsuarioJogo.Jogos)
-            {
-                var tela = new TelaCadastroJogo();
-                tela.ShowDialog();
-            }
+
 
         }
 
@@ -86,18 +77,37 @@ namespace ProjetoWindowsForms___Senac
 
         private async void btnJogos(object sender, EventArgs e)
         {
+            //if (tipoAtual == TipoCadastroUsuarioJogo.Usuarios)
+            //    {
+            //        var tela = new TelaCadastroUsuario(this);
+            //tela.ShowDialog();
+            //    }
+            //    else if (tipoAtual == TipoCadastroUsuarioJogo.Jogos)
+            //    {
+            //        var tela = new TelaCadastroJogo();
+            //      tela.ShowDialog();
+            //    }
+
+
             tipoAtual = TipoCadastroUsuarioJogo.Jogos;
             dgvADMIN.DataSource = await RepositorioJogo.ObterTodos();
         }
 
-        private void dgvADMINEXCLUIR_Click(object sender, EventArgs e)
+        private async void dgvADMINEXCLUIR_Click(object sender, EventArgs e)
         {
+            string nomeUsuario = dgvADMIN.SelectedRows[0].Cells[1].Value.ToString();
 
-        }
+            var retorno = MessageBox.Show($"Deseja mesmo excluir o usuário {nomeUsuario}?", "Excluindo usuário.", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-        private void dgvADMIN_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+            if (retorno == DialogResult.Yes)
+            {
+                int UsuarioID = (int)dgvADMIN.SelectedRows[0].Cells[0].Value;
+                await RepositorioUsuario.Deletar(UsuarioID);
+                MessageBox.Show($"O usuário {nomeUsuario} foi deletado.", "Exclusão de usuário.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
+                await this.atualizartabelaadmindgv();
+
+            }
         }
     }
 }

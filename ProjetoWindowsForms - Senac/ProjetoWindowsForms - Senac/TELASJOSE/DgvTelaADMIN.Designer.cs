@@ -41,11 +41,10 @@
             // dgvADMIN
             // 
             dgvADMIN.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvADMIN.Location = new Point(187, 12);
+            dgvADMIN.Location = new Point(187, 0);
             dgvADMIN.Name = "dgvADMIN";
-            dgvADMIN.Size = new Size(601, 260);
+            dgvADMIN.Size = new Size(614, 272);
             dgvADMIN.TabIndex = 0;
-            dgvADMIN.CellContentClick += dgvADMIN_CellContentClick;
             // 
             // dgvADMINEDITAR
             // 
@@ -92,14 +91,14 @@
             // 
             // btnExcluirTPrincipal
             // 
-            btnExcluirTPrincipal.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnExcluirTPrincipal.Location = new Point(649, 366);
-            btnExcluirTPrincipal.Name = "btnExcluirTPrincipal";
-            btnExcluirTPrincipal.Size = new Size(108, 40);
-            btnExcluirTPrincipal.TabIndex = 8;
-            btnExcluirTPrincipal.Text = "Excluir";
-            btnExcluirTPrincipal.UseVisualStyleBackColor = true;
-            btnExcluirTPrincipal.Click += dgvADMINEXCLUIR_Click;
+            dgvADMINEXCLUIR.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvADMINEXCLUIR.Location = new Point(649, 366);
+            dgvADMINEXCLUIR.Name = "dgvADMINEXCLUIR";
+            dgvADMINEXCLUIR.Size = new Size(108, 40);
+            dgvADMINEXCLUIR.TabIndex = 8;
+            dgvADMINEXCLUIR.Text = "Excluir";
+            dgvADMINEXCLUIR.UseVisualStyleBackColor = true;
+            dgvADMINEXCLUIR.Click += dgvADMINEXCLUIR_Click;
             // 
             // btnSAIRDGVADM
             // 

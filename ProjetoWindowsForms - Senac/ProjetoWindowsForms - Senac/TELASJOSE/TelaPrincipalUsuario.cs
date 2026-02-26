@@ -16,7 +16,10 @@ namespace ProjetoWindowsForms___Senac.TELAS
         private readonly string CPFUSUARIO;
         private readonly bool IsADMIN;
 
+        
+
         public TelaPrincipalUsuario(bool IsADMIN, string CPFUSUARIO)
+
         {
             InitializeComponent();
             this.CPFUSUARIO = CPFUSUARIO;

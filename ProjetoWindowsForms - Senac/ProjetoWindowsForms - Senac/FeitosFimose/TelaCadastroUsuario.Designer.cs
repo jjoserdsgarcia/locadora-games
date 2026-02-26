@@ -41,6 +41,7 @@
             txtEmailCadastroUser = new TextBox();
             txtTelefoneCadastroUser = new TextBox();
             dtpData = new DateTimePicker();
+            lblListaerro = new Label();
             SuspendLayout();
             // 
             // label1
@@ -96,7 +97,7 @@
             // button1
             // 
             button1.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(62, 388);
+            button1.Location = new Point(477, 388);
             button1.Name = "button1";
             button1.Size = new Size(95, 40);
             button1.TabIndex = 5;
@@ -162,11 +163,22 @@
             dtpData.Size = new Size(241, 23);
             dtpData.TabIndex = 13;
             // 
+            // lblListaerro
+            // 
+            lblListaerro.AutoSize = true;
+            lblListaerro.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblListaerro.ForeColor = Color.Red;
+            lblListaerro.Location = new Point(45, 367);
+            lblListaerro.Name = "lblListaerro";
+            lblListaerro.Size = new Size(0, 17);
+            lblListaerro.TabIndex = 14;
+            // 
             // TelaCadastroUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblListaerro);
             Controls.Add(dtpData);
             Controls.Add(txtTelefoneCadastroUser);
             Controls.Add(txtEmailCadastroUser);
@@ -202,5 +214,6 @@
         private TextBox txtEmailCadastroUser;
         private TextBox txtTelefoneCadastroUser;
         private DateTimePicker dtpData;
+        private Label lblListaerro;
     }
 }

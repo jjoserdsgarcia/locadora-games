@@ -107,6 +107,7 @@
             txtCpfUsuarioAlugar.Name = "txtCpfUsuarioAlugar";
             txtCpfUsuarioAlugar.Size = new Size(181, 23);
             txtCpfUsuarioAlugar.TabIndex = 9;
+            txtCpfUsuarioAlugar.TextChanged += txtCpfUsuarioAlugar_TextChanged;
             // 
             // txtTelefoneUsuarioAlugar
             // 

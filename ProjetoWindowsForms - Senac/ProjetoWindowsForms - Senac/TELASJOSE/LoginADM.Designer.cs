@@ -61,6 +61,7 @@
             txtADMSENHA.Font = new Font("Segoe UI", 11.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
             txtADMSENHA.Location = new Point(201, 278);
             txtADMSENHA.Name = "txtADMSENHA";
+            txtADMSENHA.PasswordChar = '*';
             txtADMSENHA.Size = new Size(354, 27);
             txtADMSENHA.TabIndex = 3;
             // 

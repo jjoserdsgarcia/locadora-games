@@ -23,6 +23,12 @@ namespace ProjetoWindowsForms___Senac
         private async void btnPROSSEGUIRUSER_Click(object sender, EventArgs e)
         {
             {
+
+
+
+
+               
+
                 if (txtCPFUSUARIO.Text.Length != 11 || !long.TryParse(txtCPFUSUARIO.Text, out _))
                 {
                     MessageBox.Show(

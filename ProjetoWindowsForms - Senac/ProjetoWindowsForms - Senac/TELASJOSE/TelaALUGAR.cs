@@ -80,5 +80,10 @@ namespace ProjetoWindowsForms___Senac.TELAS
 
 
         }
+
+        private void txtCpfUsuarioAlugar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
