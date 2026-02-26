@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo;
 
 namespace ProjetoWindowsForms___Senac.TELAS
 {
@@ -16,7 +18,13 @@ namespace ProjetoWindowsForms___Senac.TELAS
         private readonly string CPFUSUARIO;
         private readonly bool IsADMIN;
 
-        
+        private async void CarregarJogo()
+        {
+            var jogos = await RepositorioJogo.ObterTodos();
+            dgvListaJogos.DataSource = jogos;
+
+            CarregarJogo();            
+        }
 
         public TelaPrincipalUsuario(bool IsADMIN, string CPFUSUARIO)
 
@@ -25,7 +33,7 @@ namespace ProjetoWindowsForms___Senac.TELAS
             this.CPFUSUARIO = CPFUSUARIO;
             this.IsADMIN = IsADMIN;
 
-           
+
         }
 
         private void btnALUGAR_Click(object sender, EventArgs e)
@@ -43,5 +51,13 @@ namespace ProjetoWindowsForms___Senac.TELAS
             teladevolver.ShowDialog();
             this.Show();
         }
+
+        private void TelaPrincipalUsuario_Load(object sender, EventArgs e)
+        {
+            CarregarJogo();
+        }
+            
+        }
+
     }
-}
+

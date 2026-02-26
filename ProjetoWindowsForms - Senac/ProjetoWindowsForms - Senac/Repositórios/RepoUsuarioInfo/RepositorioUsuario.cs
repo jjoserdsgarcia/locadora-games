@@ -73,7 +73,7 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoUser
                 @"
                          DELETE FROM Usuario
                           WHERE UsuarioID = @UsuarioID
-                ", new { Usuario = UsuarioID });
+                ", new { UsuarioID = UsuarioID });   //arrumar para Usuario apenas
         }
     }
 }

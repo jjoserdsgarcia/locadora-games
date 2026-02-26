@@ -1,6 +1,6 @@
 ﻿namespace ProjetoWindowsForms___Senac
 {
-    partial class TelaCadastroJogo
+    partial class TelaPrincipalUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,7 @@
             txtNomeJogo = new TextBox();
             txtPlataforma = new TextBox();
             txtGenero = new TextBox();
-            txtValor = new TextBox();
+            txtValorSemanal = new TextBox();
             txtAnoLancamento = new TextBox();
             label1 = new Label();
             SuspendLayout();
@@ -138,12 +138,12 @@
             txtGenero.Size = new Size(293, 23);
             txtGenero.TabIndex = 10;
             // 
-            // txtValor
+            // txtValorSemanal
             // 
-            txtValor.Location = new Point(32, 329);
-            txtValor.Name = "txtValor";
-            txtValor.Size = new Size(100, 23);
-            txtValor.TabIndex = 11;
+            txtValorSemanal.Location = new Point(32, 329);
+            txtValorSemanal.Name = "txtValorSemanal";
+            txtValorSemanal.Size = new Size(100, 23);
+            txtValorSemanal.TabIndex = 11;
             // 
             // txtAnoLancamento
             // 
@@ -169,7 +169,7 @@
             ClientSize = new Size(512, 450);
             Controls.Add(label1);
             Controls.Add(txtAnoLancamento);
-            Controls.Add(txtValor);
+            Controls.Add(txtValorSemanal);
             Controls.Add(txtGenero);
             Controls.Add(txtPlataforma);
             Controls.Add(txtNomeJogo);
@@ -198,7 +198,7 @@
         private TextBox txtNomeJogo;
         private TextBox txtPlataforma;
         private TextBox txtGenero;
-        private TextBox txtValor;
+        private TextBox txtValorSemanal;
         private TextBox txtAnoLancamento;
         private Label label1;
     }

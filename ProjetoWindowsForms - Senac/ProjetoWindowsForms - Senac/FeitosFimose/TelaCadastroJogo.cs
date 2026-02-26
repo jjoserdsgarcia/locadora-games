@@ -1,12 +1,13 @@
 ﻿using ProjetoWindowsForms___Senac.Classes;
+using ProjetoWindowsForms___Senac.Repositories.RepoUser;
+using ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo;
 
 namespace ProjetoWindowsForms___Senac
 {
-    public partial class TelaCadastroJogo : Form
+    public partial class TelaPrincipalUsuario : Form
     {
-        private List<Jogo> jogos = new List<Jogo>();
 
-        public TelaCadastroJogo()
+        public TelaPrincipalUsuario()
         {
             InitializeComponent();
         }
@@ -26,28 +27,50 @@ namespace ProjetoWindowsForms___Senac
         }
 
 
-        private void btnSalvarJogo(object sender, EventArgs e)
+        private async void btnSalvarJogo(object sender, EventArgs e)
         {
-            //pegar os campos digitados
-
-            string titulo = txtNomeJogo.Text;
-            string plataforma = txtPlataforma.Text;
-            string genero = txtGenero.Text;
-            string valor = txtValor.Text;
-            string anoLancamentoCadastro = txtAnoLancamento.Text;
-
-            Jogo novoJogo = new Jogo()
+           if (string.IsNullOrWhiteSpace(txtNomeJogo.Text) ||
+               string.IsNullOrWhiteSpace(txtPlataforma.Text) ||
+               string.IsNullOrWhiteSpace(txtGenero.Text) ||
+               string.IsNullOrWhiteSpace(txtValorSemanal.Text) ||
+               string.IsNullOrWhiteSpace(txtAnoLancamento.Text))
             {
-                Titulo = titulo,
-                Plataforma = plataforma,
-                Genero = genero,
-                Valor = decimal.Parse(txtValor.Text),
-                Ano = int.Parse(anoLancamentoCadastro)
+                MessageBox.Show(
+                    "Preencha todos os campos!",
+                    "Erro",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
+
+             if (!decimal.TryParse(txtValorSemanal.Text, out decimal valor))
+            {
+                MessageBox.Show("Valor inválido!");
+                return;
+            } 
+
+             if (!int.TryParse(txtAnoLancamento.Text, out int ano))
+            {
+                MessageBox.Show("Ano inválido!");
+                return;
+            }   
+
+            var novoJogo = new Jogo
+            {
+                Titulo = txtNomeJogo.Text,
+                Plataforma = txtPlataforma.Text,
+                Genero = txtGenero.Text,
+                Valor = valor,
+                Ano = ano
             };
 
-            jogos.Add(novoJogo);
-            MessageBox.Show("Jogo cadastrado com sucesso!");
-        }
+              await RepositorioJogo.SalvarJogo(novoJogo);
+
+            MessageBox.Show(
+                "Jogo cadastrado com sucesso!");
+
+                this.Close();
+              }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {

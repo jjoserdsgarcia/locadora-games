@@ -55,7 +55,7 @@ namespace ProjetoWindowsForms___Senac
             }
                 string CPFUSUARIO = txtCPFUSUARIO.Text;
 
-            var telaprincipal = new TelaPrincipalUsuario(false, CPFUSUARIO);
+            var telaprincipal = new TELAS.TelaPrincipalUsuario(false, CPFUSUARIO);
             this.Hide();
             telaprincipal.ShowDialog();
             this.Show();

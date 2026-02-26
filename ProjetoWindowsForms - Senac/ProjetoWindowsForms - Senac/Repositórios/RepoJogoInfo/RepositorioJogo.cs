@@ -18,6 +18,7 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
             .QueryAsync<Jogo>(
                 @"
                 SELECT
+                    JogoId AS Id,
                     Titulo,
                     Plataforma,
                     Genero,
@@ -33,16 +34,17 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
 
         }
 
-        public static async void SalvarJogo(Jogo jogo)
+        public static async Task SalvarJogo(Jogo jogo)
         {
-            await conexaoBancoSQL.dbConnection().QueryAsync(
+            using (var conexao = conexaoBancoSQL.dbConnection())
+            {
+                string sql = @"INSERT INTO Jogo
+                       (Titulo, Plataforma, Genero, Valor, Ano)
+                       VALUES
+                       (@Titulo, @Plataforma, @Genero, @Valor, @Ano)";
 
-                @"INSERT INTO Jogo (Titulo, Plataforma, Genero, Valor, Ano)
-                    VALUES (@Titulo, @Plataforma, @Genero, @Valor, @Ano);
-                        
-
-
-                ", jogo);
+                await conexao.ExecuteAsync(sql, jogo);
+            }
         }
     }
 }

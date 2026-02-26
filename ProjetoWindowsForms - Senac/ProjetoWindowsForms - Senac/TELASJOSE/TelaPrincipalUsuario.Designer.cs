@@ -28,24 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvMAINPAGE = new DataGridView();
+            dgvListaJogos = new DataGridView();
             btnALUGAR = new Button();
             btnDEVOLVER = new Button();
-            ((System.ComponentModel.ISupportInitialize)dgvMAINPAGE).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvListaJogos).BeginInit();
             SuspendLayout();
             // 
-            // dgvMAINPAGE
+            // dgvListaJogos
             // 
-            dgvMAINPAGE.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMAINPAGE.Location = new Point(12, 12);
-            dgvMAINPAGE.Name = "dgvMAINPAGE";
-            dgvMAINPAGE.Size = new Size(776, 257);
-            dgvMAINPAGE.TabIndex = 0;
-            dgvMAINPAGE.CellContentClick += this.dgvMAINPAGE_CellContentClick;
+            dgvListaJogos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvListaJogos.Location = new Point(12, 12);
+            dgvListaJogos.Name = "dgvListaJogos";
+            dgvListaJogos.Size = new Size(776, 257);
+            dgvListaJogos.TabIndex = 0;
             // 
             // btnALUGAR
             // 
-            btnALUGAR.Font = new Font("Modern No. 20", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnALUGAR.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnALUGAR.Location = new Point(230, 360);
             btnALUGAR.Name = "btnALUGAR";
             btnALUGAR.Size = new Size(181, 67);
@@ -56,7 +55,7 @@
             // 
             // btnDEVOLVER
             // 
-            btnDEVOLVER.Font = new Font("Modern No. 20", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDEVOLVER.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnDEVOLVER.Location = new Point(452, 360);
             btnDEVOLVER.Name = "btnDEVOLVER";
             btnDEVOLVER.Size = new Size(181, 67);
@@ -72,16 +71,17 @@
             ClientSize = new Size(800, 450);
             Controls.Add(btnDEVOLVER);
             Controls.Add(btnALUGAR);
-            Controls.Add(dgvMAINPAGE);
+            Controls.Add(dgvListaJogos);
             Name = "TelaPrincipalUsuario";
             Text = "Tela Principal - Main Page";
-            ((System.ComponentModel.ISupportInitialize)dgvMAINPAGE).EndInit();
+            Load += TelaPrincipalUsuario_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvListaJogos).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dgvMAINPAGE;
+        private DataGridView dgvListaJogos;
         private Button btnALUGAR;
         private Button btnDEVOLVER;
     }
