@@ -15,11 +15,11 @@ namespace ProjetoWindowsForms___Senac.TELAS
 
         private readonly string CPFUSUARIO;
         private readonly bool IsADMIN;
-<<<<<<< HEAD:ProjetoWindowsForms - Senac/ProjetoWindowsForms - Senac/TELASJOSE/TelaDgvUSER.cs
-        public TelaDgvUSER(bool IsADMIN, string CPFUSUARIO)
-=======
+
+        
+
         public TelaPrincipalUsuario(bool IsADMIN, string CPFUSUARIO)
->>>>>>> 051357cfb5ec32a1a83a75fca1a13d72ff494d3f:ProjetoWindowsForms - Senac/ProjetoWindowsForms - Senac/TELASJOSE/TelaPrincipalUsuario.cs
+
         {
             InitializeComponent();
             this.CPFUSUARIO = CPFUSUARIO;

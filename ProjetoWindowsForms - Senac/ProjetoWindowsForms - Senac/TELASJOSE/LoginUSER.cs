@@ -22,16 +22,12 @@ namespace ProjetoWindowsForms___Senac
         private void btnPROSSEGUIRUSER_Click(object sender, EventArgs e)
         {
             {
-<<<<<<< HEAD
 
 
 
-                var telaprincipal = new TelaDgvUSER(false, txtCPFUSUARIO.Text);
-                this.Hide();
-                telaprincipal.ShowDialog();
-                this.Show();
 
-=======
+               
+
                 if (txtCPFUSUARIO.Text.Length != 11 || !long.TryParse(txtCPFUSUARIO.Text, out _))
                 {
                     MessageBox.Show(
@@ -41,7 +37,7 @@ namespace ProjetoWindowsForms___Senac
                         MessageBoxIcon.Error);
                     return;
                 }
->>>>>>> 051357cfb5ec32a1a83a75fca1a13d72ff494d3f
+
 
 
             }
