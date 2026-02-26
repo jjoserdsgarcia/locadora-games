@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoWindowsForms___Senac.Repositories.RepoUser;
 using ProjetoWindowsForms___Senac.TELAS;
 
 namespace ProjetoWindowsForms___Senac
@@ -19,7 +20,7 @@ namespace ProjetoWindowsForms___Senac
             InitializeComponent();
         }
 
-        private void btnPROSSEGUIRUSER_Click(object sender, EventArgs e)
+        private async void btnPROSSEGUIRUSER_Click(object sender, EventArgs e)
         {
             {
                 if (txtCPFUSUARIO.Text.Length != 11 || !long.TryParse(txtCPFUSUARIO.Text, out _))
@@ -31,10 +32,22 @@ namespace ProjetoWindowsForms___Senac
                         MessageBoxIcon.Error);
                     return;
                 }
+                string cpf = txtCPFUSUARIO.Text;
 
+                
+                var usuario = await RepositorioUsuario.ObterPorCPF(cpf);
 
+                if (usuario == null)
+                {
+                    MessageBox.Show(
+                        "CPF não encontrado. Usuário não cadastrado.",
+                        "Erro",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
             }
-            string CPFUSUARIO = txtCPFUSUARIO.Text;
+                string CPFUSUARIO = txtCPFUSUARIO.Text;
 
             var telaprincipal = new TelaPrincipalUsuario(false, CPFUSUARIO);
             this.Hide();

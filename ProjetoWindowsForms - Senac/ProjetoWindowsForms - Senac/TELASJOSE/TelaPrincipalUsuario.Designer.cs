@@ -41,6 +41,7 @@
             dgvMAINPAGE.Name = "dgvMAINPAGE";
             dgvMAINPAGE.Size = new Size(776, 257);
             dgvMAINPAGE.TabIndex = 0;
+            dgvMAINPAGE.CellContentClick += this.dgvMAINPAGE_CellContentClick;
             // 
             // btnALUGAR
             // 
@@ -64,7 +65,7 @@
             btnDEVOLVER.UseVisualStyleBackColor = true;
             btnDEVOLVER.Click += btnDEVOLVER_Click;
             // 
-            // TelaDgvUSER
+            // TelaPrincipalUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -72,7 +73,7 @@
             Controls.Add(btnDEVOLVER);
             Controls.Add(btnALUGAR);
             Controls.Add(dgvMAINPAGE);
-            Name = "TelaDgvUSER";
+            Name = "TelaPrincipalUsuario";
             Text = "Tela Principal - Main Page";
             ((System.ComponentModel.ISupportInitialize)dgvMAINPAGE).EndInit();
             ResumeLayout(false);

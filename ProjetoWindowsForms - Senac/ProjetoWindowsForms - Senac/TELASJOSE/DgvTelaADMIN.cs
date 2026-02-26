@@ -38,11 +38,11 @@ namespace ProjetoWindowsForms___Senac
         public async Task atualizartabelaadmindgv()
         {
             var usuario = await RepositorioUsuario.ObterTodos();
-            dgvADMIN.DataSource = new BindingList<Usuario>(usuario.ToList());  
+            dgvADMIN.DataSource = new BindingList<Usuario>(usuario.ToList());
         }
 
 
-       
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -76,9 +76,9 @@ namespace ProjetoWindowsForms___Senac
 
         }
 
-       
 
-        private async void btnUsuarios (object sender, EventArgs e)
+
+        private async void btnUsuarios(object sender, EventArgs e)
         {
             tipoAtual = TipoCadastroUsuarioJogo.Usuarios;
             dgvADMIN.DataSource = await RepositorioUsuario.ObterTodos();
@@ -88,6 +88,16 @@ namespace ProjetoWindowsForms___Senac
         {
             tipoAtual = TipoCadastroUsuarioJogo.Jogos;
             dgvADMIN.DataSource = await RepositorioJogo.ObterTodos();
+        }
+
+        private void dgvADMINEXCLUIR_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvADMIN_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

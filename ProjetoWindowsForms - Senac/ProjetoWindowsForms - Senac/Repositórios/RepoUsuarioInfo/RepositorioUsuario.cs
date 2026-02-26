@@ -46,7 +46,7 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoUser
                 ", usuario);
         }
 
-        public static async Task<Usuario> ObterPorCPF(int CPFUSUARIO)
+        public static async Task<Usuario> ObterPorCPF(string CPFUSUARIO)
         {
             var usuario = await conexaobanco.dbConnection()
             .QueryFirstOrDefaultAsync<Usuario>(

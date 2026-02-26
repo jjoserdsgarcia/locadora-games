@@ -38,7 +38,7 @@
             // 
             lblCPFUSER.AutoSize = true;
             lblCPFUSER.Font = new Font("Modern No. 20", 17.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            lblCPFUSER.Location = new Point(290, 166);
+            lblCPFUSER.Location = new Point(309, 169);
             lblCPFUSER.Name = "lblCPFUSER";
             lblCPFUSER.Size = new Size(170, 25);
             lblCPFUSER.TabIndex = 0;
