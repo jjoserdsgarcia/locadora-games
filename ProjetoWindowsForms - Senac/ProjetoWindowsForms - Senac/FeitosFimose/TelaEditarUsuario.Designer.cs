@@ -1,6 +1,6 @@
 ﻿namespace ProjetoWindowsForms___Senac
 {
-    partial class EditarUsuario
+    partial class TelaEditarUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -40,6 +40,8 @@
             txtTelefoneEditUsuario = new TextBox();
             button3 = new Button();
             btnCancelarEditUsuario = new Button();
+            label6 = new Label();
+            txtIdEditUsuario = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -66,18 +68,17 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(36, 166);
+            label3.Location = new Point(56, 208);
             label3.Name = "label3";
             label3.Size = new Size(55, 20);
             label3.TabIndex = 2;
             label3.Text = "Nome:";
-            label3.Click += label3_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(36, 213);
+            label4.Location = new Point(54, 246);
             label4.Name = "label4";
             label4.Size = new Size(57, 20);
             label4.TabIndex = 3;
@@ -87,7 +88,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(36, 260);
+            label5.Location = new Point(36, 287);
             label5.Name = "label5";
             label5.Size = new Size(75, 20);
             label5.TabIndex = 4;
@@ -111,31 +112,32 @@
             button1.TabIndex = 6;
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += btnBuscarUsuarioEdit;
             // 
             // txtNomeEditUsuario
             // 
-            txtNomeEditUsuario.Location = new Point(147, 166);
+            txtNomeEditUsuario.Location = new Point(147, 208);
             txtNomeEditUsuario.Name = "txtNomeEditUsuario";
-            txtNomeEditUsuario.Size = new Size(337, 23);
+            txtNomeEditUsuario.Size = new Size(232, 23);
             txtNomeEditUsuario.TabIndex = 7;
             // 
             // txtEmailEditUsuario
             // 
-            txtEmailEditUsuario.Location = new Point(147, 213);
+            txtEmailEditUsuario.Location = new Point(147, 247);
             txtEmailEditUsuario.Name = "txtEmailEditUsuario";
-            txtEmailEditUsuario.Size = new Size(337, 23);
+            txtEmailEditUsuario.Size = new Size(232, 23);
             txtEmailEditUsuario.TabIndex = 8;
             // 
             // txtTelefoneEditUsuario
             // 
-            txtTelefoneEditUsuario.Location = new Point(147, 260);
+            txtTelefoneEditUsuario.Location = new Point(147, 288);
             txtTelefoneEditUsuario.Name = "txtTelefoneEditUsuario";
-            txtTelefoneEditUsuario.Size = new Size(337, 23);
+            txtTelefoneEditUsuario.Size = new Size(232, 23);
             txtTelefoneEditUsuario.TabIndex = 9;
             // 
             // button3
             // 
-            button3.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button3.Location = new Point(542, 361);
             button3.Name = "button3";
             button3.Padding = new Padding(15, 0, 15, 0);
@@ -147,7 +149,7 @@
             // 
             // btnCancelarEditUsuario
             // 
-            btnCancelarEditUsuario.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCancelarEditUsuario.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCancelarEditUsuario.Location = new Point(386, 361);
             btnCancelarEditUsuario.Name = "btnCancelarEditUsuario";
             btnCancelarEditUsuario.Padding = new Padding(15, 0, 15, 0);
@@ -157,11 +159,31 @@
             btnCancelarEditUsuario.UseVisualStyleBackColor = true;
             btnCancelarEditUsuario.Click += btnCancelarEditarUsuario;
             // 
-            // EditarUsuario
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(81, 171);
+            label6.Name = "label6";
+            label6.Size = new Size(30, 20);
+            label6.TabIndex = 13;
+            label6.Text = "ID:";
+            // 
+            // txtIdEditUsuario
+            // 
+            txtIdEditUsuario.Location = new Point(147, 171);
+            txtIdEditUsuario.Name = "txtIdEditUsuario";
+            txtIdEditUsuario.Size = new Size(54, 23);
+            txtIdEditUsuario.TabIndex = 14;
+            txtIdEditUsuario.Visible = false;
+            // 
+            // TelaEditarUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(804, 450);
+            Controls.Add(txtIdEditUsuario);
+            Controls.Add(label6);
             Controls.Add(btnCancelarEditUsuario);
             Controls.Add(button3);
             Controls.Add(txtTelefoneEditUsuario);
@@ -174,9 +196,8 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "EditarUsuario";
+            Name = "TelaEditarUsuario";
             Text = "EditarUsuario";
-            Load += EditarUsuario_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -195,5 +216,7 @@
         private TextBox txtTelefoneEditUsuario;
         private Button button3;
         private Button btnCancelarEditUsuario;
+        private Label label6;
+        private TextBox txtIdEditUsuario;
     }
 }

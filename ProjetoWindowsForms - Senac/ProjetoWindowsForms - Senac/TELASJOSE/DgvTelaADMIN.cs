@@ -42,14 +42,26 @@ namespace ProjetoWindowsForms___Senac
             dgvADMIN.DataSource = new BindingList<Usuario>(usuario.ToList());
         }
 
-
-
-
-        private void button2_Click(object sender, EventArgs e)
+        private async void btnUsuarios(object sender, EventArgs e)
         {
+            modoAtivo = "USUARIOS";
+            contextoAtual = "Usuarios";
+            lblStatus.Text = "Gerenciando: Usuários";
 
+            tipoAtual = TipoCadastroUsuarioJogo.Usuarios;
+            dgvADMIN.DataSource = await RepositorioUsuario.ObterTodos();
         }
 
+        private async void btnJogos(object sender, EventArgs e)
+        {
+            modoAtivo = "JOGOS";
+            contextoAtual = "Jogos";
+            lblStatus.Text = "Gerenciando: Jogos";
+
+
+            tipoAtual = TipoCadastroUsuarioJogo.Jogos;
+            dgvADMIN.DataSource = await RepositorioJogo.ObterTodos();
+        }
         private void dgvADMINCADASTRAR_Click(object sender, EventArgs e)
         {
             if (modoAtivo == "USUARIOS")
@@ -74,49 +86,70 @@ namespace ProjetoWindowsForms___Senac
             Close();
         }
 
-
-
-        private async void btnUsuarios(object sender, EventArgs e)
-        {
-            modoAtivo = "USUARIOS";
-            contextoAtual = "Usuarios";
-            lblStatus.Text = "Gerenciando: Usuários";
-
-            tipoAtual = TipoCadastroUsuarioJogo.Usuarios;
-            dgvADMIN.DataSource = await RepositorioUsuario.ObterTodos();
-        }
-
-        private async void btnJogos(object sender, EventArgs e)
-        {
-            modoAtivo = "JOGOS";
-            contextoAtual = "Jogos";
-            lblStatus.Text = "Gerenciando: Jogos";
-
-
-            tipoAtual = TipoCadastroUsuarioJogo.Jogos;
-            dgvADMIN.DataSource = await RepositorioJogo.ObterTodos();
-        }
-
         private async void dgvADMINEXCLUIR_Click(object sender, EventArgs e)
         {
-            string nomeUsuario = dgvADMIN.SelectedRows[0].Cells[1].Value.ToString();
 
-            var retorno = MessageBox.Show($"Deseja mesmo excluir o usuário {nomeUsuario}?", "Excluindo usuário.", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (retorno == DialogResult.Yes)
+            if (dgvADMIN.SelectedRows.Count == 0)
             {
-                int UsuarioID = (int)dgvADMIN.SelectedRows[0].Cells[0].Value;
-                await RepositorioUsuario.Deletar(UsuarioID);
-                MessageBox.Show($"O usuário {nomeUsuario} foi deletado.", "Exclusão de usuário.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                await this.atualizartabelaadmindgv();
-
+                MessageBox.Show("Selecione um item para excluir.");
+                return;
             }
+
+            string nomeUsuario = dgvADMIN.SelectedRows[0].Cells[1].Value.ToString();
+            int id = (int)dgvADMIN.SelectedRows[0].Cells[0].Value;
+
+            if (tipoAtual == TipoCadastroUsuarioJogo.Usuarios)
+            {
+                var retorno = MessageBox.Show(
+                    $"Deseja excluir o usuário {nomeUsuario}?",
+                    "Excluir usuário",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (retorno == DialogResult.Yes)
+                {
+                    await RepositorioUsuario.Deletar(id);
+                    dgvADMIN.DataSource = await RepositorioUsuario.ObterTodos();
+                }
+            }
+            else if (tipoAtual == TipoCadastroUsuarioJogo.Jogos)
+            {
+                var retorno = MessageBox.Show(
+                    $"Deseja excluir o jogo {nomeUsuario}?",
+                    "Excluir jogo",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (retorno == DialogResult.Yes)
+                {
+                    await RepositorioJogo.Deletar(id);
+                    dgvADMIN.DataSource = await RepositorioJogo.ObterTodos();
+                }
+            }
+
         }
 
-        private void DgvTelaADMIN_Load_1(object sender, EventArgs e)
+        private void dgvAdminEditar(object sender, EventArgs e)
         {
+            if (modoAtivo == "USUARIOS")
+            {
 
+                TelaEditarUsuario tela = new TelaEditarUsuario();
+                this.Hide();
+                tela.ShowDialog();
+                this.Show();
+            }
+            else if (modoAtivo == "JOGOS")
+            {
+                var jogoSelecionado = (Jogo)dgvADMIN.SelectedRows[0].DataBoundItem;
+
+      
+                TelaEditarJogo telaJogo = new TelaEditarJogo(jogoSelecionado); this.Hide();
+                this.Hide();
+                telaJogo.ShowDialog();
+                this.Show();
+            }
         }
     }
 }
+

@@ -57,6 +57,7 @@
             dgvADMINEDITAR.TabIndex = 2;
             dgvADMINEDITAR.Text = "Editar";
             dgvADMINEDITAR.UseVisualStyleBackColor = true;
+            dgvADMINEDITAR.Click += dgvAdminEditar;
             // 
             // dgvADMINJOGOS
             // 
@@ -141,7 +142,6 @@
             Controls.Add(dgvADMIN);
             Name = "DgvTelaADMIN";
             Text = "Tela Principal - ADMIN";
-            Load += DgvTelaADMIN_Load_1;
             ((System.ComponentModel.ISupportInitialize)dgvADMIN).EndInit();
             ResumeLayout(false);
             PerformLayout();

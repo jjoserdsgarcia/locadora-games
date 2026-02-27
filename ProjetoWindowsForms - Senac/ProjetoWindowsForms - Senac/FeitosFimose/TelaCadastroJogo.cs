@@ -12,21 +12,6 @@ namespace ProjetoWindowsForms___Senac
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void txtNJogo(object sender, EventArgs e)
-        {
-
-        }
-
-
         private async void btnSalvarJogo(object sender, EventArgs e)
         {
            if (string.IsNullOrWhiteSpace(txtNomeJogo.Text) ||
@@ -70,10 +55,6 @@ namespace ProjetoWindowsForms___Senac
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void CadastroJogo_Load(object sender, EventArgs e)
-        {
         }
     }
 }

@@ -16,7 +16,7 @@ namespace ProjetoWindowsForms___Senac
             ApplicationConfiguration.Initialize();
 
 
-            Application.Run(new FPage());
+            Application.Run(new DgvTelaADMIN());
 
 
         }

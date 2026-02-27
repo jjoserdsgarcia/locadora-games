@@ -121,7 +121,7 @@
             txtNomeJogo.Name = "txtNomeJogo";
             txtNomeJogo.Size = new Size(293, 23);
             txtNomeJogo.TabIndex = 8;
-            txtNomeJogo.Click += txtNJogo;
+           
             // 
             // txtPlataforma
             // 
@@ -129,7 +129,7 @@
             txtPlataforma.Name = "txtPlataforma";
             txtPlataforma.Size = new Size(293, 23);
             txtPlataforma.TabIndex = 9;
-            txtPlataforma.TextChanged += textBox2_TextChanged;
+            
             // 
             // txtGenero
             // 
@@ -183,7 +183,7 @@
             Controls.Add(label2);
             Name = "TelaPrincipalUsuario";
             Text = "TelaCadastroJogo";
-            Load += CadastroJogo_Load;
+            
             ResumeLayout(false);
             PerformLayout();
         }

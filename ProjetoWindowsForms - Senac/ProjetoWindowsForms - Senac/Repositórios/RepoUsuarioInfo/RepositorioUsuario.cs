@@ -75,5 +75,14 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoUser
                           WHERE UsuarioID = @UsuarioID
                 ", new { UsuarioID = UsuarioID });   //arrumar para Usuario apenas
         }
+
+        internal static async Task<Usuario> BuscarPorTermo(string termo)
+        {
+            using (var conexao = conexaobanco.dbConnection())
+            {
+                string sql = "SELECT * FROM Usuario WHERE UsuarioID = @Termo OR Email = @Termo";
+                return await conexao.QueryFirstOrDefaultAsync<Usuario>(sql, new { Termo = termo });
+            }
+        }
     }
 }

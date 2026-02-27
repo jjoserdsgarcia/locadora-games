@@ -29,9 +29,6 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
                 ");
 
             return jogo;
-
-
-
         }
 
         public static async Task SalvarJogo(Jogo jogo)
@@ -44,6 +41,16 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
                        (@Titulo, @Plataforma, @Genero, @Valor, @Ano)";
 
                 await conexao.ExecuteAsync(sql, jogo);
+            }
+        }
+
+        internal static async Task Deletar(int id)
+        {
+            using (var connection = conexaoBancoSQL.dbConnection())
+            {
+                string query = "DELETE FROM Jogo WHERE JogoID = @Id";
+
+                await connection.ExecuteAsync(query, new { Id = id });
             }
         }
     }

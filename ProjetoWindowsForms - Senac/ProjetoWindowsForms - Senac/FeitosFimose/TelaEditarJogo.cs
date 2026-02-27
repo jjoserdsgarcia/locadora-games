@@ -3,23 +3,24 @@ using ProjetoWindowsForms___Senac.Classes;
 
 namespace ProjetoWindowsForms___Senac
 {
-    public partial class EditarJogo : Form
+    public partial class TelaEditarJogo : Form
     {
         private Jogo jogo;
-        public EditarJogo(Jogo jogoRecebido)
+        public TelaEditarJogo(Jogo jogoRecebido)
         {
             InitializeComponent();
             jogo = jogoRecebido;
 
             lblEditando.Text = $"Editando: {jogo.Titulo}";
            
-            lblNome.Text = jogo.Titulo;
-            lblPlataforma.Text = jogo.Plataforma;
-            lblGenero.Text = jogo.Genero;
-            lblAno.Text = jogo.Ano.ToString();
+            txtTituloJogoEdit.Text = jogo.Titulo;
+            txtPlataformaJogoEdit.Text = jogo.Plataforma;
+            txtGeneroJogoEdit.Text = jogo.Genero;
+            txtAnoJogoEdit.Text = jogo.Ano.ToString();
 
 
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
