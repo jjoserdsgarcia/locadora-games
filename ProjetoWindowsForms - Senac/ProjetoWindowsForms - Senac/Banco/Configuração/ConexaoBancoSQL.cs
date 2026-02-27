@@ -12,8 +12,8 @@ namespace ProjetoWindowsForms___Senac
     {
         public IDbConnection dbConnection()
         {
-            return new SqlConnection("Server=(localdb)\\MSSQLLocalDB; Database=locadora_games; Trusted_Connection=True;");
+            return new SqlConnection("Server=localhost; Database=locadora_games; Trusted_Connection=True;");
         }
-
+        //(localdb)\\MSSQLLocalDB
     }
 }

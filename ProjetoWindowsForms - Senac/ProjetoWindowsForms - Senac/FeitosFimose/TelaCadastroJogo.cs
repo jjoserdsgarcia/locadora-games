@@ -4,10 +4,10 @@ using ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo;
 
 namespace ProjetoWindowsForms___Senac
 {
-    public partial class TelaPrincipalUsuario : Form
+    public partial class TelaCadastroJogo : Form
     {
 
-        public TelaPrincipalUsuario()
+        public TelaCadastroJogo()
         {
             InitializeComponent();
         }
@@ -32,8 +32,7 @@ namespace ProjetoWindowsForms___Senac
            if (string.IsNullOrWhiteSpace(txtNomeJogo.Text) ||
                string.IsNullOrWhiteSpace(txtPlataforma.Text) ||
                string.IsNullOrWhiteSpace(txtGenero.Text) ||
-               string.IsNullOrWhiteSpace(txtValorSemanal.Text) ||
-               string.IsNullOrWhiteSpace(txtAnoLancamento.Text))
+               string.IsNullOrWhiteSpace(txtValorSemanal.Text))
             {
                 MessageBox.Show(
                     "Preencha todos os campos!",
@@ -47,13 +46,9 @@ namespace ProjetoWindowsForms___Senac
             {
                 MessageBox.Show("Valor inválido!");
                 return;
-            } 
+            }
 
-             if (!int.TryParse(txtAnoLancamento.Text, out int ano))
-            {
-                MessageBox.Show("Ano inválido!");
-                return;
-            }   
+            int ano = dtpAnoLancamentoCadastro.Value.Year;  
 
             var novoJogo = new Jogo
             {
@@ -79,7 +74,6 @@ namespace ProjetoWindowsForms___Senac
 
         private void CadastroJogo_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

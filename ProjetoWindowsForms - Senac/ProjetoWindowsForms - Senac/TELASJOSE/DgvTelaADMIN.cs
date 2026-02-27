@@ -20,7 +20,8 @@ namespace ProjetoWindowsForms___Senac
 
     public partial class DgvTelaADMIN : Form
     {
-
+        string modoAtivo = "";
+        string contextoAtual = "";
         private string tipoSelecionado = "";
         private TipoCadastroUsuarioJogo tipoAtual;
 
@@ -51,42 +52,45 @@ namespace ProjetoWindowsForms___Senac
 
         private void dgvADMINCADASTRAR_Click(object sender, EventArgs e)
         {
+            if (modoAtivo == "USUARIOS")
+            {
 
-            var telacadastrousuario = new TelaCadastroUsuario(this);
-            this.Hide();
-            telacadastrousuario.ShowDialog();
-            this.Show();
-
+                TelaCadastroUsuario tela = new TelaCadastroUsuario();
+                this.Hide();
+                tela.ShowDialog();
+                this.Show();
+            }
+            else if (modoAtivo == "JOGOS")
+            {
+                TelaCadastroJogo telaJogo = new TelaCadastroJogo();
+                this.Hide();
+                telaJogo.ShowDialog();
+                this.Show();
+            }
         }
 
         private void btnSAIRDGVADM_Click(object sender, EventArgs e)
         {
             Close();
-
-
-
         }
 
 
 
         private async void btnUsuarios(object sender, EventArgs e)
         {
+            modoAtivo = "USUARIOS";
+            contextoAtual = "Usuarios";
+            lblStatus.Text = "Gerenciando: Usuários";
+
             tipoAtual = TipoCadastroUsuarioJogo.Usuarios;
             dgvADMIN.DataSource = await RepositorioUsuario.ObterTodos();
         }
 
         private async void btnJogos(object sender, EventArgs e)
         {
-            //if (tipoAtual == TipoCadastroUsuarioJogo.Usuarios)
-            //    {
-            //        var tela = new TelaCadastroUsuario(this);
-            //tela.ShowDialog();
-            //    }
-            //    else if (tipoAtual == TipoCadastroUsuarioJogo.Jogos)
-            //    {
-            //        var tela = new TelaCadastroJogo();
-            //      tela.ShowDialog();
-            //    }
+            modoAtivo = "JOGOS";
+            contextoAtual = "Jogos";
+            lblStatus.Text = "Gerenciando: Jogos";
 
 
             tipoAtual = TipoCadastroUsuarioJogo.Jogos;
@@ -110,6 +114,9 @@ namespace ProjetoWindowsForms___Senac
             }
         }
 
-       
+        private void DgvTelaADMIN_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -35,6 +35,7 @@
             dgvADMINCADASTRAR = new Button();
             dgvADMINEXCLUIR = new Button();
             btnSAIRDGVADM = new Button();
+            lblStatus = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvADMIN).BeginInit();
             SuspendLayout();
             // 
@@ -71,7 +72,7 @@
             // dgvADMINUSUARIOS
             // 
             dgvADMINUSUARIOS.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvADMINUSUARIOS.Location = new Point(12, 59);
+            dgvADMINUSUARIOS.Location = new Point(12, 103);
             dgvADMINUSUARIOS.Name = "dgvADMINUSUARIOS";
             dgvADMINUSUARIOS.Size = new Size(108, 40);
             dgvADMINUSUARIOS.TabIndex = 6;
@@ -113,12 +114,24 @@
             btnSAIRDGVADM.UseVisualStyleBackColor = true;
             btnSAIRDGVADM.Click += btnSAIRDGVADM_Click;
             // 
+            // lblStatus
+            // 
+            lblStatus.AutoSize = true;
+            lblStatus.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblStatus.ForeColor = SystemColors.ControlLightLight;
+            lblStatus.Location = new Point(9, 64);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(125, 17);
+            lblStatus.TabIndex = 11;
+            lblStatus.Text = "Escolha uma opção:";
+            // 
             // DgvTelaADMIN
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblStatus);
             Controls.Add(btnSAIRDGVADM);
             Controls.Add(dgvADMINEXCLUIR);
             Controls.Add(dgvADMINCADASTRAR);
@@ -128,8 +141,10 @@
             Controls.Add(dgvADMIN);
             Name = "DgvTelaADMIN";
             Text = "Tela Principal - ADMIN";
+            Load += DgvTelaADMIN_Load_1;
             ((System.ComponentModel.ISupportInitialize)dgvADMIN).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -144,5 +159,6 @@
         private Button dgvADMINCADASTRAR;
         private Button dgvADMINEXCLUIR;
         private Button btnSAIRDGVADM;
+        private Label lblStatus;
     }
 }

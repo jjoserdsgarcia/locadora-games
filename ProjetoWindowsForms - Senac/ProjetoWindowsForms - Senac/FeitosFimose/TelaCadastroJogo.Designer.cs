@@ -1,6 +1,6 @@
 ﻿namespace ProjetoWindowsForms___Senac
 {
-    partial class TelaPrincipalUsuario
+    partial class TelaCadastroJogo
     {
         /// <summary>
         /// Required designer variable.
@@ -39,8 +39,8 @@
             txtPlataforma = new TextBox();
             txtGenero = new TextBox();
             txtValorSemanal = new TextBox();
-            txtAnoLancamento = new TextBox();
             label1 = new Label();
+            dtpAnoLancamentoCadastro = new DateTimePicker();
             SuspendLayout();
             // 
             // label2
@@ -145,13 +145,6 @@
             txtValorSemanal.Size = new Size(100, 23);
             txtValorSemanal.TabIndex = 11;
             // 
-            // txtAnoLancamento
-            // 
-            txtAnoLancamento.Location = new Point(322, 329);
-            txtAnoLancamento.Name = "txtAnoLancamento";
-            txtAnoLancamento.Size = new Size(124, 23);
-            txtAnoLancamento.TabIndex = 12;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -162,13 +155,21 @@
             label1.TabIndex = 13;
             label1.Text = "Cadastrar Novo Item";
             // 
-            // TelaCadastroJogo
+            // dtpAnoLancamentoCadastro
+            // 
+            dtpAnoLancamentoCadastro.Format = DateTimePickerFormat.Short;
+            dtpAnoLancamentoCadastro.Location = new Point(358, 329);
+            dtpAnoLancamentoCadastro.Name = "dtpAnoLancamentoCadastro";
+            dtpAnoLancamentoCadastro.Size = new Size(102, 23);
+            dtpAnoLancamentoCadastro.TabIndex = 14;
+            // 
+            // TelaPrincipalUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(512, 450);
+            Controls.Add(dtpAnoLancamentoCadastro);
             Controls.Add(label1);
-            Controls.Add(txtAnoLancamento);
             Controls.Add(txtValorSemanal);
             Controls.Add(txtGenero);
             Controls.Add(txtPlataforma);
@@ -180,7 +181,7 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Name = "TelaCadastroJogo";
+            Name = "TelaPrincipalUsuario";
             Text = "TelaCadastroJogo";
             Load += CadastroJogo_Load;
             ResumeLayout(false);
@@ -199,7 +200,7 @@
         private TextBox txtPlataforma;
         private TextBox txtGenero;
         private TextBox txtValorSemanal;
-        private TextBox txtAnoLancamento;
         private Label label1;
+        private DateTimePicker dtpAnoLancamentoCadastro;
     }
 }

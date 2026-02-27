@@ -41,17 +41,16 @@
             txtPLATAFORMAJOGO = new TextBox();
             txtGENEROJOGO = new TextBox();
             txtANOJOGO = new TextBox();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblEditando
             // 
             lblEditando.AutoSize = true;
-            lblEditando.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            lblEditando.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
             lblEditando.Location = new Point(43, 25);
             lblEditando.Name = "lblEditando";
-            lblEditando.Size = new Size(72, 18);
+            lblEditando.Size = new Size(77, 20);
             lblEditando.TabIndex = 0;
             lblEditando.Text = "Editando:";
             lblEditando.Click += label1_Click;
@@ -59,10 +58,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Modern No. 20", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(195, 25);
             label2.Name = "label2";
-            label2.Size = new Size(180, 24);
+            label2.Size = new Size(212, 25);
             label2.TabIndex = 1;
             label2.Text = "Informações do Jogo";
             label2.Click += label2_Click;
@@ -70,10 +69,10 @@
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Font = new Font("Modern No. 20", 14.25F, FontStyle.Underline);
+            lblNome.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Underline);
             lblNome.Location = new Point(195, 90);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(63, 21);
+            lblNome.Size = new Size(61, 24);
             lblNome.TabIndex = 3;
             lblNome.Text = "Título:";
             lblNome.Click += lblNome_Click;
@@ -81,37 +80,37 @@
             // lblPlataforma
             // 
             lblPlataforma.AutoSize = true;
-            lblPlataforma.Font = new Font("Modern No. 20", 14.25F, FontStyle.Underline);
+            lblPlataforma.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Underline);
             lblPlataforma.Location = new Point(195, 135);
             lblPlataforma.Name = "lblPlataforma";
-            lblPlataforma.Size = new Size(102, 21);
+            lblPlataforma.Size = new Size(102, 24);
             lblPlataforma.TabIndex = 4;
             lblPlataforma.Text = "Plataforma:";
             // 
             // lblGenero
             // 
             lblGenero.AutoSize = true;
-            lblGenero.Font = new Font("Modern No. 20", 14.25F, FontStyle.Underline);
+            lblGenero.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Underline);
             lblGenero.Location = new Point(195, 186);
             lblGenero.Name = "lblGenero";
-            lblGenero.Size = new Size(69, 21);
+            lblGenero.Size = new Size(79, 24);
             lblGenero.TabIndex = 5;
             lblGenero.Text = "Gênero:";
             // 
             // lblAno
             // 
             lblAno.AutoSize = true;
-            lblAno.Font = new Font("Modern No. 20", 14.25F, FontStyle.Underline);
+            lblAno.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Underline);
             lblAno.Location = new Point(195, 239);
             lblAno.Name = "lblAno";
-            lblAno.Size = new Size(46, 21);
+            lblAno.Size = new Size(50, 24);
             lblAno.TabIndex = 6;
             lblAno.Text = "Ano:";
             lblAno.Click += label7_Click;
             // 
             // btnSalvarEdit
             // 
-            btnSalvarEdit.Font = new Font("Modern No. 20", 15.75F);
+            btnSalvarEdit.Font = new Font("Microsoft Sans Serif", 15.75F);
             btnSalvarEdit.Location = new Point(672, 383);
             btnSalvarEdit.Name = "btnSalvarEdit";
             btnSalvarEdit.Size = new Size(100, 40);
@@ -122,7 +121,7 @@
             // 
             // btnCancelarEdit
             // 
-            btnCancelarEdit.Font = new Font("Modern No. 20", 15.75F);
+            btnCancelarEdit.Font = new Font("Microsoft Sans Serif", 15.75F);
             btnCancelarEdit.Location = new Point(550, 383);
             btnCancelarEdit.Name = "btnCancelarEdit";
             btnCancelarEdit.Size = new Size(100, 40);
@@ -167,21 +166,11 @@
             txtANOJOGO.Size = new Size(165, 23);
             txtANOJOGO.TabIndex = 22;
             // 
-            // button1
-            // 
-            button1.Location = new Point(683, 320);
-            button1.Name = "button1";
-            button1.Size = new Size(8, 8);
-            button1.TabIndex = 23;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // EditarJogo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
             Controls.Add(txtANOJOGO);
             Controls.Add(txtGENEROJOGO);
             Controls.Add(txtPLATAFORMAJOGO);
@@ -218,6 +207,5 @@
         private TextBox txtPLATAFORMAJOGO;
         private TextBox txtGENEROJOGO;
         private TextBox txtANOJOGO;
-        private Button button1;
     }
 }

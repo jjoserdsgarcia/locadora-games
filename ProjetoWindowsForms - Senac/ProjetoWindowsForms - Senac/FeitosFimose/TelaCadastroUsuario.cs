@@ -13,16 +13,13 @@ namespace ProjetoWindowsForms___Senac
     public partial class TelaCadastroUsuario : Form
     {
         private readonly DgvTelaADMIN dgvTelaADMIN;
-
-
-
        
-        private List<Usuario> usuarios = new List<Usuario>();
-        public TelaCadastroUsuario(DgvTelaADMIN dgvTelaADMIN)
+        public TelaCadastroUsuario()
         {
             InitializeComponent();
             this.dgvTelaADMIN = dgvTelaADMIN;
         }
+
 
         private async void BtnSalvarCadastroUser(object sender, EventArgs e)
         {
@@ -37,8 +34,6 @@ namespace ProjetoWindowsForms___Senac
             var ListaDeErros = new List<ValidationResult>();
 
            
-           
-
             var contexto = new ValidationContext(usuario);
             Validator.TryValidateObject(usuario, contexto, ListaDeErros, true);
 
