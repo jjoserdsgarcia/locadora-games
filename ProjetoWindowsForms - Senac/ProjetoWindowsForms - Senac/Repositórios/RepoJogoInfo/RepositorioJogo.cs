@@ -23,7 +23,8 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
                     Plataforma,
                     Genero,
                     Valor,
-                    Ano
+                    Ano,
+                    Status
                         FROM
                             Jogo
                 ");
@@ -33,12 +34,12 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
 
         public static async Task SalvarJogo(Jogo jogo)
         {
-            using (var conexao = conexaoBancoSQL.dbConnection())
+            using (var conexao = conexaoBancoSQL.dbConnection())  //ATUALIZAR O BANCO, COLOCAR "STATUS" E DISPONIVEL DPS DE CADASTRAR JOGO
             {
                 string sql = @"INSERT INTO Jogo
-                       (Titulo, Plataforma, Genero, Valor, Ano)
+                       (Titulo, Plataforma, Genero, Valor, Ano, Status)
                        VALUES
-                       (@Titulo, @Plataforma, @Genero, @Valor, @Ano)";
+                       (@Titulo, @Plataforma, @Genero, @Valor, @Ano, @Status)"; 
 
                 await conexao.ExecuteAsync(sql, jogo);
             }

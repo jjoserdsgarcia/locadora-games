@@ -41,7 +41,8 @@ namespace ProjetoWindowsForms___Senac
                 Plataforma = txtPlataforma.Text,
                 Genero = txtGenero.Text,
                 Valor = valor,
-                Ano = ano
+                Ano = ano,
+                Status = "Disponível"
             };
 
               await RepositorioJogo.SalvarJogo(novoJogo);

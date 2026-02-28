@@ -37,12 +37,17 @@
             txtTelefoneUsuarioAlugar = new TextBox();
             lblJOGOALUGADO = new Label();
             lblCATEGORIAALUGAR = new Label();
-            textBox3 = new TextBox();
+            txtCategoriaJogoAlugar = new TextBox();
             btnALUGARUSUARIO = new Button();
             btnCANCELARALUGAR = new Button();
-            cmbJogo = new ComboBox();
             lblDATADEENTREGAALUGAR = new Label();
             dtpEntrega = new DateTimePicker();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            txtValorJogoAlugar = new TextBox();
+            txtPlataformaJogoAlugar = new TextBox();
+            txtNomeJogoAlugar = new TextBox();
             SuspendLayout();
             // 
             // lblDADOSUSER
@@ -51,7 +56,7 @@
             lblDADOSUSER.BackColor = Color.Black;
             lblDADOSUSER.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
             lblDADOSUSER.ForeColor = Color.White;
-            lblDADOSUSER.Location = new Point(28, 22);
+            lblDADOSUSER.Location = new Point(28, 13);
             lblDADOSUSER.Name = "lblDADOSUSER";
             lblDADOSUSER.Size = new Size(222, 31);
             lblDADOSUSER.TabIndex = 0;
@@ -63,7 +68,7 @@
             lblNAMEUSERALUGAR.BackColor = Color.Black;
             lblNAMEUSERALUGAR.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
             lblNAMEUSERALUGAR.ForeColor = Color.White;
-            lblNAMEUSERALUGAR.Location = new Point(28, 75);
+            lblNAMEUSERALUGAR.Location = new Point(28, 61);
             lblNAMEUSERALUGAR.Name = "lblNAMEUSERALUGAR";
             lblNAMEUSERALUGAR.Size = new Size(59, 20);
             lblNAMEUSERALUGAR.TabIndex = 1;
@@ -75,12 +80,11 @@
             lblCPFUSERALUGAR.BackColor = Color.Black;
             lblCPFUSERALUGAR.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
             lblCPFUSERALUGAR.ForeColor = Color.White;
-            lblCPFUSERALUGAR.Location = new Point(28, 129);
+            lblCPFUSERALUGAR.Location = new Point(42, 99);
             lblCPFUSERALUGAR.Name = "lblCPFUSERALUGAR";
             lblCPFUSERALUGAR.Size = new Size(44, 20);
             lblCPFUSERALUGAR.TabIndex = 2;
             lblCPFUSERALUGAR.Text = "CPF:";
-            lblCPFUSERALUGAR.Click += lblCPFUSERALUGAR_Click;
             // 
             // lblTELEFONEUSERALUGAR
             // 
@@ -88,7 +92,7 @@
             lblTELEFONEUSERALUGAR.BackColor = Color.Black;
             lblTELEFONEUSERALUGAR.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
             lblTELEFONEUSERALUGAR.ForeColor = Color.White;
-            lblTELEFONEUSERALUGAR.Location = new Point(14, 186);
+            lblTELEFONEUSERALUGAR.Location = new Point(11, 136);
             lblTELEFONEUSERALUGAR.Name = "lblTELEFONEUSERALUGAR";
             lblTELEFONEUSERALUGAR.Size = new Size(75, 20);
             lblTELEFONEUSERALUGAR.TabIndex = 3;
@@ -96,14 +100,14 @@
             // 
             // txtNomeUsuarioAlugar
             // 
-            txtNomeUsuarioAlugar.Location = new Point(96, 75);
+            txtNomeUsuarioAlugar.Location = new Point(108, 60);
             txtNomeUsuarioAlugar.Name = "txtNomeUsuarioAlugar";
             txtNomeUsuarioAlugar.Size = new Size(181, 23);
             txtNomeUsuarioAlugar.TabIndex = 8;
             // 
             // txtCpfUsuarioAlugar
             // 
-            txtCpfUsuarioAlugar.Location = new Point(95, 129);
+            txtCpfUsuarioAlugar.Location = new Point(108, 99);
             txtCpfUsuarioAlugar.Name = "txtCpfUsuarioAlugar";
             txtCpfUsuarioAlugar.Size = new Size(181, 23);
             txtCpfUsuarioAlugar.TabIndex = 9;
@@ -111,7 +115,7 @@
             // 
             // txtTelefoneUsuarioAlugar
             // 
-            txtTelefoneUsuarioAlugar.Location = new Point(95, 185);
+            txtTelefoneUsuarioAlugar.Location = new Point(108, 135);
             txtTelefoneUsuarioAlugar.Name = "txtTelefoneUsuarioAlugar";
             txtTelefoneUsuarioAlugar.Size = new Size(181, 23);
             txtTelefoneUsuarioAlugar.TabIndex = 10;
@@ -122,12 +126,11 @@
             lblJOGOALUGADO.BackColor = Color.Black;
             lblJOGOALUGADO.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
             lblJOGOALUGADO.ForeColor = Color.White;
-            lblJOGOALUGADO.Location = new Point(28, 241);
+            lblJOGOALUGADO.Location = new Point(12, 182);
             lblJOGOALUGADO.Name = "lblJOGOALUGADO";
-            lblJOGOALUGADO.Size = new Size(302, 31);
+            lblJOGOALUGADO.Size = new Size(311, 31);
             lblJOGOALUGADO.TabIndex = 11;
-            lblJOGOALUGADO.Text = "Dados do Jogo Alugado";
-            lblJOGOALUGADO.Click += label1_Click;
+            lblJOGOALUGADO.Text = "Dados do Jogo a Alugar:";
             // 
             // lblCATEGORIAALUGAR
             // 
@@ -135,24 +138,24 @@
             lblCATEGORIAALUGAR.BackColor = Color.Black;
             lblCATEGORIAALUGAR.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
             lblCATEGORIAALUGAR.ForeColor = Color.White;
-            lblCATEGORIAALUGAR.Location = new Point(12, 327);
+            lblCATEGORIAALUGAR.Location = new Point(20, 319);
             lblCATEGORIAALUGAR.Name = "lblCATEGORIAALUGAR";
             lblCATEGORIAALUGAR.Size = new Size(82, 20);
             lblCATEGORIAALUGAR.TabIndex = 13;
             lblCATEGORIAALUGAR.Text = "Categoria:";
             // 
-            // textBox3
+            // txtCategoriaJogoAlugar
             // 
-            textBox3.Location = new Point(104, 325);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(181, 23);
-            textBox3.TabIndex = 15;
+            txtCategoriaJogoAlugar.Location = new Point(108, 318);
+            txtCategoriaJogoAlugar.Name = "txtCategoriaJogoAlugar";
+            txtCategoriaJogoAlugar.Size = new Size(181, 23);
+            txtCategoriaJogoAlugar.TabIndex = 15;
             // 
             // btnALUGARUSUARIO
             // 
-            btnALUGARUSUARIO.Location = new Point(625, 365);
+            btnALUGARUSUARIO.Location = new Point(623, 357);
             btnALUGARUSUARIO.Name = "btnALUGARUSUARIO";
-            btnALUGARUSUARIO.Size = new Size(157, 66);
+            btnALUGARUSUARIO.Size = new Size(108, 40);
             btnALUGARUSUARIO.TabIndex = 17;
             btnALUGARUSUARIO.Text = "ALUGAR";
             btnALUGARUSUARIO.UseVisualStyleBackColor = true;
@@ -160,42 +163,91 @@
             // 
             // btnCANCELARALUGAR
             // 
-            btnCANCELARALUGAR.Location = new Point(625, 266);
+            btnCANCELARALUGAR.Location = new Point(482, 357);
             btnCANCELARALUGAR.Name = "btnCANCELARALUGAR";
-            btnCANCELARALUGAR.Size = new Size(157, 66);
+            btnCANCELARALUGAR.Size = new Size(108, 40);
             btnCANCELARALUGAR.TabIndex = 18;
             btnCANCELARALUGAR.Text = "VOLTAR";
             btnCANCELARALUGAR.UseVisualStyleBackColor = true;
             btnCANCELARALUGAR.Click += btnCANCELARALUGAR_Click;
             // 
-            // cmbJogo
-            // 
-            cmbJogo.FormattingEnabled = true;
-            cmbJogo.Location = new Point(104, 283);
-            cmbJogo.Name = "cmbJogo";
-            cmbJogo.Size = new Size(181, 23);
-            cmbJogo.TabIndex = 19;
-            cmbJogo.Text = " - Selecione um jogo";
-            // 
             // lblDATADEENTREGAALUGAR
             // 
             lblDATADEENTREGAALUGAR.AutoSize = true;
             lblDATADEENTREGAALUGAR.BackColor = Color.Black;
-            lblDATADEENTREGAALUGAR.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            lblDATADEENTREGAALUGAR.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
             lblDATADEENTREGAALUGAR.ForeColor = Color.White;
-            lblDATADEENTREGAALUGAR.Location = new Point(12, 374);
+            lblDATADEENTREGAALUGAR.Location = new Point(539, 173);
             lblDATADEENTREGAALUGAR.Name = "lblDATADEENTREGAALUGAR";
-            lblDATADEENTREGAALUGAR.Size = new Size(131, 20);
+            lblDATADEENTREGAALUGAR.Size = new Size(150, 24);
             lblDATADEENTREGAALUGAR.TabIndex = 14;
             lblDATADEENTREGAALUGAR.Text = "Data de Entrega:";
             // 
             // dtpEntrega
             // 
             dtpEntrega.Format = DateTimePickerFormat.Short;
-            dtpEntrega.Location = new Point(152, 372);
+            dtpEntrega.Location = new Point(515, 209);
             dtpEntrega.Name = "dtpEntrega";
             dtpEntrega.Size = new Size(200, 23);
             dtpEntrega.TabIndex = 20;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Black;
+            label1.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(12, 274);
+            label1.Name = "label1";
+            label1.Size = new Size(90, 20);
+            label1.TabIndex = 21;
+            label1.Text = "Plataforma:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Black;
+            label2.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(47, 235);
+            label2.Name = "label2";
+            label2.Size = new Size(55, 20);
+            label2.TabIndex = 22;
+            label2.Text = "Nome:";
+            label2.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Black;
+            label3.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(47, 358);
+            label3.Name = "label3";
+            label3.Size = new Size(50, 20);
+            label3.TabIndex = 23;
+            label3.Text = "Valor:";
+            // 
+            // txtValorJogoAlugar
+            // 
+            txtValorJogoAlugar.Location = new Point(108, 358);
+            txtValorJogoAlugar.Name = "txtValorJogoAlugar";
+            txtValorJogoAlugar.Size = new Size(181, 23);
+            txtValorJogoAlugar.TabIndex = 24;
+            // 
+            // txtPlataformaJogoAlugar
+            // 
+            txtPlataformaJogoAlugar.Location = new Point(108, 275);
+            txtPlataformaJogoAlugar.Name = "txtPlataformaJogoAlugar";
+            txtPlataformaJogoAlugar.Size = new Size(181, 23);
+            txtPlataformaJogoAlugar.TabIndex = 25;
+            // 
+            // txtNomeJogoAlugar
+            // 
+            txtNomeJogoAlugar.Location = new Point(108, 232);
+            txtNomeJogoAlugar.Name = "txtNomeJogoAlugar";
+            txtNomeJogoAlugar.Size = new Size(181, 23);
+            txtNomeJogoAlugar.TabIndex = 26;
             // 
             // TelaALUGAR
             // 
@@ -205,11 +257,16 @@
             BackgroundImage = Properties.Resources.d0b7d847_5bad_4ed5_a76b_a413a0e81b87;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(797, 442);
+            Controls.Add(txtNomeJogoAlugar);
+            Controls.Add(txtPlataformaJogoAlugar);
+            Controls.Add(txtValorJogoAlugar);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(dtpEntrega);
-            Controls.Add(cmbJogo);
             Controls.Add(btnCANCELARALUGAR);
             Controls.Add(btnALUGARUSUARIO);
-            Controls.Add(textBox3);
+            Controls.Add(txtCategoriaJogoAlugar);
             Controls.Add(lblDATADEENTREGAALUGAR);
             Controls.Add(lblCATEGORIAALUGAR);
             Controls.Add(lblJOGOALUGADO);
@@ -238,11 +295,16 @@
         private TextBox txtTelefoneUsuarioAlugar;
         private Label lblJOGOALUGADO;
         private Label lblCATEGORIAALUGAR;
-        private TextBox textBox3;
+        private TextBox txtCategoriaJogoAlugar;
         private Button btnALUGARUSUARIO;
         private Button btnCANCELARALUGAR;
-        private ComboBox cmbJogo;
         private Label lblDATADEENTREGAALUGAR;
         private DateTimePicker dtpEntrega;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private TextBox txtValorJogoAlugar;
+        private TextBox txtPlataformaJogoAlugar;
+        private TextBox txtNomeJogoAlugar;
     }
 }

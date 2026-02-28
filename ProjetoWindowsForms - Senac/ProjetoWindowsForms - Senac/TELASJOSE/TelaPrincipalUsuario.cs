@@ -8,12 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoWindowsForms___Senac.Classes;
 using ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo;
 
 namespace ProjetoWindowsForms___Senac.TELAS
 {
+
     public partial class TelaPrincipalUsuario : Form
     {
+        public Jogo JogoSelecionado { get; set; }
 
         private readonly string CPFUSUARIO;
         private readonly bool IsADMIN;
@@ -23,8 +26,10 @@ namespace ProjetoWindowsForms___Senac.TELAS
             var jogos = await RepositorioJogo.ObterTodos();
             dgvListaJogos.DataSource = jogos;
 
-            CarregarJogo();            
+            dgvListaJogos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvListaJogos.MultiSelect = false;
         }
+
 
         public TelaPrincipalUsuario(bool IsADMIN, string CPFUSUARIO)
 
@@ -32,16 +37,32 @@ namespace ProjetoWindowsForms___Senac.TELAS
             InitializeComponent();
             this.CPFUSUARIO = CPFUSUARIO;
             this.IsADMIN = IsADMIN;
-
-
+            CarregarJogo();
         }
 
         private void btnALUGAR_Click(object sender, EventArgs e)
         {
-            var telaalugar = new TelaALUGAR();
-            this.Hide();
-            telaalugar.ShowDialog();
-            this.Show();
+            if (dgvListaJogos.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um jogo!");
+                return;
+            }
+
+            Jogo jogoSelecionado =
+                (Jogo)dgvListaJogos.SelectedRows[0].DataBoundItem;
+
+            if (jogoSelecionado.Status == "Alugado")
+            {
+                MessageBox.Show("Esse jogo já está alugado!");
+                return;
+            }
+
+            TelaALUGAR tela = new TelaALUGAR();
+            tela.JogoSelecionado = jogoSelecionado;
+            tela.CPFUsuario = CPFUSUARIO;
+            tela.ShowDialog();
+
+            dgvListaJogos.Refresh();
         }
 
         private void btnDEVOLVER_Click(object sender, EventArgs e)
@@ -56,8 +77,12 @@ namespace ProjetoWindowsForms___Senac.TELAS
         {
             CarregarJogo();
         }
-            
-        }
 
+        private void dgvListaJog(object sender, QuestionEventArgs e)
+        {
+
+        }
     }
+
+}
 
