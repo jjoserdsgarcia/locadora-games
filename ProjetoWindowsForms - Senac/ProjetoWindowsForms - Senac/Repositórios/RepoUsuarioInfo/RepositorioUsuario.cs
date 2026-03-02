@@ -24,8 +24,8 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoUser
                     Email,
                     Telefone,
                     DataNascimento
-                    FROM
-                        Usuario
+                    FROM Usuario
+                    ORDER BY Nome ASC
                 ");
 
             return usuario;
@@ -37,6 +37,24 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoUser
 
                 @"INSERT INTO Usuario (Nome, CPF, Email, Telefone, DataNascimento)
                     VALUES (@Nome, @CPF, @Email, @Telefone, @DataNascimento);", usuario);
+        }
+
+        public static async Task Atualizar(Usuario usuario)
+        {
+            using (var connection = conexaobanco.dbConnection())
+            {
+                await connection.ExecuteAsync(
+                    @"
+            UPDATE Usuario
+            SET 
+                Nome = @Nome,
+                Email = @Email,
+                Telefone = @Telefone
+            WHERE UsuarioID = @UsuarioID
+            ",
+                    usuario
+                );
+            }
         }
 
         public static async Task<Usuario> ObterPorCPF(string CPFUSUARIO)
@@ -67,15 +85,6 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoUser
                          DELETE FROM Usuario
                           WHERE UsuarioID = @UsuarioID
                 ", new { UsuarioID = UsuarioID });   //arrumar para Usuario apenas
-        }
-
-        internal static async Task<Usuario> BuscarPorTermo(string termo)
-        {
-            using (var conexao = conexaobanco.dbConnection())
-            {
-                string sql = "SELECT * FROM Usuario WHERE UsuarioID = @Termo OR Email = @Termo";
-                return await conexao.QueryFirstOrDefaultAsync<Usuario>(sql, new { Termo = termo });
-            }
         }
     }
 }

@@ -53,7 +53,6 @@
             lblEditando.Size = new Size(90, 24);
             lblEditando.TabIndex = 0;
             lblEditando.Text = "Editando:";
-            lblEditando.Click += label1_Click;
             // 
             // label2
             // 
@@ -64,7 +63,6 @@
             label2.Size = new Size(212, 25);
             label2.TabIndex = 1;
             label2.Text = "Informações do Jogo";
-            label2.Click += label2_Click;
             // 
             // lblNome
             // 
@@ -75,7 +73,6 @@
             lblNome.Size = new Size(61, 24);
             lblNome.TabIndex = 3;
             lblNome.Text = "Título:";
-            lblNome.Click += lblNome_Click;
             // 
             // lblPlataforma
             // 
@@ -106,7 +103,6 @@
             lblAno.Size = new Size(50, 24);
             lblAno.TabIndex = 6;
             lblAno.Text = "Ano:";
-            lblAno.Click += label7_Click;
             // 
             // btnSalvarEdit
             // 
@@ -117,11 +113,11 @@
             btnSalvarEdit.TabIndex = 16;
             btnSalvarEdit.Text = "Salvar";
             btnSalvarEdit.UseVisualStyleBackColor = true;
-            btnSalvarEdit.Click += button1_Click;
+            btnSalvarEdit.Click += btnSalvarEditJogo;
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(30, 92);
+            pictureBox1.Location = new Point(46, 92);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(166, 218);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -132,6 +128,7 @@
             // 
             txtTituloJogoEdit.Location = new Point(326, 141);
             txtTituloJogoEdit.Name = "txtTituloJogoEdit";
+            txtTituloJogoEdit.ReadOnly = true;
             txtTituloJogoEdit.Size = new Size(165, 23);
             txtTituloJogoEdit.TabIndex = 19;
             // 
@@ -165,6 +162,7 @@
             btnCancelarEdit.TabIndex = 23;
             btnCancelarEdit.Text = "Cancelar";
             btnCancelarEdit.UseVisualStyleBackColor = true;
+            btnCancelarEdit.Click += btnCancelarEdit_Click;
             // 
             // TelaEditarJogo
             // 
@@ -186,7 +184,6 @@
             Controls.Add(lblEditando);
             Name = "TelaEditarJogo";
             Text = "EditarJogo";
-            Load += EditarJogo_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

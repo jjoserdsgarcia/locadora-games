@@ -28,7 +28,6 @@ namespace ProjetoWindowsForms___Senac
         public DgvTelaADMIN()
         {
             InitializeComponent();
-            Load += DgvTelaADMIN_Load;
         }
 
         private async void DgvTelaADMIN_Load(object? sender, EventArgs e)
@@ -38,8 +37,16 @@ namespace ProjetoWindowsForms___Senac
 
         public async Task atualizartabelaadmindgv()
         {
-            var usuario = await RepositorioUsuario.ObterTodos();
-            dgvADMIN.DataSource = new BindingList<Usuario>(usuario.ToList());
+            if (tipoAtual == TipoCadastroUsuarioJogo.Usuarios)
+            {
+                dgvADMIN.DataSource = await RepositorioUsuario.ObterTodos();
+                lblStatus.Text = "Gerenciando: Usuários";
+            }
+            else if (tipoAtual == TipoCadastroUsuarioJogo.Jogos)
+            {
+                dgvADMIN.DataSource = await RepositorioJogo.ObterTodos();
+                lblStatus.Text = "Gerenciando: Jogos";
+            }
         }
 
         private async void btnUsuarios(object sender, EventArgs e)
@@ -62,22 +69,22 @@ namespace ProjetoWindowsForms___Senac
             tipoAtual = TipoCadastroUsuarioJogo.Jogos;
             dgvADMIN.DataSource = await RepositorioJogo.ObterTodos();
         }
-        private void dgvADMINCADASTRAR_Click(object sender, EventArgs e)
+        private async void dgvADMINCADASTRAR_Click(object sender, EventArgs e)
         {
             if (modoAtivo == "USUARIOS")
             {
 
-                TelaCadastroUsuario tela = new TelaCadastroUsuario();
-                this.Hide();
+                TelaCadastroUsuario tela = new TelaCadastroUsuario(this);
                 tela.ShowDialog();
-                this.Show();
+
+                dgvADMIN.DataSource = await RepositorioUsuario.ObterTodos();
             }
             else if (modoAtivo == "JOGOS")
             {
                 TelaCadastroJogo telaJogo = new TelaCadastroJogo();
-                this.Hide();
                 telaJogo.ShowDialog();
-                this.Show();
+
+                dgvADMIN.DataSource = await RepositorioJogo.ObterTodos();
             }
         }
 
@@ -112,6 +119,7 @@ namespace ProjetoWindowsForms___Senac
                     dgvADMIN.DataSource = await RepositorioUsuario.ObterTodos();
                 }
             }
+
             else if (tipoAtual == TipoCadastroUsuarioJogo.Jogos)
             {
                 var retorno = MessageBox.Show(
@@ -126,28 +134,37 @@ namespace ProjetoWindowsForms___Senac
                     dgvADMIN.DataSource = await RepositorioJogo.ObterTodos();
                 }
             }
-
         }
 
-        private void dgvAdminEditar(object sender, EventArgs e)
+        private async void dgvAdminEditar(object sender, EventArgs e)
         {
+            if (dgvADMIN.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um registro para editar.");
+                return;
+            }
+
             if (modoAtivo == "USUARIOS")
             {
+                var usuarioSelecionado = (Usuario)dgvADMIN.SelectedRows[0].DataBoundItem;
 
-                TelaEditarUsuario tela = new TelaEditarUsuario();
+                TelaEditarUsuario tela = new TelaEditarUsuario(usuarioSelecionado);
                 this.Hide();
                 tela.ShowDialog();
                 this.Show();
+
+                await atualizartabelaadmindgv();
             }
             else if (modoAtivo == "JOGOS")
             {
                 var jogoSelecionado = (Jogo)dgvADMIN.SelectedRows[0].DataBoundItem;
 
-      
-                TelaEditarJogo telaJogo = new TelaEditarJogo(jogoSelecionado); this.Hide();
+                TelaEditarJogo telaJogo = new TelaEditarJogo(jogoSelecionado);
                 this.Hide();
                 telaJogo.ShowDialog();
                 this.Show();
+
+                await atualizartabelaadmindgv();
             }
         }
     }

@@ -18,15 +18,15 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
             .QueryAsync<Jogo>(
                 @"
                 SELECT
-                    JogoId AS Id,
+                    JogoID,
                     Titulo,
                     Plataforma,
                     Genero,
                     Valor,
                     Ano,
                     Status
-                        FROM
-                            Jogo
+                        FROM Jogo
+                        ORDER BY Titulo ASC
                 ");
 
             return jogo;
@@ -42,6 +42,25 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
                        (@Titulo, @Plataforma, @Genero, @Valor, @Ano, @Status)"; 
 
                 await conexao.ExecuteAsync(sql, jogo);
+            }
+        }
+
+        public static async Task Atualizar(Jogo jogo)
+        {
+            using (var connection = conexaoBancoSQL.dbConnection())
+            {
+                await connection.ExecuteAsync(
+                    @"
+                    UPDATE Jogo
+                        SET
+                    Titulo = @Titulo,
+                    Plataforma = @Plataforma,
+                    Genero = @Genero,
+                    Ano = @Ano
+                        WHERE JogoID = @JogoID
+            ",
+                    jogo
+                );
             }
         }
 

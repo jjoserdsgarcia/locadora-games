@@ -14,10 +14,10 @@ namespace ProjetoWindowsForms___Senac
     {
         private readonly DgvTelaADMIN dgvTelaADMIN;
        
-        public TelaCadastroUsuario()
+        public TelaCadastroUsuario(DgvTelaADMIN telaADMIN)
         {
             InitializeComponent();
-            this.dgvTelaADMIN = dgvTelaADMIN;
+            dgvTelaADMIN = telaADMIN;
         }
 
 
@@ -50,8 +50,6 @@ namespace ProjetoWindowsForms___Senac
             }
             else
             {
-
-
                 // Salvar na Lista
 
                 RepositorioUsuario.SalvarUsuario(usuario);
