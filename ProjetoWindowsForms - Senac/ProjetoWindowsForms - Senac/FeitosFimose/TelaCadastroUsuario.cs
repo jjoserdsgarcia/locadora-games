@@ -16,19 +16,7 @@ namespace ProjetoWindowsForms___Senac
 
 
 
-        private bool emailValido(string email)
-
-        {
-            try
-            {
-                MailAddress mail = new MailAddress(email);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
+       
         private List<Usuario> usuarios = new List<Usuario>();
         public TelaCadastroUsuario()
         {
