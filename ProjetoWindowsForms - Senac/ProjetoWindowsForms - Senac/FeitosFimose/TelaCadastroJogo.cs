@@ -16,20 +16,13 @@ namespace ProjetoWindowsForms___Senac
         {
            if (string.IsNullOrWhiteSpace(txtNomeJogo.Text) ||
                string.IsNullOrWhiteSpace(txtPlataforma.Text) ||
-               string.IsNullOrWhiteSpace(txtGenero.Text) ||
-               string.IsNullOrWhiteSpace(txtValorSemanal.Text))
+               string.IsNullOrWhiteSpace(txtGenero.Text))
             {
                 MessageBox.Show(
                     "Preencha todos os campos!",
                     "Erro",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
-                return;
-            }
-
-             if (!decimal.TryParse(txtValorSemanal.Text, out decimal valor))
-            {
-                MessageBox.Show("Valor inválido!");
                 return;
             }
 
@@ -40,7 +33,6 @@ namespace ProjetoWindowsForms___Senac
                 Titulo = txtNomeJogo.Text,
                 Plataforma = txtPlataforma.Text,
                 Genero = txtGenero.Text,
-                Valor = valor,
                 Ano = ano,
                 Status = "Disponível"
             };

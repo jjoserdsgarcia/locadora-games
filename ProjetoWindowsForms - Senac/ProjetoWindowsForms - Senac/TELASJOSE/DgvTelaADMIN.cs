@@ -174,25 +174,6 @@ namespace ProjetoWindowsForms___Senac
                 await atualizartabelaadmindgv();
             }
         }
-
-
-        private void btnDetalharJogo(object sender, EventArgs e)
-        {
-            if (dgvADMIN.SelectedRows.Count > 0)
-            {
-                int idSelecionado = Convert.ToInt32(dgvADMIN.SelectedRows[0].Cells["id_locacao"].Value);
-
-                var telaDetalheJogo = new TelaDetalheJogo(idSelecionado);
-
-                this.Hide();
-                telaDetalheJogo.ShowDialog();
-                this.Show();
-            }
-            else
-            {
-                MessageBox.Show("Por favor, selecione uma linha na tabela primeiro!");
-            }
-        }
     }
 }
 

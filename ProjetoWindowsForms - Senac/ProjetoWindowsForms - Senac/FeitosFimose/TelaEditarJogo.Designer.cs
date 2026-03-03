@@ -36,13 +36,11 @@
             lblGenero = new Label();
             lblAno = new Label();
             btnSalvarEdit = new Button();
-            pictureBox1 = new PictureBox();
             txtTituloJogoEdit = new TextBox();
             txtPlataformaJogoEdit = new TextBox();
             txtGeneroJogoEdit = new TextBox();
             txtAnoJogoEdit = new TextBox();
             btnCancelarEdit = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblEditando
@@ -116,15 +114,6 @@
             btnSalvarEdit.UseVisualStyleBackColor = true;
             btnSalvarEdit.Click += btnSalvarEditJogo;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(46, 92);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(166, 218);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 18;
-            pictureBox1.TabStop = false;
-            // 
             // txtTituloJogoEdit
             // 
             txtTituloJogoEdit.Enabled = false;
@@ -177,7 +166,6 @@
             Controls.Add(txtGeneroJogoEdit);
             Controls.Add(txtPlataformaJogoEdit);
             Controls.Add(txtTituloJogoEdit);
-            Controls.Add(pictureBox1);
             Controls.Add(btnSalvarEdit);
             Controls.Add(lblAno);
             Controls.Add(lblGenero);
@@ -188,7 +176,6 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TelaEditarJogo";
             Text = "EditarJogo";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -202,7 +189,6 @@
         private Label lblGenero;
         private Label lblAno;
         private Button btnSalvarEdit;
-        private PictureBox pictureBox1;
         private TextBox txtTituloJogoEdit;
         private TextBox txtPlataformaJogoEdit;
         private TextBox txtGeneroJogoEdit;

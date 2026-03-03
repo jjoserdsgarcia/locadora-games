@@ -45,8 +45,6 @@
             dtpEntrega = new DateTimePicker();
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
-            txtValorJogoAlugar = new TextBox();
             txtPlataformaJogoAlugar = new TextBox();
             txtNomeJogoAlugar = new TextBox();
             SuspendLayout();
@@ -221,26 +219,6 @@
             label2.Text = "Nome:";
             label2.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Black;
-            label3.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(47, 358);
-            label3.Name = "label3";
-            label3.Size = new Size(50, 20);
-            label3.TabIndex = 23;
-            label3.Text = "Valor:";
-            // 
-            // txtValorJogoAlugar
-            // 
-            txtValorJogoAlugar.Enabled = false;
-            txtValorJogoAlugar.Location = new Point(108, 358);
-            txtValorJogoAlugar.Name = "txtValorJogoAlugar";
-            txtValorJogoAlugar.Size = new Size(181, 23);
-            txtValorJogoAlugar.TabIndex = 24;
-            // 
             // txtPlataformaJogoAlugar
             // 
             txtPlataformaJogoAlugar.Enabled = false;
@@ -267,8 +245,6 @@
             ClientSize = new Size(797, 442);
             Controls.Add(txtNomeJogoAlugar);
             Controls.Add(txtPlataformaJogoAlugar);
-            Controls.Add(txtValorJogoAlugar);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(dtpEntrega);
@@ -311,8 +287,6 @@
         private DateTimePicker dtpEntrega;
         private Label label1;
         private Label label2;
-        private Label label3;
-        private TextBox txtValorJogoAlugar;
         private TextBox txtPlataformaJogoAlugar;
         private TextBox txtNomeJogoAlugar;
     }

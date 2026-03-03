@@ -14,18 +14,17 @@ namespace ProjetoWindowsForms___Senac.TELAS
     {
         public TelaDevolver()
         {
-            InitializeComponent();
-        }
+        } }
 
-        public partial class FormDevolucao : Form
+        /*public partial class FormDevolucao : Form
         {
-            // Valor da diária de multa
+            /* Valor da diária de multa
             private decimal multaPorDia = 5.00m;
 
-            // Data prevista de devolução (simulação)
+            /* Data prevista de devolução (simulação)
             private DateTime dataPrevista = DateTime.Now.AddDays(-2); // Simulando atraso de 2 dias
 
-            private void FormDevolucao_Load(object sender, EventArgs e)
+            /*private void FormDevolucao_Load(object sender, EventArgs e)
             {
                 txtDataPrevista.Text = dataPrevista.ToShortDateString();
                 dtpDataDevolucao.Value = DateTime.Now;
@@ -60,7 +59,7 @@ namespace ProjetoWindowsForms___Senac.TELAS
         private void label1_Click(object sender, EventArgs e)
         {
 
-        }
+        }*/
     }
-}
+
 

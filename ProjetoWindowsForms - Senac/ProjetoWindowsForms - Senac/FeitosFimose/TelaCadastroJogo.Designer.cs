@@ -32,14 +32,12 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            label5 = new Label();
             label6 = new Label();
             btnVoltar = new Button();
             btnSalvar = new Button();
             txtNomeJogo = new TextBox();
             txtPlataforma = new TextBox();
             txtGenero = new TextBox();
-            txtValorSemanal = new TextBox();
             label1 = new Label();
             dtpAnoLancamentoCadastro = new DateTimePicker();
             SuspendLayout();
@@ -74,21 +72,11 @@
             label4.TabIndex = 3;
             label4.Text = "Gênero:";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(31, 306);
-            label5.Name = "label5";
-            label5.Size = new Size(117, 20);
-            label5.TabIndex = 4;
-            label5.Text = "Valor Semanal:";
-            // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(322, 306);
+            label6.Location = new Point(32, 298);
             label6.Name = "label6";
             label6.Size = new Size(157, 20);
             label6.TabIndex = 5;
@@ -137,13 +125,6 @@
             txtGenero.Size = new Size(235, 23);
             txtGenero.TabIndex = 10;
             // 
-            // txtValorSemanal
-            // 
-            txtValorSemanal.Location = new Point(32, 329);
-            txtValorSemanal.Name = "txtValorSemanal";
-            txtValorSemanal.Size = new Size(100, 23);
-            txtValorSemanal.TabIndex = 11;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -157,7 +138,7 @@
             // dtpAnoLancamentoCadastro
             // 
             dtpAnoLancamentoCadastro.Format = DateTimePickerFormat.Short;
-            dtpAnoLancamentoCadastro.Location = new Point(347, 338);
+            dtpAnoLancamentoCadastro.Location = new Point(32, 331);
             dtpAnoLancamentoCadastro.Name = "dtpAnoLancamentoCadastro";
             dtpAnoLancamentoCadastro.Size = new Size(102, 23);
             dtpAnoLancamentoCadastro.TabIndex = 14;
@@ -171,14 +152,12 @@
             ClientSize = new Size(512, 450);
             Controls.Add(dtpAnoLancamentoCadastro);
             Controls.Add(label1);
-            Controls.Add(txtValorSemanal);
             Controls.Add(txtGenero);
             Controls.Add(txtPlataforma);
             Controls.Add(txtNomeJogo);
             Controls.Add(btnSalvar);
             Controls.Add(btnVoltar);
             Controls.Add(label6);
-            Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -193,14 +172,12 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private Label label5;
         private Label label6;
         private Button btnVoltar;
         private Button btnSalvar;
         private TextBox txtNomeJogo;
         private TextBox txtPlataforma;
         private TextBox txtGenero;
-        private TextBox txtValorSemanal;
         private Label label1;
         private DateTimePicker dtpAnoLancamentoCadastro;
     }

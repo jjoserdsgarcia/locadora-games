@@ -70,7 +70,7 @@
             lblCodigoaluguel.Size = new Size(107, 15);
             lblCodigoaluguel.TabIndex = 2;
             lblCodigoaluguel.Text = "Código do Aluguel";
-            lblCodigoaluguel.Click += label1_Click;
+            
             // 
             // txtcodigo
             // 

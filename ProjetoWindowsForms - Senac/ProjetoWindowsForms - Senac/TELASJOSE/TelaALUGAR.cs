@@ -77,7 +77,6 @@ namespace ProjetoWindowsForms___Senac.TELAS
                 txtNomeJogoAlugar.Text = JogoSelecionado.Titulo;
                 txtCategoriaJogoAlugar.Text = JogoSelecionado.Genero;
                 txtPlataformaJogoAlugar.Text = JogoSelecionado.Plataforma;
-                txtValorJogoAlugar.Text = JogoSelecionado.Valor.ToString();
             }
 
             dtpEntrega.MinDate = DateTime.Today.AddDays(1);
@@ -89,7 +88,6 @@ namespace ProjetoWindowsForms___Senac.TELAS
             txtNomeJogoAlugar.ReadOnly = true;
             txtCategoriaJogoAlugar.ReadOnly = true;
             txtPlataformaJogoAlugar.ReadOnly = true;
-            txtValorJogoAlugar.ReadOnly = true;
         }
 
         private void txtCpfUsuarioAlugar_TextChanged(object sender, EventArgs e)

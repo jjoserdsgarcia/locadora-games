@@ -37,7 +37,6 @@
             dgvADMINEXCLUIR = new Button();
             btnSAIRDGVADM = new Button();
             lblStatus = new Label();
-            btnDetalheJogo = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvADMIN).BeginInit();
             SuspendLayout();
             // 
@@ -128,17 +127,6 @@
             lblStatus.TabIndex = 11;
             lblStatus.Text = "Escolha uma opção:";
             // 
-            // btnDetalheJogo
-            // 
-            btnDetalheJogo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDetalheJogo.Location = new Point(338, 367);
-            btnDetalheJogo.Name = "btnDetalheJogo";
-            btnDetalheJogo.Size = new Size(108, 40);
-            btnDetalheJogo.TabIndex = 12;
-            btnDetalheJogo.Text = "Detalhes";
-            btnDetalheJogo.UseVisualStyleBackColor = true;
-            btnDetalheJogo.Click += btnDetalharJogo;
-            // 
             // DgvTelaADMIN
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -147,7 +135,6 @@
             BackgroundImage = Properties.Resources.Design_sem_nome__10_;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnDetalheJogo);
             Controls.Add(lblStatus);
             Controls.Add(btnSAIRDGVADM);
             Controls.Add(dgvADMINEXCLUIR);
@@ -169,7 +156,6 @@
         private DataGridView dgvADMIN;
         private Button btnDGVADMINCRIAR;
         private Button dgvADMINEDITAR;
-        private Button btnDetalheJogo;
         private Button button2;
         private Button dgvADMINJOGOS;
         private Button dgvADMINUSUARIOS;

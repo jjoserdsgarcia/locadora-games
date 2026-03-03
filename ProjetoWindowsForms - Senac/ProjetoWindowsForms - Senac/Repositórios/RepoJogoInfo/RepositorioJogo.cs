@@ -24,7 +24,6 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
                     Titulo,
                     Plataforma,
                     Genero,
-                    Valor,
                     Ano,
                     Status
                         FROM Jogo
@@ -39,9 +38,9 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
             using (var conexao = conexaoBancoSQL.dbConnection())  //ATUALIZAR O BANCO, COLOCAR "STATUS" E DISPONIVEL DPS DE CADASTRAR JOGO
             {
                 string sql = @"INSERT INTO Jogo
-                       (Titulo, Plataforma, Genero, Valor, Ano, Status)
+                       (Titulo, Plataforma, Genero, Ano, Status)
                        VALUES
-                       (@Titulo, @Plataforma, @Genero, @Valor, @Ano, @Status)"; 
+                       (@Titulo, @Plataforma, @Genero, @Ano, @Status)"; 
 
                 await conexao.ExecuteAsync(sql, jogo);
             }
@@ -67,23 +66,6 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
         }
 
         private readonly ConexaoBancoSQL _conexao = new ConexaoBancoSQL();
-
-        public JogoDetalhe ObterDetalhesPorId(int id)
-        {
-            using (IDbConnection db = _conexao.dbConnection())
-            {
-                string sql = @"SELECT 
-                            Titulo AS NomeJogo, 
-                            Nome AS NomeCliente, 
-                            DataLocacao AS DataLocacao, 
-                            DataEntrega AS DataEntrega, 
-                            Status AS Status 
-                          FROM Locacao 
-                          WHERE LocacaoID = @Id";
-
-                return db.QueryFirstOrDefault<JogoDetalhe>(sql, new { id });
-            }
-        }
 
         internal static async Task Deletar(int id)
         {
