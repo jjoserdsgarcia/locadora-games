@@ -24,11 +24,6 @@ namespace ProjetoWindowsForms___Senac
         {
             {
 
-
-
-
-               
-
                 if (txtCPFUSUARIO.Text.Length != 11 || !long.TryParse(txtCPFUSUARIO.Text, out _))
                 {
                     MessageBox.Show(

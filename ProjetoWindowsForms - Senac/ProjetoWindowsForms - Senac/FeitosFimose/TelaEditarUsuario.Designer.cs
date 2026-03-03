@@ -83,9 +83,9 @@
             // 
             // txtNomeEditUsuario
             // 
+            txtNomeEditUsuario.Enabled = false;
             txtNomeEditUsuario.Location = new Point(302, 163);
             txtNomeEditUsuario.Name = "txtNomeEditUsuario";
-            txtNomeEditUsuario.ReadOnly = true;
             txtNomeEditUsuario.Size = new Size(232, 23);
             txtNomeEditUsuario.TabIndex = 7;
             // 

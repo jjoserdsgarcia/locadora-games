@@ -49,6 +49,7 @@ namespace ProjetoWindowsForms___Senac
             }
         }
 
+
         private async void btnUsuarios(object sender, EventArgs e)
         {
             modoAtivo = "USUARIOS";
@@ -58,6 +59,7 @@ namespace ProjetoWindowsForms___Senac
             tipoAtual = TipoCadastroUsuarioJogo.Usuarios;
             dgvADMIN.DataSource = await RepositorioUsuario.ObterTodos();
         }
+
 
         private async void btnJogos(object sender, EventArgs e)
         {
@@ -69,6 +71,8 @@ namespace ProjetoWindowsForms___Senac
             tipoAtual = TipoCadastroUsuarioJogo.Jogos;
             dgvADMIN.DataSource = await RepositorioJogo.ObterTodos();
         }
+
+
         private async void dgvADMINCADASTRAR_Click(object sender, EventArgs e)
         {
             if (modoAtivo == "USUARIOS")
@@ -88,10 +92,12 @@ namespace ProjetoWindowsForms___Senac
             }
         }
 
+
         private void btnSAIRDGVADM_Click(object sender, EventArgs e)
         {
             Close();
         }
+
 
         private async void dgvADMINEXCLUIR_Click(object sender, EventArgs e)
         {
@@ -136,6 +142,7 @@ namespace ProjetoWindowsForms___Senac
             }
         }
 
+
         private async void dgvAdminEditar(object sender, EventArgs e)
         {
             if (dgvADMIN.SelectedRows.Count == 0)
@@ -165,6 +172,25 @@ namespace ProjetoWindowsForms___Senac
                 this.Show();
 
                 await atualizartabelaadmindgv();
+            }
+        }
+
+
+        private void btnDetalharJogo(object sender, EventArgs e)
+        {
+            if (dgvADMIN.SelectedRows.Count > 0)
+            {
+                int idSelecionado = Convert.ToInt32(dgvADMIN.SelectedRows[0].Cells["id_locacao"].Value);
+
+                var telaDetalheJogo = new TelaDetalheJogo(idSelecionado);
+
+                this.Hide();
+                telaDetalheJogo.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecione uma linha na tabela primeiro!");
             }
         }
     }

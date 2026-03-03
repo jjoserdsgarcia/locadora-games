@@ -36,6 +36,7 @@
             dgvADMINEXCLUIR = new Button();
             btnSAIRDGVADM = new Button();
             lblStatus = new Label();
+            btnDetalheJogo = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvADMIN).BeginInit();
             SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             // dgvADMINEDITAR
             // 
             dgvADMINEDITAR.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            dgvADMINEDITAR.Location = new Point(484, 366);
+            dgvADMINEDITAR.Location = new Point(566, 366);
             dgvADMINEDITAR.Name = "dgvADMINEDITAR";
             dgvADMINEDITAR.Size = new Size(108, 40);
             dgvADMINEDITAR.TabIndex = 2;
@@ -84,7 +85,7 @@
             // dgvADMINCADASTRAR
             // 
             dgvADMINCADASTRAR.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvADMINCADASTRAR.Location = new Point(322, 366);
+            dgvADMINCADASTRAR.Location = new Point(452, 366);
             dgvADMINCADASTRAR.Name = "dgvADMINCADASTRAR";
             dgvADMINCADASTRAR.Size = new Size(108, 40);
             dgvADMINCADASTRAR.TabIndex = 7;
@@ -94,9 +95,9 @@
             // 
             // dgvADMINEXCLUIR
             // 
-            dgvADMINEXCLUIR.BackColor = Color.LightGray;
+            dgvADMINEXCLUIR.BackColor = Color.WhiteSmoke;
             dgvADMINEXCLUIR.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvADMINEXCLUIR.Location = new Point(646, 366);
+            dgvADMINEXCLUIR.Location = new Point(680, 365);
             dgvADMINEXCLUIR.Name = "dgvADMINEXCLUIR";
             dgvADMINEXCLUIR.Size = new Size(108, 40);
             dgvADMINEXCLUIR.TabIndex = 10;
@@ -106,12 +107,12 @@
             // 
             // btnSAIRDGVADM
             // 
-            btnSAIRDGVADM.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSAIRDGVADM.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSAIRDGVADM.Location = new Point(53, 362);
             btnSAIRDGVADM.Name = "btnSAIRDGVADM";
-            btnSAIRDGVADM.Size = new Size(149, 48);
+            btnSAIRDGVADM.Size = new Size(108, 40);
             btnSAIRDGVADM.TabIndex = 9;
-            btnSAIRDGVADM.Text = "SAIR";
+            btnSAIRDGVADM.Text = "Sair";
             btnSAIRDGVADM.UseVisualStyleBackColor = true;
             btnSAIRDGVADM.Click += btnSAIRDGVADM_Click;
             // 
@@ -126,12 +127,24 @@
             lblStatus.TabIndex = 11;
             lblStatus.Text = "Escolha uma opção:";
             // 
+            // btnDetalheJogo
+            // 
+            btnDetalheJogo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDetalheJogo.Location = new Point(338, 367);
+            btnDetalheJogo.Name = "btnDetalheJogo";
+            btnDetalheJogo.Size = new Size(108, 40);
+            btnDetalheJogo.TabIndex = 12;
+            btnDetalheJogo.Text = "Detalhes";
+            btnDetalheJogo.UseVisualStyleBackColor = true;
+            btnDetalheJogo.Click += btnDetalharJogo;
+            // 
             // DgvTelaADMIN
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnDetalheJogo);
             Controls.Add(lblStatus);
             Controls.Add(btnSAIRDGVADM);
             Controls.Add(dgvADMINEXCLUIR);
@@ -152,7 +165,7 @@
         private DataGridView dgvADMIN;
         private Button btnDGVADMINCRIAR;
         private Button dgvADMINEDITAR;
-        private Button button1;
+        private Button btnDetalheJogo;
         private Button button2;
         private Button dgvADMINJOGOS;
         private Button dgvADMINUSUARIOS;

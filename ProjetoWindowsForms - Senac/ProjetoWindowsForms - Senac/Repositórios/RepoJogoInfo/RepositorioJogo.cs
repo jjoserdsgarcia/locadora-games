@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using ProjetoWindowsForms___Senac.Classes;
 using Dapper;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
 {
@@ -18,7 +20,7 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
             .QueryAsync<Jogo>(
                 @"
                 SELECT
-                    JogoID,
+                    Id,
                     Titulo,
                     Plataforma,
                     Genero,
@@ -57,10 +59,29 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
                     Plataforma = @Plataforma,
                     Genero = @Genero,
                     Ano = @Ano
-                        WHERE JogoID = @JogoID
+                        WHERE Id = @Id
             ",
                     jogo
                 );
+            }
+        }
+
+        private readonly ConexaoBancoSQL _conexao = new ConexaoBancoSQL();
+
+        public JogoDetalhe ObterDetalhesPorId(int id)
+        {
+            using (IDbConnection db = _conexao.dbConnection())
+            {
+                string sql = @"SELECT 
+                            Titulo AS NomeJogo, 
+                            Nome AS NomeCliente, 
+                            DataLocacao AS DataLocacao, 
+                            DataEntrega AS DataEntrega, 
+                            Status AS Status 
+                          FROM Locacao 
+                          WHERE LocacaoID = @Id";
+
+                return db.QueryFirstOrDefault<JogoDetalhe>(sql, new { id });
             }
         }
 
@@ -68,7 +89,7 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
         {
             using (var connection = conexaoBancoSQL.dbConnection())
             {
-                string query = "DELETE FROM Jogo WHERE JogoID = @Id";
+                string query = "DELETE FROM Jogo WHERE Id = @Id";
 
                 await connection.ExecuteAsync(query, new { Id = id });
             }

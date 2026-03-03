@@ -126,9 +126,9 @@
             // 
             // txtTituloJogoEdit
             // 
+            txtTituloJogoEdit.Enabled = false;
             txtTituloJogoEdit.Location = new Point(326, 141);
             txtTituloJogoEdit.Name = "txtTituloJogoEdit";
-            txtTituloJogoEdit.ReadOnly = true;
             txtTituloJogoEdit.Size = new Size(165, 23);
             txtTituloJogoEdit.TabIndex = 19;
             // 

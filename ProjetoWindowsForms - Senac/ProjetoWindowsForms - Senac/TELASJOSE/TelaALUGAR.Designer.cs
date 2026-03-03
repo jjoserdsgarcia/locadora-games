@@ -100,6 +100,7 @@
             // 
             // txtNomeUsuarioAlugar
             // 
+            txtNomeUsuarioAlugar.Enabled = false;
             txtNomeUsuarioAlugar.Location = new Point(108, 60);
             txtNomeUsuarioAlugar.Name = "txtNomeUsuarioAlugar";
             txtNomeUsuarioAlugar.Size = new Size(181, 23);
@@ -107,6 +108,7 @@
             // 
             // txtCpfUsuarioAlugar
             // 
+            txtCpfUsuarioAlugar.Enabled = false;
             txtCpfUsuarioAlugar.Location = new Point(108, 99);
             txtCpfUsuarioAlugar.Name = "txtCpfUsuarioAlugar";
             txtCpfUsuarioAlugar.Size = new Size(181, 23);
@@ -115,6 +117,7 @@
             // 
             // txtTelefoneUsuarioAlugar
             // 
+            txtTelefoneUsuarioAlugar.Enabled = false;
             txtTelefoneUsuarioAlugar.Location = new Point(108, 135);
             txtTelefoneUsuarioAlugar.Name = "txtTelefoneUsuarioAlugar";
             txtTelefoneUsuarioAlugar.Size = new Size(181, 23);
@@ -146,6 +149,7 @@
             // 
             // txtCategoriaJogoAlugar
             // 
+            txtCategoriaJogoAlugar.Enabled = false;
             txtCategoriaJogoAlugar.Location = new Point(108, 318);
             txtCategoriaJogoAlugar.Name = "txtCategoriaJogoAlugar";
             txtCategoriaJogoAlugar.Size = new Size(181, 23);
@@ -230,6 +234,7 @@
             // 
             // txtValorJogoAlugar
             // 
+            txtValorJogoAlugar.Enabled = false;
             txtValorJogoAlugar.Location = new Point(108, 358);
             txtValorJogoAlugar.Name = "txtValorJogoAlugar";
             txtValorJogoAlugar.Size = new Size(181, 23);
@@ -237,6 +242,7 @@
             // 
             // txtPlataformaJogoAlugar
             // 
+            txtPlataformaJogoAlugar.Enabled = false;
             txtPlataformaJogoAlugar.Location = new Point(108, 275);
             txtPlataformaJogoAlugar.Name = "txtPlataformaJogoAlugar";
             txtPlataformaJogoAlugar.Size = new Size(181, 23);
@@ -244,6 +250,7 @@
             // 
             // txtNomeJogoAlugar
             // 
+            txtNomeJogoAlugar.Enabled = false;
             txtNomeJogoAlugar.Location = new Point(108, 232);
             txtNomeJogoAlugar.Name = "txtNomeJogoAlugar";
             txtNomeJogoAlugar.Size = new Size(181, 23);
