@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoWindowsForms___Senac.Repositories.RepoUser;
 using ProjetoWindowsForms___Senac.TELAS;
 
 namespace ProjetoWindowsForms___Senac
@@ -18,21 +20,42 @@ namespace ProjetoWindowsForms___Senac
             InitializeComponent();
         }
 
-        private void btnPROSSEGUIRUSER_Click(object sender, EventArgs e)
+        private async void btnPROSSEGUIRUSER_Click(object sender, EventArgs e)
         {
             {
-                int CPFUSUARIO = int.Parse(txtCPFUSUARIO.Text);
 
-                var telaprincipal = new TelaDgvUSER(false, CPFUSUARIO);
-                this.Hide();
-                telaprincipal.ShowDialog();
-                this.Show();
+                if (txtCPFUSUARIO.Text.Length != 11 || !long.TryParse(txtCPFUSUARIO.Text, out _))
+                {
+                    MessageBox.Show(
+                        "CPF inválido. Digite 11 números.",
+                        "Erro",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
+                string cpf = txtCPFUSUARIO.Text;
 
+                
+                var usuario = await RepositorioUsuario.ObterPorCPF(cpf);
 
-
+                if (usuario == null)
+                {
+                    MessageBox.Show(
+                        "CPF não encontrado. Usuário não cadastrado.",
+                        "Erro",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
             }
-          
-        }
+                string CPFUSUARIO = txtCPFUSUARIO.Text;
+
+            var telaprincipal = new TELAS.TelaPrincipalUsuario(false, CPFUSUARIO);
+            this.Hide();
+            telaprincipal.ShowDialog();
+            this.Show();
+            }
+
 
         private void lblCPFUSER_Click(object sender, EventArgs e)
         {
@@ -40,6 +63,16 @@ namespace ProjetoWindowsForms___Senac
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVOLTARUSER_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void LoginUSER_Load(object sender, EventArgs e)
         {
 
         }

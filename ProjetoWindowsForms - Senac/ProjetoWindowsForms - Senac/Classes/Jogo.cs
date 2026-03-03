@@ -8,7 +8,8 @@
         public string Plataforma { get; set; }
         public string Genero { get; set; }
         public decimal Valor { get; set; }
-        public  int Ano { get; set; }
+        public string Status { get; set; }
+        public int Ano { get; set; }
 
         
         

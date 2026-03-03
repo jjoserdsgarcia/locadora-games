@@ -38,7 +38,7 @@
             // 
             lblCPFUSER.AutoSize = true;
             lblCPFUSER.Font = new Font("Modern No. 20", 17.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            lblCPFUSER.Location = new Point(290, 166);
+            lblCPFUSER.Location = new Point(309, 169);
             lblCPFUSER.Name = "lblCPFUSER";
             lblCPFUSER.Size = new Size(170, 25);
             lblCPFUSER.TabIndex = 0;
@@ -56,7 +56,7 @@
             // btnPROSSEGUIRUSER
             // 
             btnPROSSEGUIRUSER.Font = new Font("Modern No. 20", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnPROSSEGUIRUSER.Location = new Point(513, 369);
+            btnPROSSEGUIRUSER.Location = new Point(474, 367);
             btnPROSSEGUIRUSER.Name = "btnPROSSEGUIRUSER";
             btnPROSSEGUIRUSER.Size = new Size(235, 61);
             btnPROSSEGUIRUSER.TabIndex = 4;
@@ -67,12 +67,13 @@
             // btnVOLTARUSER
             // 
             btnVOLTARUSER.Font = new Font("Modern No. 20", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnVOLTARUSER.Location = new Point(31, 373);
+            btnVOLTARUSER.Location = new Point(125, 369);
             btnVOLTARUSER.Name = "btnVOLTARUSER";
             btnVOLTARUSER.Size = new Size(209, 54);
             btnVOLTARUSER.TabIndex = 5;
             btnVOLTARUSER.Text = "Voltar";
             btnVOLTARUSER.UseVisualStyleBackColor = true;
+            btnVOLTARUSER.Click += btnVOLTARUSER_Click;
             // 
             // LoginUSER
             // 
@@ -86,6 +87,7 @@
             Controls.Add(lblCPFUSER);
             Name = "LoginUSER";
             Text = "Login de Usuário";
+            Load += LoginUSER_Load;
             ResumeLayout(false);
             PerformLayout();
         }

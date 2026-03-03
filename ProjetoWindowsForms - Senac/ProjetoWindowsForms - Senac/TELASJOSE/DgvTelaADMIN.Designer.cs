@@ -35,32 +35,35 @@
             dgvADMINCADASTRAR = new Button();
             dgvADMINEXCLUIR = new Button();
             btnSAIRDGVADM = new Button();
+            lblStatus = new Label();
+            btnDetalheJogo = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvADMIN).BeginInit();
             SuspendLayout();
             // 
             // dgvADMIN
             // 
             dgvADMIN.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvADMIN.Location = new Point(187, 12);
+            dgvADMIN.Location = new Point(149, 12);
             dgvADMIN.Name = "dgvADMIN";
-            dgvADMIN.Size = new Size(601, 260);
+            dgvADMIN.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvADMIN.Size = new Size(639, 272);
             dgvADMIN.TabIndex = 0;
-            
             // 
             // dgvADMINEDITAR
             // 
-            dgvADMINEDITAR.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            dgvADMINEDITAR.Location = new Point(484, 366);
+            dgvADMINEDITAR.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            dgvADMINEDITAR.Location = new Point(566, 366);
             dgvADMINEDITAR.Name = "dgvADMINEDITAR";
             dgvADMINEDITAR.Size = new Size(108, 40);
             dgvADMINEDITAR.TabIndex = 2;
             dgvADMINEDITAR.Text = "Editar";
             dgvADMINEDITAR.UseVisualStyleBackColor = true;
+            dgvADMINEDITAR.Click += dgvAdminEditar;
             // 
             // dgvADMINJOGOS
             // 
-            dgvADMINJOGOS.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvADMINJOGOS.Location = new Point(38, 163);
+            dgvADMINJOGOS.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvADMINJOGOS.Location = new Point(12, 161);
             dgvADMINJOGOS.Name = "dgvADMINJOGOS";
             dgvADMINJOGOS.Size = new Size(108, 40);
             dgvADMINJOGOS.TabIndex = 5;
@@ -70,8 +73,8 @@
             // 
             // dgvADMINUSUARIOS
             // 
-            dgvADMINUSUARIOS.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvADMINUSUARIOS.Location = new Point(38, 66);
+            dgvADMINUSUARIOS.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvADMINUSUARIOS.Location = new Point(12, 103);
             dgvADMINUSUARIOS.Name = "dgvADMINUSUARIOS";
             dgvADMINUSUARIOS.Size = new Size(108, 40);
             dgvADMINUSUARIOS.TabIndex = 6;
@@ -81,8 +84,8 @@
             // 
             // dgvADMINCADASTRAR
             // 
-            dgvADMINCADASTRAR.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvADMINCADASTRAR.Location = new Point(322, 366);
+            dgvADMINCADASTRAR.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvADMINCADASTRAR.Location = new Point(452, 366);
             dgvADMINCADASTRAR.Name = "dgvADMINCADASTRAR";
             dgvADMINCADASTRAR.Size = new Size(108, 40);
             dgvADMINCADASTRAR.TabIndex = 7;
@@ -92,24 +95,48 @@
             // 
             // dgvADMINEXCLUIR
             // 
-            dgvADMINEXCLUIR.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvADMINEXCLUIR.Location = new Point(649, 366);
+            dgvADMINEXCLUIR.BackColor = Color.WhiteSmoke;
+            dgvADMINEXCLUIR.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvADMINEXCLUIR.Location = new Point(680, 365);
             dgvADMINEXCLUIR.Name = "dgvADMINEXCLUIR";
             dgvADMINEXCLUIR.Size = new Size(108, 40);
-            dgvADMINEXCLUIR.TabIndex = 8;
+            dgvADMINEXCLUIR.TabIndex = 10;
             dgvADMINEXCLUIR.Text = "Excluir";
-            dgvADMINEXCLUIR.UseVisualStyleBackColor = true;
+            dgvADMINEXCLUIR.UseVisualStyleBackColor = false;
+            dgvADMINEXCLUIR.Click += dgvADMINEXCLUIR_Click;
             // 
             // btnSAIRDGVADM
             // 
-            btnSAIRDGVADM.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSAIRDGVADM.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSAIRDGVADM.Location = new Point(53, 362);
             btnSAIRDGVADM.Name = "btnSAIRDGVADM";
-            btnSAIRDGVADM.Size = new Size(149, 48);
+            btnSAIRDGVADM.Size = new Size(108, 40);
             btnSAIRDGVADM.TabIndex = 9;
-            btnSAIRDGVADM.Text = "SAIR";
+            btnSAIRDGVADM.Text = "Sair";
             btnSAIRDGVADM.UseVisualStyleBackColor = true;
             btnSAIRDGVADM.Click += btnSAIRDGVADM_Click;
+            // 
+            // lblStatus
+            // 
+            lblStatus.AutoSize = true;
+            lblStatus.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblStatus.ForeColor = SystemColors.ControlLightLight;
+            lblStatus.Location = new Point(9, 64);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(125, 17);
+            lblStatus.TabIndex = 11;
+            lblStatus.Text = "Escolha uma opção:";
+            // 
+            // btnDetalheJogo
+            // 
+            btnDetalheJogo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDetalheJogo.Location = new Point(338, 367);
+            btnDetalheJogo.Name = "btnDetalheJogo";
+            btnDetalheJogo.Size = new Size(108, 40);
+            btnDetalheJogo.TabIndex = 12;
+            btnDetalheJogo.Text = "Detalhes";
+            btnDetalheJogo.UseVisualStyleBackColor = true;
+            btnDetalheJogo.Click += btnDetalharJogo;
             // 
             // DgvTelaADMIN
             // 
@@ -117,6 +144,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnDetalheJogo);
+            Controls.Add(lblStatus);
             Controls.Add(btnSAIRDGVADM);
             Controls.Add(dgvADMINEXCLUIR);
             Controls.Add(dgvADMINCADASTRAR);
@@ -126,9 +155,9 @@
             Controls.Add(dgvADMIN);
             Name = "DgvTelaADMIN";
             Text = "Tela Principal - ADMIN";
-           
             ((System.ComponentModel.ISupportInitialize)dgvADMIN).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -136,12 +165,13 @@
         private DataGridView dgvADMIN;
         private Button btnDGVADMINCRIAR;
         private Button dgvADMINEDITAR;
-        private Button button1;
+        private Button btnDetalheJogo;
         private Button button2;
         private Button dgvADMINJOGOS;
         private Button dgvADMINUSUARIOS;
         private Button dgvADMINCADASTRAR;
         private Button dgvADMINEXCLUIR;
         private Button btnSAIRDGVADM;
+        private Label lblStatus;
     }
 }

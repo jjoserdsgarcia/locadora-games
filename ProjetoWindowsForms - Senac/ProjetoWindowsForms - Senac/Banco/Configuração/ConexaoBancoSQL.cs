@@ -14,6 +14,6 @@ namespace ProjetoWindowsForms___Senac
         {
             return new SqlConnection("Server=(localdb)\\MSSQLLocalDB; Database=locadora_games; Trusted_Connection=True;");
         }
-
+        //(localdb)\\MSSQLLocalDB
     }
 }

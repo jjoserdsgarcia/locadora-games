@@ -24,14 +24,11 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoUser
                     Email,
                     Telefone,
                     DataNascimento
-                    FROM
-                        Usuario
+                    FROM Usuario
+                    ORDER BY Nome ASC
                 ");
 
             return usuario;
-
-
-
         }
 
         public static async void SalvarUsuario(Usuario usuario)
@@ -39,14 +36,28 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoUser
             await conexaobanco.dbConnection().QueryAsync(
 
                 @"INSERT INTO Usuario (Nome, CPF, Email, Telefone, DataNascimento)
-                    VALUES (@Nome, @CPF, @Email, @Telefone, @DataNascimento);
-                        
-
-
-                ", usuario);
+                    VALUES (@Nome, @CPF, @Email, @Telefone, @DataNascimento);", usuario);
         }
 
-        public static async Task<Usuario> ObterPorCPF(int CPFUSUARIO)
+        public static async Task Atualizar(Usuario usuario)
+        {
+            using (var connection = conexaobanco.dbConnection())
+            {
+                await connection.ExecuteAsync(
+                    @"
+            UPDATE Usuario
+            SET 
+                Nome = @Nome,
+                Email = @Email,
+                Telefone = @Telefone
+            WHERE UsuarioID = @UsuarioID
+            ",
+                    usuario
+                );
+            }
+        }
+
+        public static async Task<Usuario> ObterPorCPF(string CPFUSUARIO)
         {
             var usuario = await conexaobanco.dbConnection()
             .QueryFirstOrDefaultAsync<Usuario>(
@@ -65,6 +76,15 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoUser
                 ", new { CPF = CPFUSUARIO });
 
             return usuario;
+        }
+
+        public static async Task Deletar(int UsuarioID)
+        {
+            await conexaobanco.dbConnection().QueryAsync(
+                @"
+                         DELETE FROM Usuario
+                          WHERE UsuarioID = @UsuarioID
+                ", new { UsuarioID = UsuarioID });   //arrumar para Usuario apenas
         }
     }
 }

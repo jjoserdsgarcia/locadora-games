@@ -38,9 +38,9 @@
             txtNomeJogo = new TextBox();
             txtPlataforma = new TextBox();
             txtGenero = new TextBox();
-            txtValor = new TextBox();
-            txtAnoLancamento = new TextBox();
+            txtValorSemanal = new TextBox();
             label1 = new Label();
+            dtpAnoLancamentoCadastro = new DateTimePicker();
             SuspendLayout();
             // 
             // label2
@@ -121,7 +121,7 @@
             txtNomeJogo.Name = "txtNomeJogo";
             txtNomeJogo.Size = new Size(293, 23);
             txtNomeJogo.TabIndex = 8;
-            txtNomeJogo.Click += txtNJogo;
+           
             // 
             // txtPlataforma
             // 
@@ -129,7 +129,7 @@
             txtPlataforma.Name = "txtPlataforma";
             txtPlataforma.Size = new Size(293, 23);
             txtPlataforma.TabIndex = 9;
-            txtPlataforma.TextChanged += textBox2_TextChanged;
+            
             // 
             // txtGenero
             // 
@@ -138,19 +138,12 @@
             txtGenero.Size = new Size(293, 23);
             txtGenero.TabIndex = 10;
             // 
-            // txtValor
+            // txtValorSemanal
             // 
-            txtValor.Location = new Point(32, 329);
-            txtValor.Name = "txtValor";
-            txtValor.Size = new Size(100, 23);
-            txtValor.TabIndex = 11;
-            // 
-            // txtAnoLancamento
-            // 
-            txtAnoLancamento.Location = new Point(322, 329);
-            txtAnoLancamento.Name = "txtAnoLancamento";
-            txtAnoLancamento.Size = new Size(124, 23);
-            txtAnoLancamento.TabIndex = 12;
+            txtValorSemanal.Location = new Point(32, 329);
+            txtValorSemanal.Name = "txtValorSemanal";
+            txtValorSemanal.Size = new Size(100, 23);
+            txtValorSemanal.TabIndex = 11;
             // 
             // label1
             // 
@@ -162,14 +155,22 @@
             label1.TabIndex = 13;
             label1.Text = "Cadastrar Novo Item";
             // 
-            // TelaCadastroJogo
+            // dtpAnoLancamentoCadastro
+            // 
+            dtpAnoLancamentoCadastro.Format = DateTimePickerFormat.Short;
+            dtpAnoLancamentoCadastro.Location = new Point(358, 329);
+            dtpAnoLancamentoCadastro.Name = "dtpAnoLancamentoCadastro";
+            dtpAnoLancamentoCadastro.Size = new Size(102, 23);
+            dtpAnoLancamentoCadastro.TabIndex = 14;
+            // 
+            // TelaPrincipalUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(512, 450);
+            Controls.Add(dtpAnoLancamentoCadastro);
             Controls.Add(label1);
-            Controls.Add(txtAnoLancamento);
-            Controls.Add(txtValor);
+            Controls.Add(txtValorSemanal);
             Controls.Add(txtGenero);
             Controls.Add(txtPlataforma);
             Controls.Add(txtNomeJogo);
@@ -180,9 +181,9 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Name = "TelaCadastroJogo";
+            Name = "TelaPrincipalUsuario";
             Text = "TelaCadastroJogo";
-            Load += CadastroJogo_Load;
+            
             ResumeLayout(false);
             PerformLayout();
         }
@@ -198,8 +199,8 @@
         private TextBox txtNomeJogo;
         private TextBox txtPlataforma;
         private TextBox txtGenero;
-        private TextBox txtValor;
-        private TextBox txtAnoLancamento;
+        private TextBox txtValorSemanal;
         private Label label1;
+        private DateTimePicker dtpAnoLancamentoCadastro;
     }
 }

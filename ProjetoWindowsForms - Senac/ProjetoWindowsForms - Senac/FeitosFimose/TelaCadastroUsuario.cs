@@ -13,15 +13,22 @@ namespace ProjetoWindowsForms___Senac
     public partial class TelaCadastroUsuario : Form
     {
         private readonly DgvTelaADMIN dgvTelaADMIN;
+<<<<<<< HEAD
 
 
 
        
         private List<Usuario> usuarios = new List<Usuario>();
         public TelaCadastroUsuario()
+=======
+       
+        public TelaCadastroUsuario(DgvTelaADMIN telaADMIN)
+>>>>>>> 2efed7a3422679c4ff045b85d23a0cfbb2c076a4
         {
             InitializeComponent();
+            dgvTelaADMIN = telaADMIN;
         }
+
 
         private async void BtnSalvarCadastroUser(object sender, EventArgs e)
         {
@@ -36,8 +43,6 @@ namespace ProjetoWindowsForms___Senac
             var ListaDeErros = new List<ValidationResult>();
 
            
-           
-
             var contexto = new ValidationContext(usuario);
             Validator.TryValidateObject(usuario, contexto, ListaDeErros, true);
 
@@ -47,13 +52,13 @@ namespace ProjetoWindowsForms___Senac
                 foreach (var erro in ListaDeErros)
                 {
                     stringBuilder.Append(erro.ErrorMessage + "\n");
-                }
+                    
 
+                }
+                    lblListaerro.Text = stringBuilder.ToString();
             }
             else
             {
-
-
                 // Salvar na Lista
 
                 RepositorioUsuario.SalvarUsuario(usuario);

@@ -1,4 +1,5 @@
 using ProjetoWindowsForms___Senac;
+using ProjetoWindowsForms___Senac.TELAS;
 
 namespace ProjetoWindowsForms___Senac
 {
@@ -15,7 +16,7 @@ namespace ProjetoWindowsForms___Senac
             ApplicationConfiguration.Initialize();
 
 
-            Application.Run(new FPage());
+            Application.Run(new DgvTelaADMIN());
 
 
         }

@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using ProjetoWindowsForms___Senac.Classes;
 using Dapper;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
 {
@@ -18,31 +20,79 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
             .QueryAsync<Jogo>(
                 @"
                 SELECT
+                    Id,
                     Titulo,
                     Plataforma,
                     Genero,
                     Valor,
-                    Ano
-                        FROM
-                            Jogo
+                    Ano,
+                    Status
+                        FROM Jogo
+                        ORDER BY Titulo ASC
                 ");
 
             return jogo;
-
-
-
         }
 
-        public static async void SalvarJogo(Jogo jogo)
+        public static async Task SalvarJogo(Jogo jogo)
         {
-            await conexaoBancoSQL.dbConnection().QueryAsync(
+            using (var conexao = conexaoBancoSQL.dbConnection())  //ATUALIZAR O BANCO, COLOCAR "STATUS" E DISPONIVEL DPS DE CADASTRAR JOGO
+            {
+                string sql = @"INSERT INTO Jogo
+                       (Titulo, Plataforma, Genero, Valor, Ano, Status)
+                       VALUES
+                       (@Titulo, @Plataforma, @Genero, @Valor, @Ano, @Status)"; 
 
-                @"INSERT INTO Jogo (Titulo, Plataforma, Genero, Valor, Ano)
-                    VALUES (@Titulo, @Plataforma, @Genero, @Valor, @Ano);
-                        
+                await conexao.ExecuteAsync(sql, jogo);
+            }
+        }
 
+        public static async Task Atualizar(Jogo jogo)
+        {
+            using (var connection = conexaoBancoSQL.dbConnection())
+            {
+                await connection.ExecuteAsync(
+                    @"
+                    UPDATE Jogo
+                        SET
+                    Titulo = @Titulo,
+                    Plataforma = @Plataforma,
+                    Genero = @Genero,
+                    Ano = @Ano
+                        WHERE Id = @Id
+            ",
+                    jogo
+                );
+            }
+        }
 
-                ", jogo);
+        private readonly ConexaoBancoSQL _conexao = new ConexaoBancoSQL();
+
+        public JogoDetalhe ObterDetalhesPorId(int id)
+        {
+            using (IDbConnection db = _conexao.dbConnection())
+            {
+                string sql = @"SELECT 
+                            Titulo AS NomeJogo, 
+                            Nome AS NomeCliente, 
+                            DataLocacao AS DataLocacao, 
+                            DataEntrega AS DataEntrega, 
+                            Status AS Status 
+                          FROM Locacao 
+                          WHERE LocacaoID = @Id";
+
+                return db.QueryFirstOrDefault<JogoDetalhe>(sql, new { id });
+            }
+        }
+
+        internal static async Task Deletar(int id)
+        {
+            using (var connection = conexaoBancoSQL.dbConnection())
+            {
+                string query = "DELETE FROM Jogo WHERE Id = @Id";
+
+                await connection.ExecuteAsync(query, new { Id = id });
+            }
         }
     }
 }
