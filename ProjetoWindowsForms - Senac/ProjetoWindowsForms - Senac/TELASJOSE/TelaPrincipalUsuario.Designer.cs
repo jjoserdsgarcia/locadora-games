@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPrincipalUsuario));
             dgvListaJogos = new DataGridView();
             btnALUGAR = new Button();
             btnDEVOLVER = new Button();
@@ -80,11 +81,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(label1);
             Controls.Add(btnDEVOLVER);
             Controls.Add(btnALUGAR);
             Controls.Add(dgvListaJogos);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TelaPrincipalUsuario";
             Text = "Tela Principal - Main Page";
             Load += TelaPrincipalUsuario_Load;

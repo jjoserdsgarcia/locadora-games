@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaEditarJogo));
             lblEditando = new Label();
             label2 = new Label();
             lblNome = new Label();
@@ -58,7 +59,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(300, 92);
+            label2.Location = new Point(301, 54);
             label2.Name = "label2";
             label2.Size = new Size(212, 25);
             label2.TabIndex = 1;
@@ -68,7 +69,7 @@
             // 
             lblNome.AutoSize = true;
             lblNome.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Underline);
-            lblNome.Location = new Point(259, 140);
+            lblNome.Location = new Point(260, 102);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(61, 24);
             lblNome.TabIndex = 3;
@@ -78,7 +79,7 @@
             // 
             lblPlataforma.AutoSize = true;
             lblPlataforma.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Underline);
-            lblPlataforma.Location = new Point(218, 180);
+            lblPlataforma.Location = new Point(219, 142);
             lblPlataforma.Name = "lblPlataforma";
             lblPlataforma.Size = new Size(102, 24);
             lblPlataforma.TabIndex = 4;
@@ -88,7 +89,7 @@
             // 
             lblGenero.AutoSize = true;
             lblGenero.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Underline);
-            lblGenero.Location = new Point(241, 218);
+            lblGenero.Location = new Point(242, 180);
             lblGenero.Name = "lblGenero";
             lblGenero.Size = new Size(79, 24);
             lblGenero.TabIndex = 5;
@@ -98,7 +99,7 @@
             // 
             lblAno.AutoSize = true;
             lblAno.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Underline);
-            lblAno.Location = new Point(270, 257);
+            lblAno.Location = new Point(271, 219);
             lblAno.Name = "lblAno";
             lblAno.Size = new Size(50, 24);
             lblAno.TabIndex = 6;
@@ -127,28 +128,28 @@
             // txtTituloJogoEdit
             // 
             txtTituloJogoEdit.Enabled = false;
-            txtTituloJogoEdit.Location = new Point(326, 141);
+            txtTituloJogoEdit.Location = new Point(327, 103);
             txtTituloJogoEdit.Name = "txtTituloJogoEdit";
             txtTituloJogoEdit.Size = new Size(165, 23);
             txtTituloJogoEdit.TabIndex = 19;
             // 
             // txtPlataformaJogoEdit
             // 
-            txtPlataformaJogoEdit.Location = new Point(326, 180);
+            txtPlataformaJogoEdit.Location = new Point(327, 142);
             txtPlataformaJogoEdit.Name = "txtPlataformaJogoEdit";
             txtPlataformaJogoEdit.Size = new Size(165, 23);
             txtPlataformaJogoEdit.TabIndex = 20;
             // 
             // txtGeneroJogoEdit
             // 
-            txtGeneroJogoEdit.Location = new Point(326, 218);
+            txtGeneroJogoEdit.Location = new Point(327, 180);
             txtGeneroJogoEdit.Name = "txtGeneroJogoEdit";
             txtGeneroJogoEdit.Size = new Size(165, 23);
             txtGeneroJogoEdit.TabIndex = 21;
             // 
             // txtAnoJogoEdit
             // 
-            txtAnoJogoEdit.Location = new Point(326, 257);
+            txtAnoJogoEdit.Location = new Point(327, 219);
             txtAnoJogoEdit.Name = "txtAnoJogoEdit";
             txtAnoJogoEdit.Size = new Size(165, 23);
             txtAnoJogoEdit.TabIndex = 22;
@@ -168,6 +169,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(btnCancelarEdit);
             Controls.Add(txtAnoJogoEdit);
@@ -182,6 +185,7 @@
             Controls.Add(lblNome);
             Controls.Add(label2);
             Controls.Add(lblEditando);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TelaEditarJogo";
             Text = "EditarJogo";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

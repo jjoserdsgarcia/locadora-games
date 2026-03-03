@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaALUGAR));
             lblDADOSUSER = new Label();
             lblNAMEUSERALUGAR = new Label();
             lblCPFUSERALUGAR = new Label();
@@ -261,7 +262,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DimGray;
-            BackgroundImage = Properties.Resources.d0b7d847_5bad_4ed5_a76b_a413a0e81b87;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(797, 442);
             Controls.Add(txtNomeJogoAlugar);
@@ -284,6 +285,7 @@
             Controls.Add(lblCPFUSERALUGAR);
             Controls.Add(lblNAMEUSERALUGAR);
             Controls.Add(lblDADOSUSER);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TelaALUGAR";
             Text = "Usuário - Alugar";
             Load += TelaALUGAR_Load;

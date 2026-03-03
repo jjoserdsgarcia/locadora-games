@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastroJogo));
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -47,7 +48,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(32, 82);
+            label2.Location = new Point(32, 80);
             label2.Name = "label2";
             label2.Size = new Size(116, 20);
             label2.TabIndex = 1;
@@ -57,7 +58,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(32, 151);
+            label3.Location = new Point(32, 149);
             label3.Name = "label3";
             label3.Size = new Size(90, 20);
             label3.TabIndex = 2;
@@ -67,7 +68,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(33, 230);
+            label4.Location = new Point(32, 226);
             label4.Name = "label4";
             label4.Size = new Size(67, 20);
             label4.TabIndex = 3;
@@ -77,7 +78,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(31, 309);
+            label5.Location = new Point(31, 306);
             label5.Name = "label5";
             label5.Size = new Size(117, 20);
             label5.TabIndex = 4;
@@ -87,7 +88,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(322, 308);
+            label6.Location = new Point(322, 306);
             label6.Name = "label6";
             label6.Size = new Size(157, 20);
             label6.TabIndex = 5;
@@ -119,23 +120,21 @@
             // 
             txtNomeJogo.Location = new Point(32, 103);
             txtNomeJogo.Name = "txtNomeJogo";
-            txtNomeJogo.Size = new Size(293, 23);
+            txtNomeJogo.Size = new Size(235, 23);
             txtNomeJogo.TabIndex = 8;
-           
             // 
             // txtPlataforma
             // 
             txtPlataforma.Location = new Point(32, 172);
             txtPlataforma.Name = "txtPlataforma";
-            txtPlataforma.Size = new Size(293, 23);
+            txtPlataforma.Size = new Size(235, 23);
             txtPlataforma.TabIndex = 9;
-            
             // 
             // txtGenero
             // 
             txtGenero.Location = new Point(32, 249);
             txtGenero.Name = "txtGenero";
-            txtGenero.Size = new Size(293, 23);
+            txtGenero.Size = new Size(235, 23);
             txtGenero.TabIndex = 10;
             // 
             // txtValorSemanal
@@ -158,15 +157,17 @@
             // dtpAnoLancamentoCadastro
             // 
             dtpAnoLancamentoCadastro.Format = DateTimePickerFormat.Short;
-            dtpAnoLancamentoCadastro.Location = new Point(358, 329);
+            dtpAnoLancamentoCadastro.Location = new Point(347, 338);
             dtpAnoLancamentoCadastro.Name = "dtpAnoLancamentoCadastro";
             dtpAnoLancamentoCadastro.Size = new Size(102, 23);
             dtpAnoLancamentoCadastro.TabIndex = 14;
             // 
-            // TelaPrincipalUsuario
+            // TelaCadastroJogo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(512, 450);
             Controls.Add(dtpAnoLancamentoCadastro);
             Controls.Add(label1);
@@ -181,9 +182,9 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Name = "TelaPrincipalUsuario";
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "TelaCadastroJogo";
             Text = "TelaCadastroJogo";
-            
             ResumeLayout(false);
             PerformLayout();
         }

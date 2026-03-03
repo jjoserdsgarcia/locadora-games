@@ -13,17 +13,17 @@ namespace ProjetoWindowsForms___Senac
     public partial class TelaCadastroUsuario : Form
     {
         private readonly DgvTelaADMIN dgvTelaADMIN;
-<<<<<<< HEAD
+
 
 
 
        
         private List<Usuario> usuarios = new List<Usuario>();
-        public TelaCadastroUsuario()
-=======
+       
+
        
         public TelaCadastroUsuario(DgvTelaADMIN telaADMIN)
->>>>>>> 2efed7a3422679c4ff045b85d23a0cfbb2c076a4
+
         {
             InitializeComponent();
             dgvTelaADMIN = telaADMIN;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginUSER));
             lblCPFUSER = new Label();
             txtCPFUSUARIO = new TextBox();
             btnPROSSEGUIRUSER = new Button();
@@ -38,7 +39,7 @@
             // 
             lblCPFUSER.AutoSize = true;
             lblCPFUSER.Font = new Font("Modern No. 20", 17.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            lblCPFUSER.Location = new Point(309, 169);
+            lblCPFUSER.Location = new Point(318, 169);
             lblCPFUSER.Name = "lblCPFUSER";
             lblCPFUSER.Size = new Size(170, 25);
             lblCPFUSER.TabIndex = 0;
@@ -56,7 +57,7 @@
             // btnPROSSEGUIRUSER
             // 
             btnPROSSEGUIRUSER.Font = new Font("Modern No. 20", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnPROSSEGUIRUSER.Location = new Point(474, 367);
+            btnPROSSEGUIRUSER.Location = new Point(484, 362);
             btnPROSSEGUIRUSER.Name = "btnPROSSEGUIRUSER";
             btnPROSSEGUIRUSER.Size = new Size(235, 61);
             btnPROSSEGUIRUSER.TabIndex = 4;
@@ -80,11 +81,14 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(btnVOLTARUSER);
             Controls.Add(btnPROSSEGUIRUSER);
             Controls.Add(txtCPFUSUARIO);
             Controls.Add(lblCPFUSER);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "LoginUSER";
             Text = "Login de Usuário";
             Load += LoginUSER_Load;

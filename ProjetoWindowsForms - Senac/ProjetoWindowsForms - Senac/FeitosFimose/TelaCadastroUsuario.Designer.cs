@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastroUsuario));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -48,7 +49,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(45, 74);
+            label1.Location = new Point(45, 69);
             label1.Name = "label1";
             label1.Size = new Size(55, 20);
             label1.TabIndex = 0;
@@ -58,7 +59,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(45, 132);
+            label2.Location = new Point(45, 129);
             label2.Name = "label2";
             label2.Size = new Size(44, 20);
             label2.TabIndex = 1;
@@ -68,7 +69,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(45, 187);
+            label3.Location = new Point(45, 185);
             label3.Name = "label3";
             label3.Size = new Size(52, 20);
             label3.TabIndex = 2;
@@ -78,7 +79,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(45, 249);
+            label4.Location = new Point(45, 247);
             label4.Name = "label4";
             label4.Size = new Size(75, 20);
             label4.TabIndex = 3;
@@ -177,6 +178,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(lblListaerro);
             Controls.Add(dtpData);
@@ -192,6 +195,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TelaCadastroUsuario";
             Text = "Tela Cadastro Usuário ";
             Load += CadastroUsuario_Load;

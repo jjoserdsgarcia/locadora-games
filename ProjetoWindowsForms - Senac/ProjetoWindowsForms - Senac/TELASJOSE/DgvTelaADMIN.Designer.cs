@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DgvTelaADMIN));
             dgvADMIN = new DataGridView();
             dgvADMINEDITAR = new Button();
             dgvADMINJOGOS = new Button();
@@ -143,6 +144,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
+            BackgroundImage = Properties.Resources.Design_sem_nome__10_;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(btnDetalheJogo);
             Controls.Add(lblStatus);
@@ -153,6 +156,7 @@
             Controls.Add(dgvADMINJOGOS);
             Controls.Add(dgvADMINEDITAR);
             Controls.Add(dgvADMIN);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "DgvTelaADMIN";
             Text = "Tela Principal - ADMIN";
             ((System.ComponentModel.ISupportInitialize)dgvADMIN).EndInit();
