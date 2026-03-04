@@ -39,7 +39,10 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
             using (var conexao = conexaoBancoSQL.dbConnection()) 
             {
                 string sql = @"INSERT INTO Jogo
+<<<<<<< HEAD
 
+=======
+>>>>>>> f9a786b35b4b5638405e6690312c499dccccb32c
                        (Titulo, Plataforma, Genero, Ano, Status, Categoria)
                        VALUES
                        (@Titulo, @Plataforma, @Genero, @Ano, @Status, @Categoria)"; 

@@ -8,7 +8,6 @@ namespace ProjetoWindowsForms___Senac.Classes
 {
     public class RegistroLocacao
     {
-        public int LocacaoID { get; set; }
         public string NomeJogo { get; set; }
         public string Cliente { get; set; }
         public DateTime DataLocacao { get; set; }
