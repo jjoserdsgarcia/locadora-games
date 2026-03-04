@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             btnFecharD = new Button();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtStatusDetalhe = new TextBox();
+            txtEntregaDetalhe = new TextBox();
+            txtLocacaoDetalhe = new TextBox();
+            txtClienteDetalhe = new TextBox();
+            txtNomeDetalhe = new TextBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
@@ -53,45 +53,45 @@
             btnFecharD.UseVisualStyleBackColor = true;
             btnFecharD.Click += btnFecharDetalhe;
             // 
-            // textBox5
+            // txtStatusDetalhe
             // 
-            textBox5.Enabled = false;
-            textBox5.Location = new Point(410, 291);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(170, 23);
-            textBox5.TabIndex = 22;
+            txtStatusDetalhe.Enabled = false;
+            txtStatusDetalhe.Location = new Point(410, 291);
+            txtStatusDetalhe.Name = "txtStatusDetalhe";
+            txtStatusDetalhe.Size = new Size(170, 23);
+            txtStatusDetalhe.TabIndex = 22;
             // 
-            // textBox4
+            // txtEntregaDetalhe
             // 
-            textBox4.Enabled = false;
-            textBox4.Location = new Point(410, 242);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(170, 23);
-            textBox4.TabIndex = 21;
+            txtEntregaDetalhe.Enabled = false;
+            txtEntregaDetalhe.Location = new Point(410, 242);
+            txtEntregaDetalhe.Name = "txtEntregaDetalhe";
+            txtEntregaDetalhe.Size = new Size(170, 23);
+            txtEntregaDetalhe.TabIndex = 21;
             // 
-            // textBox3
+            // txtLocacaoDetalhe
             // 
-            textBox3.Enabled = false;
-            textBox3.Location = new Point(410, 198);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(170, 23);
-            textBox3.TabIndex = 20;
+            txtLocacaoDetalhe.Enabled = false;
+            txtLocacaoDetalhe.Location = new Point(410, 198);
+            txtLocacaoDetalhe.Name = "txtLocacaoDetalhe";
+            txtLocacaoDetalhe.Size = new Size(170, 23);
+            txtLocacaoDetalhe.TabIndex = 20;
             // 
-            // textBox2
+            // txtClienteDetalhe
             // 
-            textBox2.Enabled = false;
-            textBox2.Location = new Point(410, 152);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(170, 23);
-            textBox2.TabIndex = 19;
+            txtClienteDetalhe.Enabled = false;
+            txtClienteDetalhe.Location = new Point(410, 152);
+            txtClienteDetalhe.Name = "txtClienteDetalhe";
+            txtClienteDetalhe.Size = new Size(170, 23);
+            txtClienteDetalhe.TabIndex = 19;
             // 
-            // textBox1
+            // txtNomeDetalhe
             // 
-            textBox1.Enabled = false;
-            textBox1.Location = new Point(410, 103);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(170, 23);
-            textBox1.TabIndex = 18;
+            txtNomeDetalhe.Enabled = false;
+            txtNomeDetalhe.Location = new Point(410, 103);
+            txtNomeDetalhe.Name = "txtNomeDetalhe";
+            txtNomeDetalhe.Size = new Size(170, 23);
+            txtNomeDetalhe.TabIndex = 18;
             // 
             // label6
             // 
@@ -159,11 +159,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(btnFecharD);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtStatusDetalhe);
+            Controls.Add(txtEntregaDetalhe);
+            Controls.Add(txtLocacaoDetalhe);
+            Controls.Add(txtClienteDetalhe);
+            Controls.Add(txtNomeDetalhe);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -180,11 +180,11 @@
         #endregion
 
         private Button btnFecharD;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtStatusDetalhe;
+        private TextBox txtEntregaDetalhe;
+        private TextBox txtLocacaoDetalhe;
+        private TextBox txtClienteDetalhe;
+        private TextBox txtNomeDetalhe;
         private Label label6;
         private Label label5;
         private Label label4;

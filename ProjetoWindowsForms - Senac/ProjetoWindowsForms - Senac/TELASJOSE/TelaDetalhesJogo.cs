@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoWindowsForms___Senac.Repositories.RepoUser;
 
 namespace ProjetoWindowsForms___Senac.TELASJOSE
 {
     public partial class TelaDetalhesJogo : Form
     {
+
         public TelaDetalhesJogo()
         {
             InitializeComponent();
@@ -24,7 +26,24 @@ namespace ProjetoWindowsForms___Senac.TELASJOSE
 
         private async void TelaDetalhesJogo_Load(object sender, EventArgs e)
         {
-           
+            if (!string.IsNullOrEmpty())
+            {
+                var usuario = await RepositorioUsuario.ObterPorCPF(CPFUsuario);
+
+                if (usuario != null)
+                {
+                    txtNomeDetalhe.Text = usuario.Nome;
+                    txtClienteDetalhe.Text = usuario.Cliente;
+                    txtTelefoneUsuarioAlugar.Text = usuario.Telefone;
+                }
+            }
+
+            if (JogoSelecionado != null)
+            {
+                txtNomeJogoAlugar.Text = JogoSelecionado.Titulo;
+                txtCategoriaJogoAlugar.Text = JogoSelecionado.Genero;
+                txtPlataformaJogoAlugar.Text = JogoSelecionado.Plataforma;
+            }
         }
     }
 }
