@@ -33,16 +33,17 @@
             btnUser = new Button();
             btnAdm = new Button();
             label1 = new Label();
-            lblNomeLocadora = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblOpcaoLog
             // 
             lblOpcaoLog.AutoSize = true;
-            lblOpcaoLog.BackColor = Color.LightGray;
+            lblOpcaoLog.BackColor = Color.Black;
             lblOpcaoLog.Font = new Font("MS Reference Sans Serif", 18F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            lblOpcaoLog.ForeColor = Color.Crimson;
-            lblOpcaoLog.Location = new Point(159, 156);
+            lblOpcaoLog.ForeColor = Color.White;
+            lblOpcaoLog.Location = new Point(169, 209);
             lblOpcaoLog.Name = "lblOpcaoLog";
             lblOpcaoLog.Size = new Size(507, 29);
             lblOpcaoLog.TabIndex = 0;
@@ -50,22 +51,23 @@
             // 
             // btnUser
             // 
+            btnUser.BackColor = Color.Black;
             btnUser.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            btnUser.ForeColor = Color.Red;
-            btnUser.Location = new Point(281, 238);
+            btnUser.ForeColor = Color.White;
+            btnUser.Location = new Point(282, 272);
             btnUser.Name = "btnUser";
             btnUser.Size = new Size(259, 41);
             btnUser.TabIndex = 1;
             btnUser.Text = "Usuário";
-            btnUser.UseVisualStyleBackColor = true;
+            btnUser.UseVisualStyleBackColor = false;
             btnUser.Click += btnUser_Click;
             // 
             // btnAdm
             // 
-            btnAdm.BackColor = Color.Snow;
+            btnAdm.BackColor = Color.Black;
             btnAdm.Font = new Font("Modern No. 20", 11.249999F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            btnAdm.ForeColor = Color.Red;
-            btnAdm.Location = new Point(281, 355);
+            btnAdm.ForeColor = Color.White;
+            btnAdm.Location = new Point(282, 378);
             btnAdm.Name = "btnAdm";
             btnAdm.Size = new Size(259, 45);
             btnAdm.TabIndex = 2;
@@ -76,35 +78,35 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.LightGray;
+            label1.BackColor = Color.Black;
             label1.Font = new Font("Modern No. 20", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Red;
-            label1.Location = new Point(394, 306);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(394, 334);
             label1.Name = "label1";
             label1.Size = new Size(32, 21);
             label1.TabIndex = 3;
             label1.Text = "Ou";
             // 
-            // lblNomeLocadora
+            // pictureBox1
             // 
-            lblNomeLocadora.AutoSize = true;
-            lblNomeLocadora.BackColor = Color.LightGray;
-            lblNomeLocadora.Font = new Font("Modern No. 20", 17.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            lblNomeLocadora.ForeColor = Color.Crimson;
-            lblNomeLocadora.Location = new Point(344, 32);
-            lblNomeLocadora.Name = "lblNomeLocadora";
-            lblNomeLocadora.Size = new Size(145, 25);
-            lblNomeLocadora.TabIndex = 4;
-            lblNomeLocadora.Text = "Noxus Rental";
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.ChatGPT_Image_4_de_mar__de_2026__14_56_58;
+            pictureBox1.Location = new Point(255, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(312, 174);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
             // 
             // FPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            BackgroundImage = Properties.Resources.noxus_lol_cinematic_2025_1_1024x437;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 435);
-            Controls.Add(lblNomeLocadora);
+            Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(btnAdm);
             Controls.Add(btnUser);
@@ -113,6 +115,7 @@
             Name = "FPage";
             Text = "Tela de Login";
             Load += FPage_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -123,6 +126,6 @@
         private Button btnUser;
         private Button btnAdm;
         private Label label1;
-        private Label lblNomeLocadora;
+        private PictureBox pictureBox1;
     }
 }

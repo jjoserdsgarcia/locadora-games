@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using Dapper;
 using ProjetoWindowsForms___Senac.Classes;
 
 namespace ProjetoWindowsForms___Senac.Repositórios.RepoLocacaoInfo
 {
-    public static async Task<RegistroLocacao>ObterLocacaoAtivaPorJogo(int jogoId)
+    public static class RepositorioLocacao
     {
-        var conexao = new ConexaoBancoSQL();
-
-        using (var connection = conexao.dbConnection())
+        public static async Task<RegistroLocacao> ObterLocacaoAtivaPorJogo(int jogoId)
         {
-            string sql = @"
+            var conexao = new ConexaoBancoSQL();
+
+            using (var connection = conexao.dbConnection())
+            {
+                string sql = @"
             SELECT 
                 j.Titulo AS NomeJogo,
                 u.Nome AS Cliente,
@@ -26,7 +29,8 @@ namespace ProjetoWindowsForms___Senac.Repositórios.RepoLocacaoInfo
             INNER JOIN Usuario u ON l.UsuarioID = u.UsuarioID
             WHERE l.JogoID = @Id AND l.Status = 'Ativo'";
 
-            return await connection.QueryFirstOrDefaultAsync<RegistroLocacao>(sql, new { Id = jogoId });
+                return await connection.QueryFirstOrDefaultAsync<RegistroLocacao>(sql, new { Id = jogoId });
+            }
         }
     }
 }

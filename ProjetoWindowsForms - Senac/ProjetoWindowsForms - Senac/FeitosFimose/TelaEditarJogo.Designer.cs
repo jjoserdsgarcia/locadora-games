@@ -57,7 +57,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(155, 174);
+            label2.Location = new Point(94, 173);
             label2.Name = "label2";
             label2.Size = new Size(212, 25);
             label2.TabIndex = 1;
@@ -67,7 +67,7 @@
             // 
             lblNome.AutoSize = true;
             lblNome.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Underline);
-            lblNome.Location = new Point(114, 222);
+            lblNome.Location = new Point(53, 221);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(61, 24);
             lblNome.TabIndex = 3;
@@ -77,7 +77,7 @@
             // 
             lblPlataforma.AutoSize = true;
             lblPlataforma.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Underline);
-            lblPlataforma.Location = new Point(73, 262);
+            lblPlataforma.Location = new Point(12, 261);
             lblPlataforma.Name = "lblPlataforma";
             lblPlataforma.Size = new Size(102, 24);
             lblPlataforma.TabIndex = 4;
@@ -87,7 +87,7 @@
             // 
             lblGenero.AutoSize = true;
             lblGenero.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Underline);
-            lblGenero.Location = new Point(96, 300);
+            lblGenero.Location = new Point(35, 299);
             lblGenero.Name = "lblGenero";
             lblGenero.Size = new Size(79, 24);
             lblGenero.TabIndex = 5;
@@ -97,7 +97,7 @@
             // 
             lblAno.AutoSize = true;
             lblAno.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Underline);
-            lblAno.Location = new Point(125, 339);
+            lblAno.Location = new Point(64, 338);
             lblAno.Name = "lblAno";
             lblAno.Size = new Size(50, 24);
             lblAno.TabIndex = 6;
@@ -106,7 +106,7 @@
             // btnSalvarEdit
             // 
             btnSalvarEdit.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSalvarEdit.Location = new Point(672, 383);
+            btnSalvarEdit.Location = new Point(168, 386);
             btnSalvarEdit.Name = "btnSalvarEdit";
             btnSalvarEdit.Size = new Size(100, 40);
             btnSalvarEdit.TabIndex = 16;
@@ -117,28 +117,28 @@
             // txtTituloJogoEdit
             // 
             txtTituloJogoEdit.Enabled = false;
-            txtTituloJogoEdit.Location = new Point(181, 223);
+            txtTituloJogoEdit.Location = new Point(120, 222);
             txtTituloJogoEdit.Name = "txtTituloJogoEdit";
             txtTituloJogoEdit.Size = new Size(165, 23);
             txtTituloJogoEdit.TabIndex = 19;
             // 
             // txtPlataformaJogoEdit
             // 
-            txtPlataformaJogoEdit.Location = new Point(181, 262);
+            txtPlataformaJogoEdit.Location = new Point(120, 261);
             txtPlataformaJogoEdit.Name = "txtPlataformaJogoEdit";
             txtPlataformaJogoEdit.Size = new Size(165, 23);
             txtPlataformaJogoEdit.TabIndex = 20;
             // 
             // txtGeneroJogoEdit
             // 
-            txtGeneroJogoEdit.Location = new Point(181, 300);
+            txtGeneroJogoEdit.Location = new Point(120, 299);
             txtGeneroJogoEdit.Name = "txtGeneroJogoEdit";
             txtGeneroJogoEdit.Size = new Size(165, 23);
             txtGeneroJogoEdit.TabIndex = 21;
             // 
             // txtAnoJogoEdit
             // 
-            txtAnoJogoEdit.Location = new Point(181, 339);
+            txtAnoJogoEdit.Location = new Point(120, 338);
             txtAnoJogoEdit.Name = "txtAnoJogoEdit";
             txtAnoJogoEdit.Size = new Size(165, 23);
             txtAnoJogoEdit.TabIndex = 22;
@@ -146,7 +146,7 @@
             // btnCancelarEdit
             // 
             btnCancelarEdit.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCancelarEdit.Location = new Point(552, 383);
+            btnCancelarEdit.Location = new Point(48, 386);
             btnCancelarEdit.Name = "btnCancelarEdit";
             btnCancelarEdit.Size = new Size(100, 40);
             btnCancelarEdit.TabIndex = 23;

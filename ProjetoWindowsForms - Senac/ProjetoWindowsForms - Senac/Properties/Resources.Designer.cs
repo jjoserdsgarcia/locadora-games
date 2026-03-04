@@ -93,6 +93,16 @@ namespace ProjetoWindowsForms___Senac.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_4_de_mar__de_2026__14_56_58 {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image 4 de mar. de 2026, 14_56_58", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap d0b7d847_5bad_4ed5_a76b_a413a0e81b87 {
             get {
                 object obj = ResourceManager.GetObject("d0b7d847-5bad-4ed5-a76b-a413a0e81b87", resourceCulture);

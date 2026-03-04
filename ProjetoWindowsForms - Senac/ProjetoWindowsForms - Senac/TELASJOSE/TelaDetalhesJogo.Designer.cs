@@ -84,6 +84,7 @@
             txtClienteDetalhe.Name = "txtClienteDetalhe";
             txtClienteDetalhe.Size = new Size(170, 23);
             txtClienteDetalhe.TabIndex = 19;
+            txtClienteDetalhe.TextChanged += txtClienteDetalhe_TextChanged;
             // 
             // txtNomeDetalhe
             // 
@@ -92,6 +93,7 @@
             txtNomeDetalhe.Name = "txtNomeDetalhe";
             txtNomeDetalhe.Size = new Size(170, 23);
             txtNomeDetalhe.TabIndex = 18;
+            txtNomeDetalhe.TextChanged += txtNomeDetalhe_TextChanged;
             // 
             // label6
             // 

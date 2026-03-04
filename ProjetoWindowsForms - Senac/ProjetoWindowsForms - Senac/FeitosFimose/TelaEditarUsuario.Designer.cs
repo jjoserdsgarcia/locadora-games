@@ -106,7 +106,7 @@
             // button3
             // 
             button3.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(542, 361);
+            button3.Location = new Point(203, 367);
             button3.Name = "button3";
             button3.Padding = new Padding(15, 0, 15, 0);
             button3.Size = new Size(131, 40);
@@ -118,7 +118,7 @@
             // btnCancelarEditUsuario
             // 
             btnCancelarEditUsuario.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCancelarEditUsuario.Location = new Point(386, 361);
+            btnCancelarEditUsuario.Location = new Point(47, 367);
             btnCancelarEditUsuario.Name = "btnCancelarEditUsuario";
             btnCancelarEditUsuario.Padding = new Padding(15, 0, 15, 0);
             btnCancelarEditUsuario.Size = new Size(131, 40);
@@ -141,7 +141,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Design_sem_nome__9_;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(804, 450);
             Controls.Add(label1);
