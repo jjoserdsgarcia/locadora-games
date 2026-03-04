@@ -33,6 +33,7 @@
             btnALUGAR = new Button();
             btnDEVOLVER = new Button();
             label1 = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvListaJogos).BeginInit();
             SuspendLayout();
             // 
@@ -77,6 +78,17 @@
             label1.TabIndex = 3;
             label1.Text = "Escolha um dos jogos para Alugar:";
             // 
+            // button1
+            // 
+            button1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(33, 364);
+            button1.Name = "button1";
+            button1.Size = new Size(130, 37);
+            button1.TabIndex = 4;
+            button1.Text = "SAIR";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // TelaPrincipalUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -84,6 +96,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(btnDEVOLVER);
             Controls.Add(btnALUGAR);
@@ -102,6 +115,6 @@
         private Button btnDEVOLVER;
         private Label label1;
         private DataGridView dgvListaJogos;
-        
+        private Button button1;
     }
 }

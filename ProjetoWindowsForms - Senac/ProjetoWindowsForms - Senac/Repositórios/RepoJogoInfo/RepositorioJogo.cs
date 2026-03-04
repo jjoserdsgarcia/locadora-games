@@ -24,8 +24,9 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
                     Titulo,
                     Plataforma,
                     Genero,
-                    Ano,
-                    Status
+                    Status,
+                    Categoria,
+                    Ano
                         FROM Jogo
                         ORDER BY Titulo ASC
                 ");
@@ -38,9 +39,9 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
             using (var conexao = conexaoBancoSQL.dbConnection())  //ATUALIZAR O BANCO, COLOCAR "STATUS" E DISPONIVEL DPS DE CADASTRAR JOGO
             {
                 string sql = @"INSERT INTO Jogo
-                       (Titulo, Plataforma, Genero, Ano, Status)
+                       (Titulo, Plataforma, Genero, Ano, Status, Categoria)
                        VALUES
-                       (@Titulo, @Plataforma, @Genero, @Ano, @Status)"; 
+                       (@Titulo, @Plataforma, @Genero, @Ano, @Status, @Categoria)"; 
 
                 await conexao.ExecuteAsync(sql, jogo);
             }

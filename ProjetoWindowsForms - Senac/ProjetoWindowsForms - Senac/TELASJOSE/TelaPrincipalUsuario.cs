@@ -67,10 +67,7 @@ namespace ProjetoWindowsForms___Senac.TELAS
 
         private void btnDEVOLVER_Click(object sender, EventArgs e)
         {
-            var teladevolver = new TelaDevolver();
-            this.Hide();
-            teladevolver.ShowDialog();
-            this.Show();
+            
         }
 
         private void TelaPrincipalUsuario_Load(object sender, EventArgs e)
@@ -81,6 +78,11 @@ namespace ProjetoWindowsForms___Senac.TELAS
         private void dgvListaJog(object sender, QuestionEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 

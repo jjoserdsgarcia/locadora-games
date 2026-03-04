@@ -14,9 +14,9 @@ namespace ProjetoWindowsForms___Senac
 
         private async void btnSalvarJogo(object sender, EventArgs e)
         {
-           if (string.IsNullOrWhiteSpace(txtNomeJogo.Text) ||
-               string.IsNullOrWhiteSpace(txtPlataforma.Text) ||
-               string.IsNullOrWhiteSpace(txtGenero.Text))
+            if (string.IsNullOrWhiteSpace(txtNomeJogo.Text) ||
+                string.IsNullOrWhiteSpace(txtPlataforma.Text) ||
+                string.IsNullOrWhiteSpace(txtGenero.Text))
             {
                 MessageBox.Show(
                     "Preencha todos os campos!",
@@ -26,28 +26,36 @@ namespace ProjetoWindowsForms___Senac
                 return;
             }
 
-            int ano = dtpAnoLancamentoCadastro.Value.Year;  
+            int ano = dtpAnoLancamentoCadastro.Value.Year;
 
             var novoJogo = new Jogo
             {
                 Titulo = txtNomeJogo.Text,
                 Plataforma = txtPlataforma.Text,
                 Genero = txtGenero.Text,
+                Categoria = rbtnBronze.Checked ? CategoriaJogo.Bronze :
+                            rbtnPrata.Checked ? CategoriaJogo.Prata :
+                            CategoriaJogo.Ouro,
                 Ano = ano,
                 Status = "Disponível"
             };
 
-              await RepositorioJogo.SalvarJogo(novoJogo);
+            await RepositorioJogo.SalvarJogo(novoJogo);
 
             MessageBox.Show(
                 "Jogo cadastrado com sucesso!");
 
-                this.Close();
-              }
+            this.Close();
+        }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void rbtnBronze_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

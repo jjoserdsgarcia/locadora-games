@@ -23,7 +23,7 @@ namespace ProjetoWindowsForms___Senac
 
             lblEditandoUsuario.Text = $"Editando: {usuario.Nome}";
 
-            txtIdEditUsuario.Text = usuario.UsuarioID.ToString();
+            
             txtNomeEditUsuario.Text = usuario.Nome;
             txtEmailEditUsuario.Text = usuario.Email;
             txtTelefoneEditUsuario.Text = usuario.Telefone;
@@ -52,10 +52,15 @@ namespace ProjetoWindowsForms___Senac
         }
         private void LimparCampos()
         {
-              txtNomeEditUsuario.Clear();
-              txtEmailEditUsuario.Clear();
-              txtTelefoneEditUsuario.Clear();
-              txtIdEditUsuario.Clear();
+            txtNomeEditUsuario.Clear();
+            txtEmailEditUsuario.Clear();
+            txtTelefoneEditUsuario.Clear();
+            
+        }
+
+        private void txtIdEditUsuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

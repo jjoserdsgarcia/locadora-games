@@ -8,6 +8,7 @@
         public string Plataforma { get; set; }
         public string Genero { get; set; }
         public string Status { get; set; }
+        public CategoriaJogo Categoria { get; set; }
         public int Ano { get; set; }
 
         

@@ -40,6 +40,11 @@
             txtGenero = new TextBox();
             label1 = new Label();
             dtpAnoLancamentoCadastro = new DateTimePicker();
+            gbCategoria = new GroupBox();
+            rbtnBronze = new RadioButton();
+            rbtnPrata = new RadioButton();
+            rbtnOuro = new RadioButton();
+            gbCategoria.SuspendLayout();
             SuspendLayout();
             // 
             // label2
@@ -96,7 +101,7 @@
             // btnSalvar
             // 
             btnSalvar.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSalvar.Location = new Point(360, 390);
+            btnSalvar.Location = new Point(198, 390);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(100, 40);
             btnSalvar.TabIndex = 7;
@@ -108,21 +113,21 @@
             // 
             txtNomeJogo.Location = new Point(32, 103);
             txtNomeJogo.Name = "txtNomeJogo";
-            txtNomeJogo.Size = new Size(235, 23);
+            txtNomeJogo.Size = new Size(157, 23);
             txtNomeJogo.TabIndex = 8;
             // 
             // txtPlataforma
             // 
             txtPlataforma.Location = new Point(32, 172);
             txtPlataforma.Name = "txtPlataforma";
-            txtPlataforma.Size = new Size(235, 23);
+            txtPlataforma.Size = new Size(157, 23);
             txtPlataforma.TabIndex = 9;
             // 
             // txtGenero
             // 
             txtGenero.Location = new Point(32, 249);
             txtGenero.Name = "txtGenero";
-            txtGenero.Size = new Size(235, 23);
+            txtGenero.Size = new Size(157, 23);
             txtGenero.TabIndex = 10;
             // 
             // label1
@@ -143,13 +148,63 @@
             dtpAnoLancamentoCadastro.Size = new Size(102, 23);
             dtpAnoLancamentoCadastro.TabIndex = 14;
             // 
+            // gbCategoria
+            // 
+            gbCategoria.BackColor = SystemColors.ButtonHighlight;
+            gbCategoria.Controls.Add(rbtnOuro);
+            gbCategoria.Controls.Add(rbtnPrata);
+            gbCategoria.Controls.Add(rbtnBronze);
+            gbCategoria.Location = new Point(248, 80);
+            gbCategoria.Name = "gbCategoria";
+            gbCategoria.Size = new Size(236, 78);
+            gbCategoria.TabIndex = 15;
+            gbCategoria.TabStop = false;
+            gbCategoria.Text = "Categoria";
+            // 
+            // rbtnBronze
+            // 
+            rbtnBronze.AutoSize = true;
+            rbtnBronze.Checked = true;
+            rbtnBronze.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            rbtnBronze.Location = new Point(6, 32);
+            rbtnBronze.Name = "rbtnBronze";
+            rbtnBronze.Size = new Size(67, 20);
+            rbtnBronze.TabIndex = 0;
+            rbtnBronze.TabStop = true;
+            rbtnBronze.Text = "Bronze";
+            rbtnBronze.UseVisualStyleBackColor = true;
+            rbtnBronze.CheckedChanged += rbtnBronze_CheckedChanged;
+            // 
+            // rbtnPrata
+            // 
+            rbtnPrata.AutoSize = true;
+            rbtnPrata.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            rbtnPrata.Location = new Point(87, 32);
+            rbtnPrata.Name = "rbtnPrata";
+            rbtnPrata.Size = new Size(57, 20);
+            rbtnPrata.TabIndex = 1;
+            rbtnPrata.Text = "Prata";
+            rbtnPrata.UseVisualStyleBackColor = true;
+            // 
+            // rbtnOuro
+            // 
+            rbtnOuro.AutoSize = true;
+            rbtnOuro.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            rbtnOuro.Location = new Point(169, 32);
+            rbtnOuro.Name = "rbtnOuro";
+            rbtnOuro.Size = new Size(54, 20);
+            rbtnOuro.TabIndex = 2;
+            rbtnOuro.Text = "Ouro";
+            rbtnOuro.UseVisualStyleBackColor = true;
+            // 
             // TelaCadastroJogo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(512, 450);
+            ClientSize = new Size(755, 450);
+            Controls.Add(gbCategoria);
             Controls.Add(dtpAnoLancamentoCadastro);
             Controls.Add(label1);
             Controls.Add(txtGenero);
@@ -164,6 +219,8 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TelaCadastroJogo";
             Text = "TelaCadastroJogo";
+            gbCategoria.ResumeLayout(false);
+            gbCategoria.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -180,5 +237,9 @@
         private TextBox txtGenero;
         private Label label1;
         private DateTimePicker dtpAnoLancamentoCadastro;
+        private GroupBox gbCategoria;
+        private RadioButton rbtnOuro;
+        private RadioButton rbtnPrata;
+        private RadioButton rbtnBronze;
     }
 }

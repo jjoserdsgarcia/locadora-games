@@ -41,7 +41,7 @@
             lblOpcaoLog.AutoSize = true;
             lblOpcaoLog.BackColor = Color.LightGray;
             lblOpcaoLog.Font = new Font("MS Reference Sans Serif", 18F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            lblOpcaoLog.ForeColor = Color.Red;
+            lblOpcaoLog.ForeColor = Color.Crimson;
             lblOpcaoLog.Location = new Point(159, 156);
             lblOpcaoLog.Name = "lblOpcaoLog";
             lblOpcaoLog.Size = new Size(507, 29);
@@ -90,7 +90,7 @@
             lblNomeLocadora.AutoSize = true;
             lblNomeLocadora.BackColor = Color.LightGray;
             lblNomeLocadora.Font = new Font("Modern No. 20", 17.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            lblNomeLocadora.ForeColor = Color.Red;
+            lblNomeLocadora.ForeColor = Color.Crimson;
             lblNomeLocadora.Location = new Point(344, 32);
             lblNomeLocadora.Name = "lblNomeLocadora";
             lblNomeLocadora.Size = new Size(145, 25);
