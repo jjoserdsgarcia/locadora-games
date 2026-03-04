@@ -25,7 +25,10 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
                     Plataforma,
                     Genero,
                     Status,
+<<<<<<< HEAD
                     Categoria,
+=======
+>>>>>>> b12447c45db917e1fa63f23d1b1c76d286cc71ab
                     Ano
                         FROM Jogo
                         ORDER BY Titulo ASC
@@ -36,12 +39,18 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
 
         public static async Task SalvarJogo(Jogo jogo)
         {
-            using (var conexao = conexaoBancoSQL.dbConnection())  //ATUALIZAR O BANCO, COLOCAR "STATUS" E DISPONIVEL DPS DE CADASTRAR JOGO
+            using (var conexao = conexaoBancoSQL.dbConnection()) 
             {
                 string sql = @"INSERT INTO Jogo
+<<<<<<< HEAD
                        (Titulo, Plataforma, Genero, Ano, Status, Categoria)
                        VALUES
                        (@Titulo, @Plataforma, @Genero, @Ano, @Status, @Categoria)"; 
+=======
+                       (Titulo, Plataforma, Genero, Status, Ano)
+                       VALUES
+                       (@Titulo, @Plataforma, @Genero, @Status, @Ano)"; 
+>>>>>>> b12447c45db917e1fa63f23d1b1c76d286cc71ab
 
                 await conexao.ExecuteAsync(sql, jogo);
             }
@@ -55,18 +64,17 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
                     @"
                     UPDATE Jogo
                         SET
-                    Titulo = @Titulo,
-                    Plataforma = @Plataforma,
-                    Genero = @Genero,
-                    Ano = @Ano
+                            Titulo = @Titulo,
+                            Plataforma = @Plataforma,
+                            Genero = @Genero,
+                            Status = @Status,
+                            Ano = @Ano
                         WHERE Id = @Id
             ",
                     jogo
                 );
             }
         }
-
-        private readonly ConexaoBancoSQL _conexao = new ConexaoBancoSQL();
 
         internal static async Task Deletar(int id)
         {
