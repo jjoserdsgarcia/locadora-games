@@ -25,10 +25,7 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
                     Plataforma,
                     Genero,
                     Status,
-<<<<<<< HEAD
                     Categoria,
-=======
->>>>>>> b12447c45db917e1fa63f23d1b1c76d286cc71ab
                     Ano
                         FROM Jogo
                         ORDER BY Titulo ASC
@@ -42,15 +39,10 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
             using (var conexao = conexaoBancoSQL.dbConnection()) 
             {
                 string sql = @"INSERT INTO Jogo
-<<<<<<< HEAD
+
                        (Titulo, Plataforma, Genero, Ano, Status, Categoria)
                        VALUES
                        (@Titulo, @Plataforma, @Genero, @Ano, @Status, @Categoria)"; 
-=======
-                       (Titulo, Plataforma, Genero, Status, Ano)
-                       VALUES
-                       (@Titulo, @Plataforma, @Genero, @Status, @Ano)"; 
->>>>>>> b12447c45db917e1fa63f23d1b1c76d286cc71ab
 
                 await conexao.ExecuteAsync(sql, jogo);
             }
