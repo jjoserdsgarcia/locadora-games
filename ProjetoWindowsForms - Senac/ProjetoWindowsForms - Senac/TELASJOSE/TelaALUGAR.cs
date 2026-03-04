@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoWindowsForms___Senac.Classes;
+using ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo;
 using ProjetoWindowsForms___Senac.Repositories.RepoUser;
 
 namespace ProjetoWindowsForms___Senac.TELAS
@@ -24,7 +25,7 @@ namespace ProjetoWindowsForms___Senac.TELAS
             InitializeComponent();
         }
 
-        private void btnALUGARUSUARIO_Click(object sender, EventArgs e)
+        private async void btnALUGARUSUARIO_Click(object sender, EventArgs e)
         {
 
             if (dtpEntrega.Value.Date <= DateTime.Today)
@@ -47,8 +48,9 @@ namespace ProjetoWindowsForms___Senac.TELAS
 
             JogoSelecionado.Status = "Alugado";
 
-            MessageBox.Show("Aluguel realizado com sucesso!");
+            await RepositorioJogo.Atualizar(JogoSelecionado);
 
+            MessageBox.Show("Aluguel realizado com sucesso!");
             Close();
         }
 

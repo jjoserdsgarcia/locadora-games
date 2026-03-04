@@ -14,6 +14,7 @@ using ProjetoWindowsForms___Senac.Classes;
 using ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo;
 
 using ProjetoWindowsForms___Senac.Repositories.RepoUser;
+using ProjetoWindowsForms___Senac.TELASJOSE;
 
 namespace ProjetoWindowsForms___Senac
 {
@@ -58,6 +59,7 @@ namespace ProjetoWindowsForms___Senac
 
             tipoAtual = TipoCadastroUsuarioJogo.Usuarios;
             dgvADMIN.DataSource = await RepositorioUsuario.ObterTodos();
+            btnDetalhes.Visible = false;
         }
 
 
@@ -70,6 +72,7 @@ namespace ProjetoWindowsForms___Senac
 
             tipoAtual = TipoCadastroUsuarioJogo.Jogos;
             dgvADMIN.DataSource = await RepositorioJogo.ObterTodos();
+            btnDetalhes.Visible = true;
         }
 
 
@@ -173,6 +176,15 @@ namespace ProjetoWindowsForms___Senac
 
                 await atualizartabelaadmindgv();
             }
+        }
+
+        private void btnDetalhesJogo(object sender, EventArgs e)
+        {
+            TelaDetalhesJogo tela = new TelaDetalhesJogo();
+            this.Hide();
+            tela.ShowDialog();
+            this.Show();
+
         }
     }
 }

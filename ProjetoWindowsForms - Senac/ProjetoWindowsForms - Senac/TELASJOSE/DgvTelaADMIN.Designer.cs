@@ -37,6 +37,7 @@
             dgvADMINEXCLUIR = new Button();
             btnSAIRDGVADM = new Button();
             lblStatus = new Label();
+            btnDetalhes = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvADMIN).BeginInit();
             SuspendLayout();
             // 
@@ -119,6 +120,7 @@
             // lblStatus
             // 
             lblStatus.AutoSize = true;
+            lblStatus.BackColor = Color.Black;
             lblStatus.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblStatus.ForeColor = SystemColors.ControlLightLight;
             lblStatus.Location = new Point(9, 64);
@@ -126,6 +128,17 @@
             lblStatus.Size = new Size(125, 17);
             lblStatus.TabIndex = 11;
             lblStatus.Text = "Escolha uma opção:";
+            // 
+            // btnDetalhes
+            // 
+            btnDetalhes.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDetalhes.Location = new Point(338, 367);
+            btnDetalhes.Name = "btnDetalhes";
+            btnDetalhes.Size = new Size(108, 40);
+            btnDetalhes.TabIndex = 12;
+            btnDetalhes.Text = "Detalhes";
+            btnDetalhes.UseVisualStyleBackColor = true;
+            btnDetalhes.Click += btnDetalhesJogo;
             // 
             // DgvTelaADMIN
             // 
@@ -135,6 +148,7 @@
             BackgroundImage = Properties.Resources.Design_sem_nome__10_;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnDetalhes);
             Controls.Add(lblStatus);
             Controls.Add(btnSAIRDGVADM);
             Controls.Add(dgvADMINEXCLUIR);
@@ -163,5 +177,6 @@
         private Button dgvADMINEXCLUIR;
         private Button btnSAIRDGVADM;
         private Label lblStatus;
+        private Button btnDetalhes;
     }
 }

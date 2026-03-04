@@ -38,7 +38,6 @@
             txtTelefoneEditUsuario = new TextBox();
             button3 = new Button();
             btnCancelarEditUsuario = new Button();
-            txtIdEditUsuario = new TextBox();
             label1 = new Label();
             SuspendLayout();
             // 
@@ -128,14 +127,6 @@
             btnCancelarEditUsuario.UseVisualStyleBackColor = true;
             btnCancelarEditUsuario.Click += btnCancelarEditarUsuario;
             // 
-            // txtIdEditUsuario
-            // 
-            txtIdEditUsuario.Location = new Point(30, 82);
-            txtIdEditUsuario.Name = "txtIdEditUsuario";
-            txtIdEditUsuario.Size = new Size(54, 23);
-            txtIdEditUsuario.TabIndex = 14;
-            txtIdEditUsuario.Visible = false;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -154,7 +145,6 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(804, 450);
             Controls.Add(label1);
-            Controls.Add(txtIdEditUsuario);
             Controls.Add(btnCancelarEditUsuario);
             Controls.Add(button3);
             Controls.Add(txtTelefoneEditUsuario);
@@ -182,7 +172,6 @@
         private TextBox txtTelefoneEditUsuario;
         private Button button3;
         private Button btnCancelarEditUsuario;
-        private TextBox txtIdEditUsuario;
         private Label label1;
     }
 }

@@ -23,7 +23,6 @@ namespace ProjetoWindowsForms___Senac
 
             lblEditandoUsuario.Text = $"Editando: {usuario.Nome}";
 
-            txtIdEditUsuario.Text = usuario.UsuarioID.ToString();
             txtNomeEditUsuario.Text = usuario.Nome;
             txtEmailEditUsuario.Text = usuario.Email;
             txtTelefoneEditUsuario.Text = usuario.Telefone;
@@ -55,7 +54,6 @@ namespace ProjetoWindowsForms___Senac
               txtNomeEditUsuario.Clear();
               txtEmailEditUsuario.Clear();
               txtTelefoneEditUsuario.Clear();
-              txtIdEditUsuario.Clear();
         }
     }
 }
