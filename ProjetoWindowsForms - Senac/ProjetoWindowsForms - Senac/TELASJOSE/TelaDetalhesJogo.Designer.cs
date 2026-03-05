@@ -172,6 +172,7 @@
             Controls.Add(label1);
             Name = "TelaDetalhesJogo";
             Text = "TelaDetalhesJogo";
+            Load += TelaDetalhesJogo_Load;
             ResumeLayout(false);
             PerformLayout();
         }

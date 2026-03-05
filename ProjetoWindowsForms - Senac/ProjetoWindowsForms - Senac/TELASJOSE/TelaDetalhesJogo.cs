@@ -15,7 +15,7 @@ namespace ProjetoWindowsForms___Senac.TELASJOSE
 {
     public partial class TelaDetalhesJogo : Form
     {
-        
+
         public TelaDetalhesJogo(RegistroLocacao locacao)
         {
             InitializeComponent();
@@ -30,6 +30,11 @@ namespace ProjetoWindowsForms___Senac.TELASJOSE
         private void btnFecharDetalhe(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void TelaDetalhesJogo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
