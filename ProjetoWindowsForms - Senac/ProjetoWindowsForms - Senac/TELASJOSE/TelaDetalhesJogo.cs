@@ -36,10 +36,13 @@ namespace ProjetoWindowsForms___Senac.TELASJOSE
         {
 
         }
+<<<<<<< HEAD
 
         private void txtNomeDetalhe_TextChanged(object sender, EventArgs e)
         {
 
         }
+=======
+>>>>>>> f250fabb055dae7552cdb501d82d44dd1cafc365
     }
 }
