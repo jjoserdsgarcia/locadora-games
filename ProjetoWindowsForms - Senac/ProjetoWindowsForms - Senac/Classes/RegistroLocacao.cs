@@ -11,7 +11,7 @@ namespace ProjetoWindowsForms___Senac.Classes
         public string NomeJogo { get; set; }
         public string Cliente { get; set; }
         public DateTime DataLocacao { get; set; }
-        public DateTime DataEntrega { get; set; }
+        public DateTime? DataEntrega { get; set; }
         public string Status { get; set; }
     }
 }
