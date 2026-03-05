@@ -92,6 +92,7 @@
             txtNomeDetalhe.Name = "txtNomeDetalhe";
             txtNomeDetalhe.Size = new Size(170, 23);
             txtNomeDetalhe.TabIndex = 18;
+            txtNomeDetalhe.TextChanged += txtNomeDetalhe_TextChanged;
             // 
             // label6
             // 
@@ -172,6 +173,7 @@
             Controls.Add(label1);
             Name = "TelaDetalhesJogo";
             Text = "TelaDetalhesJogo";
+            Load += TelaDetalhesJogo_Load;
             ResumeLayout(false);
             PerformLayout();
         }

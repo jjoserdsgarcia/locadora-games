@@ -41,11 +41,11 @@
             // 
             lblOpcaoLog.AutoSize = true;
             lblOpcaoLog.BackColor = Color.Black;
-            lblOpcaoLog.Font = new Font("MS Reference Sans Serif", 18F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            lblOpcaoLog.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Underline, GraphicsUnit.Point, 0);
             lblOpcaoLog.ForeColor = Color.White;
             lblOpcaoLog.Location = new Point(169, 209);
             lblOpcaoLog.Name = "lblOpcaoLog";
-            lblOpcaoLog.Size = new Size(507, 29);
+            lblOpcaoLog.Size = new Size(460, 29);
             lblOpcaoLog.TabIndex = 0;
             lblOpcaoLog.Text = "Escolha uma das opções para fazer Login";
             // 
