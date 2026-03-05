@@ -41,11 +41,11 @@
             // 
             lblUsuarioADM.AutoSize = true;
             lblUsuarioADM.BackColor = Color.Black;
-            lblUsuarioADM.Font = new Font("Modern No. 20", 17.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            lblUsuarioADM.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Underline, GraphicsUnit.Point, 0);
             lblUsuarioADM.ForeColor = Color.Red;
             lblUsuarioADM.Location = new Point(201, 84);
             lblUsuarioADM.Name = "lblUsuarioADM";
-            lblUsuarioADM.Size = new Size(89, 25);
+            lblUsuarioADM.Size = new Size(96, 29);
             lblUsuarioADM.TabIndex = 0;
             lblUsuarioADM.Text = "Usuário";
             // 
@@ -69,18 +69,18 @@
             // 
             lblSenhaADM.AutoSize = true;
             lblSenhaADM.BackColor = Color.Black;
-            lblSenhaADM.Font = new Font("Modern No. 20", 17.9999981F, FontStyle.Underline);
+            lblSenhaADM.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Underline, GraphicsUnit.Point, 0);
             lblSenhaADM.ForeColor = Color.Red;
             lblSenhaADM.Location = new Point(201, 232);
             lblSenhaADM.Name = "lblSenhaADM";
-            lblSenhaADM.Size = new Size(72, 25);
+            lblSenhaADM.Size = new Size(82, 29);
             lblSenhaADM.TabIndex = 2;
             lblSenhaADM.Text = "Senha";
             // 
             // btnENTRARADM
             // 
             btnENTRARADM.BackColor = Color.LawnGreen;
-            btnENTRARADM.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            btnENTRARADM.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Underline);
             btnENTRARADM.Location = new Point(447, 349);
             btnENTRARADM.Name = "btnENTRARADM";
             btnENTRARADM.Size = new Size(222, 48);
@@ -92,7 +92,7 @@
             // btnSAIRADMLOG
             // 
             btnSAIRADMLOG.BackColor = Color.Red;
-            btnSAIRADMLOG.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            btnSAIRADMLOG.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Underline);
             btnSAIRADMLOG.ForeColor = SystemColors.ActiveCaptionText;
             btnSAIRADMLOG.Location = new Point(137, 349);
             btnSAIRADMLOG.Name = "btnSAIRADMLOG";

@@ -39,10 +39,6 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
             using (var conexao = conexaoBancoSQL.dbConnection()) 
             {
                 string sql = @"INSERT INTO Jogo
-<<<<<<< HEAD
-
-=======
->>>>>>> f9a786b35b4b5638405e6690312c499dccccb32c
                        (Titulo, Plataforma, Genero, Ano, Status, Categoria)
                        VALUES
                        (@Titulo, @Plataforma, @Genero, @Ano, @Status, @Categoria)"; 
@@ -80,5 +76,20 @@ namespace ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo
                 await connection.ExecuteAsync(query, new { Id = id });
             }
         }
+        public static async Task<bool> AtualizarStatus(int id, string novoStatus)
+        {
+            using (var conexao = new SqlConnection(ConexaoBancoSQL.StringConexao))
+            {
+                var comando = new SqlCommand("UPDATE Jogo SET Status = @Status WHERE Id = @Id", conexao);
+                comando.Parameters.AddWithValue("@Status", novoStatus);
+                comando.Parameters.AddWithValue("@Id", id);
+
+                await conexao.OpenAsync();
+                int linhasAfetadas = await comando.ExecuteNonQueryAsync();
+                return linhasAfetadas > 0;
+            }
+        }
+      
+
     }
 }

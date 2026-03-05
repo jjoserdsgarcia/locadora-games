@@ -163,6 +163,7 @@
             dtpData.Name = "dtpData";
             dtpData.Size = new Size(241, 23);
             dtpData.TabIndex = 13;
+            dtpData.ValueChanged += dtpData_ValueChanged;
             // 
             // lblListaerro
             // 

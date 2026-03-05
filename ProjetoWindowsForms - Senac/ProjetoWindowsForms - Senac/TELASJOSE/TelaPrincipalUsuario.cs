@@ -21,7 +21,9 @@ namespace ProjetoWindowsForms___Senac.TELAS
         private readonly string CPFUSUARIO;
         private readonly bool IsADMIN;
 
-        private async void CarregarJogo()
+        private async
+        Task
+CarregarJogo()
         {
             var jogos = await RepositorioJogo.ObterTodos();
             dgvListaJogos.DataSource = jogos;
@@ -44,7 +46,7 @@ namespace ProjetoWindowsForms___Senac.TELAS
         {
             if (dgvListaJogos.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione um jogo!");
+                MessageBox.Show("Selecione um jogo.");
                 return;
             }
 
@@ -53,7 +55,7 @@ namespace ProjetoWindowsForms___Senac.TELAS
 
             if (jogoSelecionado.Status == "Alugado")
             {
-                MessageBox.Show("Esse jogo já está alugado!");
+                MessageBox.Show("Esse jogo já está alugado.");
                 return;
             }
 
@@ -65,10 +67,38 @@ namespace ProjetoWindowsForms___Senac.TELAS
             dgvListaJogos.Refresh();
         }
 
-        private void btnDEVOLVER_Click(object sender, EventArgs e)
+        private async void btnDEVOLVER_Click(object sender, EventArgs e)
         {
-            
+            if (dgvListaJogos.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um jogo para devolver.");
+                return;
+            }
+
+            Jogo jogoSelecionado = (Jogo)dgvListaJogos.SelectedRows[0].DataBoundItem;
+
+            if (jogoSelecionado.Status != "Alugado")
+            {
+                MessageBox.Show("Este jogo não está alugado.");
+                return;
+            }
+
+
+
+            bool sucesso = await RepositorioJogo.AtualizarStatus(jogoSelecionado.Id, "Disponível");
+
+            if (sucesso)
+            {
+                MessageBox.Show("Jogo devolvido com sucesso.");
+                await CarregarJogo();
+            }
+            else
+            {
+                MessageBox.Show("Erro ao devolver o jogo.");
+            }
         }
+
+
 
         private void TelaPrincipalUsuario_Load(object sender, EventArgs e)
         {
@@ -85,6 +115,9 @@ namespace ProjetoWindowsForms___Senac.TELAS
             Close();
         }
     }
-
 }
+
+
+
+
 

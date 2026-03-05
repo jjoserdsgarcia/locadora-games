@@ -52,7 +52,7 @@
             // btnUser
             // 
             btnUser.BackColor = Color.Black;
-            btnUser.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            btnUser.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Underline, GraphicsUnit.Point, 0);
             btnUser.ForeColor = Color.White;
             btnUser.Location = new Point(282, 272);
             btnUser.Name = "btnUser";
@@ -65,7 +65,7 @@
             // btnAdm
             // 
             btnAdm.BackColor = Color.Black;
-            btnAdm.Font = new Font("Modern No. 20", 11.249999F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            btnAdm.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
             btnAdm.ForeColor = Color.White;
             btnAdm.Location = new Point(282, 378);
             btnAdm.Name = "btnAdm";
@@ -79,11 +79,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Black;
-            label1.Font = new Font("Modern No. 20", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
             label1.Location = new Point(394, 334);
             label1.Name = "label1";
-            label1.Size = new Size(32, 21);
+            label1.Size = new Size(36, 24);
             label1.TabIndex = 3;
             label1.Text = "Ou";
             // 

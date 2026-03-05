@@ -9,6 +9,7 @@ namespace ProjetoWindowsForms___Senac
     using System.Net.Mail;
     using System.Runtime.CompilerServices;
     using System.Text;
+    using CpfCnpjLibrary;
 
     public partial class TelaCadastroUsuario : Form
     {
@@ -17,11 +18,11 @@ namespace ProjetoWindowsForms___Senac
 
 
 
-       
-        private List<Usuario> usuarios = new List<Usuario>();
-       
 
-       
+        private List<Usuario> usuarios = new List<Usuario>();
+
+
+
         public TelaCadastroUsuario(DgvTelaADMIN telaADMIN)
 
         {
@@ -37,12 +38,18 @@ namespace ProjetoWindowsForms___Senac
             usuario.CPF = txtCPFCadastroUser.Text;
             usuario.Email = txtEmailCadastroUser.Text;
             usuario.Telefone = txtTelefoneCadastroUser.Text;
-            usuario.DataNascimento = DateTime.Now;
+            usuario.DataNascimento = dtpData.Value;
 
             var stringBuilder = new StringBuilder();
             var ListaDeErros = new List<ValidationResult>();
 
-           
+            bool CPFValido = Cpf.Validar(usuario.CPF);
+
+
+            if (!CPFValido)
+            {
+               ListaDeErros.Add(new ValidationResult("O CPF precisa ser válido."));
+            }
             var contexto = new ValidationContext(usuario);
             Validator.TryValidateObject(usuario, contexto, ListaDeErros, true);
 
@@ -52,10 +59,10 @@ namespace ProjetoWindowsForms___Senac
                 foreach (var erro in ListaDeErros)
                 {
                     stringBuilder.Append(erro.ErrorMessage + "\n");
-                    
+
 
                 }
-                    lblListaerro.Text = stringBuilder.ToString();
+                lblListaerro.Text = stringBuilder.ToString();
             }
             else
             {
@@ -82,6 +89,11 @@ namespace ProjetoWindowsForms___Senac
         }
 
         private void txtCPFCadastroUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpData_ValueChanged(object sender, EventArgs e)
         {
 
         }

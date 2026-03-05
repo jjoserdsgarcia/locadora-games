@@ -10,10 +10,13 @@ namespace ProjetoWindowsForms___Senac
 {
     public class ConexaoBancoSQL
     {
+        
+        public static string StringConexao { get; internal set; } = "Server=(localdb)\\MSSQLLocalDB; Database=locadora_games; Trusted_Connection=True;";
+
         public IDbConnection dbConnection()
         {
-            return new SqlConnection("Server=(localdb)\\MSSQLLocalDB; Database=locadora_games; Trusted_Connection=True;");
+           
+            return new SqlConnection(StringConexao);
         }
-        //(localdb)\\MSSQLLocalDB
     }
 }

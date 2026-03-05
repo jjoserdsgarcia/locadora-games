@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Cpf.Cnpj" Version="1.0.2" />
     <PackageReference Include="Dapper" Version="2.1.66" />
     <PackageReference Include="System.Data.SqlClient" Version="4.9.1" />
   </ItemGroup>
