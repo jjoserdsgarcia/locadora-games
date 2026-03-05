@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnFecharD = new Button();
+            btnFecharDetal = new Button();
             txtStatusDetalhe = new TextBox();
             txtEntregaDetalhe = new TextBox();
             txtLocacaoDetalhe = new TextBox();
@@ -42,16 +42,16 @@
             label1 = new Label();
             SuspendLayout();
             // 
-            // btnFecharD
+            // btnFecharDetal
             // 
-            btnFecharD.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnFecharD.Location = new Point(399, 378);
-            btnFecharD.Name = "btnFecharD";
-            btnFecharD.Size = new Size(108, 40);
-            btnFecharD.TabIndex = 23;
-            btnFecharD.Text = "Fechar";
-            btnFecharD.UseVisualStyleBackColor = true;
-            btnFecharD.Click += btnFecharDetalhe;
+            btnFecharDetal.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnFecharDetal.Location = new Point(399, 378);
+            btnFecharDetal.Name = "btnFecharDetal";
+            btnFecharDetal.Size = new Size(108, 40);
+            btnFecharDetal.TabIndex = 23;
+            btnFecharDetal.Text = "Fechar";
+            btnFecharDetal.UseVisualStyleBackColor = true;
+            btnFecharDetal.Click += btnFecharDetalhe;
             // 
             // txtStatusDetalhe
             // 
@@ -84,7 +84,6 @@
             txtClienteDetalhe.Name = "txtClienteDetalhe";
             txtClienteDetalhe.Size = new Size(170, 23);
             txtClienteDetalhe.TabIndex = 19;
-            txtClienteDetalhe.TextChanged += txtClienteDetalhe_TextChanged;
             // 
             // txtNomeDetalhe
             // 
@@ -93,7 +92,6 @@
             txtNomeDetalhe.Name = "txtNomeDetalhe";
             txtNomeDetalhe.Size = new Size(170, 23);
             txtNomeDetalhe.TabIndex = 18;
-            txtNomeDetalhe.TextChanged += txtNomeDetalhe_TextChanged;
             // 
             // label6
             // 
@@ -160,7 +158,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnFecharD);
+            Controls.Add(btnFecharDetal);
             Controls.Add(txtStatusDetalhe);
             Controls.Add(txtEntregaDetalhe);
             Controls.Add(txtLocacaoDetalhe);
@@ -174,14 +172,13 @@
             Controls.Add(label1);
             Name = "TelaDetalhesJogo";
             Text = "TelaDetalhesJogo";
-            Load += TelaDetalhesJogo_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button btnFecharD;
+        private Button btnFecharDetal;
         private TextBox txtStatusDetalhe;
         private TextBox txtEntregaDetalhe;
         private TextBox txtLocacaoDetalhe;

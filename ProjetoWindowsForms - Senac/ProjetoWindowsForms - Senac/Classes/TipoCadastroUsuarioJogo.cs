@@ -9,6 +9,6 @@ namespace ProjetoWindowsForms___Senac.Classes
     public enum TipoCadastroUsuarioJogo
     {
         Usuarios,
-        Jogos
+        Jogos,
     }
 }

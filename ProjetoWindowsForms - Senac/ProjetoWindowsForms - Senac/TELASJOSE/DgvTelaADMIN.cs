@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using ProjetoWindowsForms___Senac.Classes;
-using Dapper;
-﻿using System.Threading.Tasks;
-using ProjetoWindowsForms___Senac.Classes;
+﻿using ProjetoWindowsForms___Senac.Classes;
 using ProjetoWindowsForms___Senac.Repositories.RepoGamesInfo;
 
 using ProjetoWindowsForms___Senac.Repositories.RepoUser;
@@ -180,10 +168,22 @@ namespace ProjetoWindowsForms___Senac
 
         private void btnDetalhesJogo(object sender, EventArgs e)
         {
-            TelaDetalhesJogo tela = new TelaDetalhesJogo();
-            this.Hide();
+            if (dgvADMIN.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione uma locação para ver os detalhes.");
+                return;
+            }
+
+            var locacaoSelecionada = dgvADMIN.SelectedRows[0].DataBoundItem as RegistroLocacao;
+
+            if (locacaoSelecionada == null)
+            {
+                MessageBox.Show("Não foi possível obter os detalhes da locação.");
+                return;
+            }
+
+            var tela = new TelaDetalhesJogo(locacaoSelecionada);
             tela.ShowDialog();
-            this.Show();
 
         }
     }
